@@ -2,6 +2,20 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/67595223-134b-4bfc-836e-c60be465a4fa/deploy-status)](https://app.netlify.com/sites/oceanosplastico/deploys)
 
+<h3 align="left">🛠 Tecnologias utilizadas</h3>
+
+###
+
+<div align="left">
+  <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?logo=tailwindcss&logoColor=black&style=for-the-badge" height="40" alt="tailwindcss logo"  />
+  <img width="12" />
+  <img src="https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white&style=for-the-badge" height="40" alt="angularjs logo"  />
+</div>
+
+###
+
+###
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
 ## Development server
