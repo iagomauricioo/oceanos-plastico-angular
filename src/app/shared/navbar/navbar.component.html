@@ -1,8 +1,8 @@
-<nav class="bg-white border-gray-200 dark:bg-primary">
+<nav class="bg-white border-gray-200 dark:bg-primary max-h-[11vh]">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <a routerLink="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img
         src="assets/images/logo-oceano-plastico.png"
         class="h-20 w-auto"
@@ -21,7 +21,7 @@
       <button
         type="button"
         data-dropdown-toggle="language-dropdown-menu"
-        class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-primarybg-primary dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+        class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-primarybg-primary dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-secondary dark:hover:text-white"
       >
         <svg
           class="w-5 h-5 rounded-full me-3"
@@ -40,14 +40,14 @@
         Brasil (PT-BR)
       </button>
       <div
-        class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700"
+        class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-secondary"
         id="language-dropdown-menu"
       >
         <ul class="py-2 font-medium" role="none">
           <li>
             <a
               href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
               <div class="inline-flex items-center">
@@ -90,7 +90,7 @@
           <li>
             <a
               href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
               <div class="inline-flex items-center">
@@ -112,7 +112,7 @@
           <li>
             <a
               href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
               <div class="inline-flex items-center">
@@ -136,7 +136,7 @@
           <li>
             <a
               href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
               <div class="inline-flex items-center">
@@ -227,9 +227,9 @@
       >
         <li>
           <a
-            href="#"
             class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
             aria-current="page"
+            href="#projetos"
             >Projetos</a
           >
         </li>
@@ -244,8 +244,10 @@
           <a
             href="#"
             class="block py-2 px-3 md:p-0 text-primarybg-primary rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Colaboradores</a
+            [routerLink]="['/colaboradores']" routerLinkActive="router-link-active" 
           >
+            Colaboradores
+          </a>
         </li>
         <li>
           <a
