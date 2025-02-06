@@ -1,4 +1,6 @@
-# TailwindTeste
+# Oceanos de Plástico
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67595223-134b-4bfc-836e-c60be465a4fa/deploy-status)](https://app.netlify.com/sites/oceanosplastico/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
