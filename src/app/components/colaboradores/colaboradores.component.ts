@@ -29,25 +29,31 @@ export class ColaboradoresComponent {
     {
       "nome": "Alessandro Sarmento",
       "cargo": "Pesquisador",
-      "foto": "assets/images/jesse.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      "foto": "assets/images/alessandro.png",
+      "linkedin": "https://www.linkedin.com/in/alessandro-sarmento-cavalcanti-01498227/"
     },
     {
       "nome": "Marcelo Reis",
       "cargo": "Pesquisador",
-      "foto": "assets/images/jesse.png",
+      "foto": "assets/images/marcelo.png",
       "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
     },
     {
       "nome": "Clarissa",
       "cargo": "Pesquisador",
-      "foto": "assets/images/jesse.png",
+      "foto": "assets/images/clarissa.png",
       "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
     },
     {
-      "nome": "Thiago",
+      "nome": "Thyago",
       "cargo": "Pesquisador",
-      "foto": "assets/images/jesse.png",
+      "foto": "assets/images/profile.png",
+      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+    },
+    {
+      "nome": "Márcio",
+      "cargo": "Pesquisador",
+      "foto": "assets/images/profile.png",
       "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
     },
   ]
