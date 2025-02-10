@@ -1,60 +1,84 @@
 import { Component } from '@angular/core';
-import { ProfileCardComponent } from "../../shared/profile-card/profile-card.component";
+import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-colaboradores',
   standalone: true,
-  imports: [
-    ProfileCardComponent,
-    NgFor
-  ],
+  imports: [ProfileCardComponent, NgFor],
   templateUrl: './colaboradores.component.html',
-  styleUrl: './colaboradores.component.css'
+  styleUrl: './colaboradores.component.css',
 })
 export class ColaboradoresComponent {
   pessoas = [
+    /* Falta:
+      Lattes de Marcelo Reis
+      Linkedin de Marcelo Reis
+
+      Linkedin de Márcio Berto
+    */
     {
-      "nome": "Jessé Marques",
-      "cargo": "Coordenador e idealizador",
-      "foto": "assets/images/jesse.png",
-      "linkedin": "https://www.linkedin.com/in/dr-jess%C3%A9-marques-6949b8236/"
+      nome: 'Jessé Marques',
+      cargo: 'Coordenador e idealizador',
+      foto: 'assets/images/jesse.png',
+      linkedin: 'https://www.linkedin.com/in/dr-jess%C3%A9-marques-6949b8236/',
+      lattes: 'http://lattes.cnpq.br/2811263859126204',
     },
     {
-      "nome": "Iago Mauricio",
-      "cargo": "Desenvolvedor Python e Angular",
-      "foto": "assets/images/iago.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      nome: 'Iago Mauricio',
+      cargo: 'Desenvolvedor Python e Angular',
+      foto: 'assets/images/iago.png',
+      linkedin: 'https://www.linkedin.com/in/iagomauricioo/',
+      lattes: 'http://lattes.cnpq.br/6076150135832214',
     },
     {
-      "nome": "Alessandro Sarmento",
-      "cargo": "Pesquisador",
-      "foto": "assets/images/alessandro.png",
-      "linkedin": "https://www.linkedin.com/in/alessandro-sarmento-cavalcanti-01498227/"
+      nome: 'Alessandro Sarmento',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/alessandro2.png',
+      linkedin:
+        'https://www.linkedin.com/in/alessandro-sarmento-cavalcanti-01498227/',
+      lattes:
+        'http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4706903P5',
     },
     {
-      "nome": "Marcelo Reis",
-      "cargo": "Pesquisador",
-      "foto": "assets/images/marcelo.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      nome: 'Marcelo Reis',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/marcelo.png',
+      linkedin: '',
+      lattes: '',
     },
     {
-      "nome": "Clarissa",
-      "cargo": "Pesquisador",
-      "foto": "assets/images/clarissa.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      nome: 'Clarissa Soares',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/clarissa.png',
+      linkedin:
+        'https://www.linkedin.com/in/clarissasoares-engcivil-engsegurancadotrabalho/',
+      lattes:
+        'https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4942496P0',
     },
     {
-      "nome": "Thyago",
-      "cargo": "Pesquisador",
-      "foto": "assets/images/profile.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      nome: 'Thyago Soares',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/thyago.png',
+      linkedin:
+        'https://www.linkedin.com/in/thyago-anthony-soares-lima-b7004963/',
+      lattes: ' http://lattes.cnpq.br/1714186197608991',
     },
     {
-      "nome": "Márcio",
-      "cargo": "Pesquisador",
-      "foto": "assets/images/profile.png",
-      "linkedin": "https://www.linkedin.com/in/iagomauricioo/"
+      nome: 'Márcio Berto',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/marcio.png',
+      linkedin: '',
+      lattes: 'http://lattes.cnpq.br/5527925471049709',
     },
-  ]
+    {
+      nome: 'Victoria Kamille',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/victoria.png',
+      linkedin:
+        'https://www.linkedin.com/in/victoria-kamille-de-castro-almeida-22856723b',
+      lattes:
+        'https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C973EC0014F5148E1B6B2279689CE78C.buscatextual_0',
+    },
+  ];
 }
