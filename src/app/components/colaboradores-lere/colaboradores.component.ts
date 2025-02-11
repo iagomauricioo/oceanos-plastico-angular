@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-colaboradores',
@@ -10,7 +11,15 @@ import { NgFor } from '@angular/common';
   styleUrl: './colaboradores.component.css',
 })
 export class ColaboradoresComponent {
-  pessoas = [
+  pessoas: any[] = [];
+
+  constructor(private router: Router, private route: ActivatedRoute) {
+    if (this.router.url === '/colaboradores/lere') this.pessoas = this.pessoasLere;
+    else if (this.router.url === '/colaboradores/ppgasa') this.pessoas = this.pessoasPpgasa;
+    else if (this.router.url === '/colaboradores/univassouras') this.pessoas = this.pessoasUnivassouras;
+  }
+  
+  pessoasLere = [
     /* Falta:
       Lattes de Marcelo Reis
       Linkedin de Marcelo Reis
@@ -90,4 +99,28 @@ export class ColaboradoresComponent {
         'https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2496458D4',
     },
   ];
+
+  pessoasPpgasa = [
+    {
+      nome: 'Desconhecido PPGASA',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/profile.png',
+      linkedin:
+        '',
+      lattes:
+        '',
+    },
+  ]
+
+  pessoasUnivassouras = [
+    {
+      nome: 'Desconhecido Univassouras',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/profile.png',
+      linkedin:
+        '',
+      lattes:
+        '',
+    },
+  ]
 }

@@ -15,6 +15,14 @@ export const routes: Routes = [
         component: ColaboradoresComponent
     },
     {
+        path: "colaboradores/ppgasa",
+        component: ColaboradoresComponent
+    },
+    {
+        path: "colaboradores/univassouras",
+        component: ColaboradoresComponent
+    },
+    {
         path: "contato",
         component: ContatoComponent
     },
