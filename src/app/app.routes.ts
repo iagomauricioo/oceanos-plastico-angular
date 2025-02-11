@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { ColaboradoresComponent } from './components/colaboradores-lere/colaboradores.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContatoComponent } from './contato/contato.component';
-import { SolucoesComponent } from './solucoes/solucoes.component';
+import { ContatoComponent } from './components/contato/contato.component';
+import { SolucoesComponent } from './components/solucoes/solucoes.component';
 
 
 export const routes: Routes = [
@@ -12,6 +12,14 @@ export const routes: Routes = [
     },
     {
         path: "colaboradores/lere",
+        component: ColaboradoresComponent
+    },
+    {
+        path: "colaboradores/ppgasa",
+        component: ColaboradoresComponent
+    },
+    {
+        path: "colaboradores/univassouras",
         component: ColaboradoresComponent
     },
     {

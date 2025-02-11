@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-colaboradores',
@@ -10,7 +11,15 @@ import { NgFor } from '@angular/common';
   styleUrl: './colaboradores.component.css',
 })
 export class ColaboradoresComponent {
-  pessoas = [
+  pessoas: any[] = [];
+
+  constructor(private router: Router, private route: ActivatedRoute) {
+    if (this.router.url === '/colaboradores/lere') this.pessoas = this.pessoasLere;
+    else if (this.router.url === '/colaboradores/ppgasa') this.pessoas = this.pessoasPpgasa;
+    else if (this.router.url === '/colaboradores/univassouras') this.pessoas = this.pessoasUnivassouras;
+  }
+  
+  pessoasLere = [
     /* Falta:
       Lattes de Marcelo Reis
       Linkedin de Marcelo Reis
@@ -44,8 +53,8 @@ export class ColaboradoresComponent {
       nome: 'Marcelo Reis',
       cargo: 'Pesquisador',
       foto: 'assets/images/marcelo.png',
-      linkedin: '',
-      lattes: '',
+      linkedin: 'https://www.linkedin.com/in/marcelo-reis-24133997/',
+      lattes: 'http://lattes.cnpq.br/5766916493726386',
     },
     {
       nome: 'Clarissa Soares',
@@ -62,7 +71,7 @@ export class ColaboradoresComponent {
       foto: 'assets/images/thyago.png',
       linkedin:
         'https://www.linkedin.com/in/thyago-anthony-soares-lima-b7004963/',
-      lattes: ' http://lattes.cnpq.br/1714186197608991',
+      lattes: 'http://lattes.cnpq.br/1714186197608991',
     },
     {
       nome: 'Márcio Berto',
@@ -80,5 +89,38 @@ export class ColaboradoresComponent {
       lattes:
         'https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C973EC0014F5148E1B6B2279689CE78C.buscatextual_0',
     },
+    {
+      nome: 'Erivelto Souza',
+      cargo: 'Produtor audiovisual',
+      foto: 'assets/images/erivelto.png',
+      linkedin:
+        'https://www.linkedin.com/in/erivelto-souza-320721271/',
+      lattes:
+        'https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2496458D4',
+    },
   ];
+
+  pessoasPpgasa = [
+    {
+      nome: 'Desconhecido PPGASA',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/profile.png',
+      linkedin:
+        '',
+      lattes:
+        '',
+    },
+  ]
+
+  pessoasUnivassouras = [
+    {
+      nome: 'Desconhecido Univassouras',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/profile.png',
+      linkedin:
+        '',
+      lattes:
+        '',
+    },
+  ]
 }

@@ -1,91 +1,35 @@
 <div
-  class="w-80 max-w-sm bg-white border to-transparent border-gray-500 rounded-lg shadow-sm dark:bg-transparent dark:border-l-0 dark:border-r-0"
->
+  class="w-80 max-w-sm bg-white border to-transparent border-gray-500 rounded-lg shadow-sm dark:bg-transparent dark:border-l-0 dark:border-r-0">
   <div class="flex justify-end px-4 pt-4">
-    <button
-      id="dropdownButton"
-      data-dropdown-toggle="dropdown"
-      class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
-      type="button"
-    >
+    <button id="dropdownButton" class="inline-block text-gray-500 dark:text-gray-400 rounded-lg text-sm p-1.5"
+      type="button">
       <span class="sr-only">Open dropdown</span>
-      <svg
-        class="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 16 3"
-      >
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
         <path
-          d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
-        />
+          d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
       </svg>
     </button>
-    <!-- Dropdown menu -->
-    <div
-      id="dropdown"
-      class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
-    >
-      <ul class="py-2" aria-labelledby="dropdownButton">
-        <li>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >Edit</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >Export Data</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >Delete</a
-          >
-        </li>
-      </ul>
-    </div>
   </div>
   <div class="flex flex-col items-center pb-10">
-    <img
-      class="w-24 h-24 mb-3 rounded-full shadow-xl object-cover object-center"
-      [src]="pessoa.foto"
-      alt="Bonnie image"
-    />
+    <img class="w-24 h-24 mb-3 rounded-full shadow-xl object-cover object-center" [src]="pessoa.foto"
+      alt="Bonnie image" />
     <h5 class="mb-1 text-xl font-medium text-primary dark:text-white">
       {{ pessoa.nome }}
     </h5>
-    <span class="text-sm text-gray-500 dark:text-gray-400"
-      >{{ pessoa.cargo }}</span
-    >
-    <div class="flex mt-4 md:mt-6">
-      <a
-        [href]="pessoa.linkedin"
-        target="_blank"
-        class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-[#0077b5] rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#0077b5] dark:focus:ring-blue-800 gap-3 transition-colors duration-300 hover:bg-[#005f8e]"
-        >Linkedin
+    <span class="text-sm text-gray-500 dark:text-gray-400">{{ pessoa.cargo }}</span>
+    <div class="flex mx-auto mt-4 md:mt-6">
+      <a [href]="pessoa.linkedin" target="_blank"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-[#0077b5] rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#0077b5] dark:focus:ring-blue-800 gap-3 transition-colors duration-300 hover:bg-[#005f8e]">Linkedin
         <span class="[&>svg]:h-5 [&>svg]:w-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 448 512"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
             <path
-              d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
-            />
-          </svg> </span
-      ></a>
-      <a
-        [href]="pessoa.lattes"
-        target="_blank"
-        class="py-2 px-4 ms-2 text-sm font-medium text-primary focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-textWhite dark:text-primary dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-300 duration-300"
-        ><img src="assets/images/lattes.png" alt=""></a
-      >
+              d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+          </svg>
+        </span>
+      </a>
+      <a [href]="pessoa.lattes" target="_blank"
+        class="py-2 px-4 ms-2 text-sm font-medium text-primary focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-textWhite dark:text-primary dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-300 duration-300"><img
+          src="assets/images/lattes.png" alt=""></a>
     </div>
   </div>
 </div>
