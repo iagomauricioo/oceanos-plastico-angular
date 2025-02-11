@@ -80,5 +80,14 @@ export class ColaboradoresComponent {
       lattes:
         'https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=C973EC0014F5148E1B6B2279689CE78C.buscatextual_0',
     },
+    {
+      nome: 'Erivelto Souza',
+      cargo: 'Produtor audiovisual',
+      foto: 'assets/images/erivelto.png',
+      linkedin:
+        'https://www.linkedin.com/in/erivelto-souza-320721271/',
+      lattes:
+        'https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2496458D4',
+    },
   ];
 }
