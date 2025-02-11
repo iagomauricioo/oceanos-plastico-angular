@@ -44,8 +44,8 @@ export class ColaboradoresComponent {
       nome: 'Marcelo Reis',
       cargo: 'Pesquisador',
       foto: 'assets/images/marcelo.png',
-      linkedin: '',
-      lattes: '',
+      linkedin: 'https://www.linkedin.com/in/marcelo-reis-24133997/',
+      lattes: 'http://lattes.cnpq.br/5766916493726386',
     },
     {
       nome: 'Clarissa Soares',
@@ -62,7 +62,7 @@ export class ColaboradoresComponent {
       foto: 'assets/images/thyago.png',
       linkedin:
         'https://www.linkedin.com/in/thyago-anthony-soares-lima-b7004963/',
-      lattes: ' http://lattes.cnpq.br/1714186197608991',
+      lattes: 'http://lattes.cnpq.br/1714186197608991',
     },
     {
       nome: 'Márcio Berto',
