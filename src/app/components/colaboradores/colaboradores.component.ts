@@ -21,9 +21,6 @@ export class ColaboradoresComponent {
   
   pessoasLere = [
     /* Falta:
-      Lattes de Marcelo Reis
-      Linkedin de Marcelo Reis
-
       Linkedin de Márcio Berto
     */
     {
