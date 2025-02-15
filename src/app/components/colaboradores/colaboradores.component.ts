@@ -88,7 +88,7 @@ export class ColaboradoresComponent {
     },
     {
       nome: 'Erivelto Souza',
-      cargo: 'Produtor audiovisual',
+      cargo: 'Pesquisador / Produtor audiovisual',
       foto: 'assets/images/erivelto.png',
       linkedin:
         'https://www.linkedin.com/in/erivelto-souza-320721271/',
