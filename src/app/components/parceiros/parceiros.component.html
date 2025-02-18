@@ -1,38 +1,9 @@
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-40">
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/policoncret.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="assets/images/logotipos/webp/PPGASA.webp"
-            alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/CESMAC.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/FAPEAL.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/CNPq.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/CAPES.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/unesco.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/Advances in Cleaner Production Network.webp" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg"
-            src="assets/images/logotipos/webp/Ocean Decade.webp" alt="">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-5 py-10 sm:px-10 md:p-40">
+    <div *ngFor="let parceiro of parceiros" class="relative group">
+        <img class="h-auto max-w-full rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            [src]="parceiro.src" [alt]="parceiro.alt">
+        <div
+            class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300">
+        </div>
     </div>
 </div>
