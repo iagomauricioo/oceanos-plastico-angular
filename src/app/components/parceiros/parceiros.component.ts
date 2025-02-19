@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-parceiros',
   standalone: true,
   imports: [
-    NgFor
+    NgFor,
   ],
   templateUrl: './parceiros.component.html',
   styleUrl: './parceiros.component.css'
