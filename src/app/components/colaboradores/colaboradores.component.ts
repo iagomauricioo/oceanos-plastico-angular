@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
+import { OrderByPipe } from './order-by.pipe';
 
 @Component({
   selector: 'app-colaboradores',
   standalone: true,
-  imports: [ProfileCardComponent, NgFor],
+  imports: [ProfileCardComponent, NgFor,OrderByPipe],
   templateUrl: './colaboradores.component.html',
   styleUrl: './colaboradores.component.css',
 })
