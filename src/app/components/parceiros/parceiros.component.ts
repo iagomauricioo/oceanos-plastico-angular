@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [
     NgFor,
+    NgOptimizedImage
   ],
   templateUrl: './parceiros.component.html',
   styleUrl: './parceiros.component.css'

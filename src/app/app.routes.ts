@@ -3,6 +3,7 @@ import { ColaboradoresComponent } from './components/colaboradores/colaboradores
 import { HomeComponent } from './components/home/home.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { SolucoesComponent } from './components/solucoes/solucoes.component';
+import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.component';
 
 
 export const routes: Routes = [
@@ -29,5 +30,9 @@ export const routes: Routes = [
     {
         path: "solucoes",
         component: SolucoesComponent
+    },
+    {
+        path: "licenca-acpn",
+        component: LicencaAcpnComponent
     },
 ];
