@@ -1,16 +1,19 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { VideoComponent } from "../../shared/video/video.component";
 
 @Component({
   selector: 'app-parceiros',
   standalone: true,
   imports: [
     NgFor,
-  ],
+    VideoComponent
+],
   templateUrl: './parceiros.component.html',
   styleUrl: './parceiros.component.css'
 })
 export class ParceirosComponent {
+  src = "https://www.youtube.com/watch?v=MLK8BcnmO2A"
   parceiros = [
     { src: 'assets/images/logotipos/webp/policoncret.webp', alt: 'Policoncret' },
     { src: 'assets/images/logotipos/webp/PPGASA.webp', alt: 'PPGASA' },
