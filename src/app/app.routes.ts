@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { SolucoesComponent } from './components/solucoes/solucoes.component';
 import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.component';
+import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
 
 
 export const routes: Routes = [
@@ -26,6 +27,10 @@ export const routes: Routes = [
     {
         path: "contato",
         component: ContatoComponent
+    },
+    {
+        path: "divulgacao-cientifica",
+        component: DivulgacaoCientificaComponent
     },
     {
         path: "solucoes",
