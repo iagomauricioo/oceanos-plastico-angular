@@ -33,7 +33,7 @@ export const routes: Routes = [
         component: DivulgacaoCientificaComponent
     },
     {
-        path: "solucoes",
+        path: "projetos",
         component: SolucoesComponent
     },
     {

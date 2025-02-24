@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { FlagUsComponent } from "../flags-navbar/flag-us/flag-us.component";
-import { FlagBrazilComponent } from "../flags-navbar/flag-brazil/flag-brazil.component";
+import { FlagUsComponent } from '../flags-navbar/flag-us/flag-us.component';
+import { FlagBrazilComponent } from '../flags-navbar/flag-brazil/flag-brazil.component';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,10 @@ import { FlagBrazilComponent } from "../flags-navbar/flag-brazil/flag-brazil.com
     RouterLink,
     RouterLinkActive,
     FlagBrazilComponent,
-    FlagUsComponent
-],
+    FlagUsComponent,
+  ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-
 }

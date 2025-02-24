@@ -1,25 +1,64 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OrderByPipe } from './order-by.pipe';
+import { ColaboradorService } from '../../service/colaborador/colaborador.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
+import { PessoaDto } from '../../shared/dto/pessoa-dto';
 
 @Component({
   selector: 'app-colaboradores',
   standalone: true,
-  imports: [ProfileCardComponent, NgFor,OrderByPipe],
+  imports: [ProfileCardComponent, NgFor, OrderByPipe, HttpClientModule],
   templateUrl: './colaboradores.component.html',
   styleUrl: './colaboradores.component.css',
 })
 export class ColaboradoresComponent {
   pessoas: any[] = [];
+  colaboradores: any[] = [];
+  private apiUrl = 'http://localhost:3000/colaborador';
+
+  http = inject(HttpClient);
+
+  getColaboradores(): Observable<PessoaDto[]> {
+    return this.http.get<PessoaDto[]>(this.apiUrl).pipe(
+      map((colaboradores) =>
+        colaboradores.map((colaborador) => {
+          const primeiroNome = colaborador.nome
+            .split(' ')[0]
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase();
+
+          return {
+            nome: colaborador.nome,
+            cargo: colaborador.cargo,
+            foto: `assets/images/${primeiroNome}.png`,
+            linkedin: colaborador.linkedin,
+            lattes: colaborador.lattes,
+          };
+        })
+      )
+    );
+  }
+
+  ngOnInit(): void {
+    this.getColaboradores().subscribe((data) => {
+      this.colaboradores = data;
+    });
+  }
 
   constructor(private router: Router, private route: ActivatedRoute) {
-    if (this.router.url === '/colaboradores/lere') this.pessoas = this.pessoasLere;
-    else if (this.router.url === '/colaboradores/ppgasa') this.pessoas = this.pessoasPpgasa;
-    else if (this.router.url === '/colaboradores/univassouras') this.pessoas = this.pessoasUnivassouras;
+    if (this.router.url === '/colaboradores/lere')
+      this.pessoas = this.pessoasLere;
+    else if (this.router.url === '/colaboradores/ppgasa')
+      this.pessoas = this.pessoasPpgasa;
+    else if (this.router.url === '/colaboradores/univassouras')
+      this.pessoas = this.pessoasUnivassouras;
   }
-  
+
   pessoasLere = [
     /* Falta:
       Linkedin de Márcio Berto
@@ -91,8 +130,7 @@ export class ColaboradoresComponent {
       nome: 'Erivelto Souza',
       cargo: 'Pesquisador / Produtor audiovisual',
       foto: 'assets/images/erivelto.png',
-      linkedin:
-        'https://www.linkedin.com/in/erivelto-souza-320721271/',
+      linkedin: 'https://www.linkedin.com/in/erivelto-souza-320721271/',
       lattes:
         'https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2496458D4',
     },
@@ -103,22 +141,18 @@ export class ColaboradoresComponent {
       nome: 'Desconhecido PPGASA',
       cargo: 'Pesquisador',
       foto: 'assets/images/profile.png',
-      linkedin:
-        '',
-      lattes:
-        '',
+      linkedin: '',
+      lattes: '',
     },
-  ]
+  ];
 
   pessoasUnivassouras = [
     {
       nome: 'Desconhecido Univassouras',
       cargo: 'Pesquisador',
       foto: 'assets/images/profile.png',
-      linkedin:
-        '',
-      lattes:
-        '',
+      linkedin: '',
+      lattes: '',
     },
-  ]
+  ];
 }
