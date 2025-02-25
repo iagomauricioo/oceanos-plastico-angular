@@ -6,6 +6,7 @@ import { SolucoesComponent } from './components/solucoes/solucoes.component';
 import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.component';
 import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 export const routes: Routes = [
@@ -44,5 +45,9 @@ export const routes: Routes = [
     {
         path: "admin",
         component: AdminComponent
+    },
+    {
+        path: "login",
+        component: LoginComponent
     },
 ];

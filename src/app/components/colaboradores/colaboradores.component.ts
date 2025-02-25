@@ -3,7 +3,6 @@ import { ProfileCardComponent } from '../../shared/profile-card/profile-card.com
 import { NgFor } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OrderByPipe } from './order-by.pipe';
-import { ColaboradorService } from '../../service/colaborador/colaborador.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
