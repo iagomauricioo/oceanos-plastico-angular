@@ -2,7 +2,6 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
-import { OrderByPipe } from './order-by.pipe';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
@@ -10,7 +9,7 @@ import { PessoaDto } from '../../shared/dto/pessoa-dto';
 @Component({
   selector: 'app-colaboradores',
   standalone: true,
-  imports: [ProfileCardComponent, NgFor, OrderByPipe, HttpClientModule],
+  imports: [ProfileCardComponent, NgFor, HttpClientModule],
   templateUrl: './colaboradores.component.html',
   styleUrl: './colaboradores.component.css',
 })
