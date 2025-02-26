@@ -7,7 +7,7 @@ import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.com
 import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
-import { AuthGuard } from './service/auth.guard';
+import { AuthGuard } from './service/auth/auth.guard';
 
 
 export const routes: Routes = [

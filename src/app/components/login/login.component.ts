@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../../service/auth.service';
+import { AuthService } from '../../service/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -38,7 +38,7 @@ export class LoginComponent {
       const { username, password } = this.loginForm.value;
       this.authService.login(username, password).subscribe(
         (response) => {
-          this.authService.storeToken(response.token);
+          this.authService.storeToken(response.access_token);
           this.router.navigate(['/admin']);
         },
         (error) => {

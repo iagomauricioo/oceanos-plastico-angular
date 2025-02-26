@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor } from '@angular/common';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
-import { ColaboradoresService } from '../../service/colaboradores.service';
+import { ColaboradoresService } from '../../service/colaboradores/colaboradores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-colaboradores',
@@ -15,11 +16,29 @@ export class ColaboradoresComponent {
   pessoas: any[] = [];
   colaboradores: PessoaDto[] = [];
 
-  ngOnInit(): void {
-    this.colaboradoresService.getColaboradores().subscribe((data) => {
-      this.colaboradores = data;
-    });
+
+  constructor(
+    private colaboradoresService: ColaboradoresService,
+    private router: Router
+  ) {
+    if (this.router.url === '/colaboradores/ppgasa')
+      this.colaboradores = this.desconhecido;
+    else if (this.router.url === '/colaboradores/univassouras')
+      this.colaboradores = this.desconhecido;
+    else if (this.router.url === '/colaboradores/lere') {
+      this.colaboradoresService.getColaboradores().subscribe((data) => {
+        this.colaboradores = data;
+      });
+    }
   }
 
-  constructor(private colaboradoresService: ColaboradoresService) {}
+  desconhecido = [
+    {
+      nome: 'Desconhecido',
+      cargo: 'Pesquisador',
+      foto: 'assets/images/profile.png',
+      linkedin: '',
+      lattes: '',
+    },
+  ];
 }
