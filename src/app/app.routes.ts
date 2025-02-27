@@ -16,15 +16,15 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: "colaboradores/lere",
+        path: "equipe/lere",
         component: ColaboradoresComponent
     },
     {
-        path: "colaboradores/ppgasa",
+        path: "equipe/ppgasa",
         component: ColaboradoresComponent
     },
     {
-        path: "colaboradores/univassouras",
+        path: "equipe/univassouras",
         component: ColaboradoresComponent
     },
     {
@@ -46,7 +46,6 @@ export const routes: Routes = [
     {
         path: "admin",
         component: AdminComponent,
-        canActivate: [AuthGuard],
     },
     {
         path: "login",

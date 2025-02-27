@@ -21,11 +21,11 @@ export class ColaboradoresComponent {
     private colaboradoresService: ColaboradoresService,
     private router: Router
   ) {
-    if (this.router.url === '/colaboradores/ppgasa')
+    if (this.router.url === '/equipe/ppgasa')
       this.colaboradores = this.desconhecido;
-    else if (this.router.url === '/colaboradores/univassouras')
+    else if (this.router.url === '/equipe/univassouras')
       this.colaboradores = this.desconhecido;
-    else if (this.router.url === '/colaboradores/lere') {
+    else if (this.router.url === '/equipe/lere') {
       this.colaboradoresService.getColaboradores().subscribe((data) => {
         this.colaboradores = data;
       });

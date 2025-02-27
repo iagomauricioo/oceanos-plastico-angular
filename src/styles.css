@@ -43,5 +43,12 @@ body {
 .reveal {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 33%;
+}
+
+
+.reveal2 {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 }
