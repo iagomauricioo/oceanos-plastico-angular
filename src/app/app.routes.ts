@@ -5,6 +5,9 @@ import { ContatoComponent } from './components/contato/contato.component';
 import { SolucoesComponent } from './components/solucoes/solucoes.component';
 import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.component';
 import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './service/auth/auth.guard';
 
 
 export const routes: Routes = [
@@ -13,15 +16,15 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: "colaboradores/lere",
+        path: "equipe/lere",
         component: ColaboradoresComponent
     },
     {
-        path: "colaboradores/ppgasa",
+        path: "equipe/ppgasa",
         component: ColaboradoresComponent
     },
     {
-        path: "colaboradores/univassouras",
+        path: "equipe/univassouras",
         component: ColaboradoresComponent
     },
     {
@@ -33,11 +36,19 @@ export const routes: Routes = [
         component: DivulgacaoCientificaComponent
     },
     {
-        path: "solucoes",
+        path: "projetos",
         component: SolucoesComponent
     },
     {
         path: "licenca-acpn",
         component: LicencaAcpnComponent
+    },
+    {
+        path: "admin",
+        component: AdminComponent,
+    },
+    {
+        path: "login",
+        component: LoginComponent
     },
 ];
