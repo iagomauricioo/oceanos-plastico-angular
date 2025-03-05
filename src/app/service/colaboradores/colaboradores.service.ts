@@ -8,7 +8,7 @@ import { PessoaDto } from '../../shared/dto/pessoa-dto';
 })
 export class ColaboradoresService {
   colaboradores: any[] = [];
-  private apiUrl = 'http://localhost:3000/colaborador';
+  private apiUrl = 'http://54.161.194.57:3000/colaborador';
 
   constructor(private http: HttpClient) {}
 
