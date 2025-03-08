@@ -39,6 +39,7 @@ export class ColaboradoresComponent {
       foto: 'assets/images/profile.png',
       linkedin: '',
       lattes: '',
+      isActived: true
     },
   ];
 }

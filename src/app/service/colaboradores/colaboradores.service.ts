@@ -28,6 +28,7 @@ export class ColaboradoresService {
             foto: `assets/images/${primeiroNome}.png`,
             linkedin: colaborador.linkedin,
             lattes: colaborador.lattes,
+            isActived: colaborador.isActived
           };
         })
       )

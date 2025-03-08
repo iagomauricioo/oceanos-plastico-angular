@@ -3,5 +3,6 @@ export interface PessoaDto {
     cargo: string,
     foto: string,
     linkedin: string,
-    lattes: string
+    lattes: string,
+    isActived: boolean
 }
