@@ -4,26 +4,15 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   Router,
+  GuardResult,
+  MaybeAsync,
 } from '@angular/router';
-import { AuthService } from './auth.service';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
-
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
-    if (this.authService.isAuthenticated()) {
-      this.router.navigate(['/admin']);
-      return true;
-    } else {
-      this.router.navigate(['/login']);
-      return false;
-    }
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
+    throw new Error('Method not implemented.');
   }
 }
