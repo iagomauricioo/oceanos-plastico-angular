@@ -5,9 +5,8 @@ import { ContatoComponent } from './components/contato/contato.component';
 import { SolucoesComponent } from './components/solucoes/solucoes.component';
 import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.component';
 import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
-import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
-import { AuthGuard } from './service/auth/auth.guard';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 export const routes: Routes = [
@@ -44,7 +43,7 @@ export const routes: Routes = [
         component: LicencaAcpnComponent
     },
     {
-        path: "admin",
+        path: "adm",
         component: AdminComponent,
     },
     {
