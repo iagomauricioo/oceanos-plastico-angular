@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:tailwind-teste": "node dist/tailwind-teste/server/server.mjs"
+    "serve:ssr:oceanos-plastico-angular": "node dist/oceanos-plastico-angular/server/server.mjs"
   },
   "private": true,
   "dependencies": {

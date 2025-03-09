@@ -1,5 +1,14 @@
 {
   "routes": [
-    "/"
+    "/",
+    "/admin",
+    "/contato",
+    "/divulgacao-cientifica",
+    "/equipe/lere",
+    "/equipe/ppgasa",
+    "/equipe/univassouras",
+    "/licenca-acpn",
+    "/login",
+    "/projetos"
   ]
 }
