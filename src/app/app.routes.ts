@@ -43,7 +43,7 @@ export const routes: Routes = [
         component: LicencaAcpnComponent
     },
     {
-        path: "adm",
+        path: "admin",
         component: AdminComponent,
     },
     {
