@@ -7,6 +7,7 @@ import { LicencaAcpnComponent } from './components/licenca-acpn/licenca-acpn.com
 import { DivulgacaoCientificaComponent } from './components/divulgacao-cientifica/divulgacao-cientifica.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { JanelaAmbientalComponent } from './components/janela-ambiental/janela-ambiental.component';
 
 
 export const routes: Routes = [
@@ -50,4 +51,8 @@ export const routes: Routes = [
         path: "login",
         component: LoginComponent
     },
+    {
+        path: "janela-ambiental",
+        component: JanelaAmbientalComponent
+    }
 ];
