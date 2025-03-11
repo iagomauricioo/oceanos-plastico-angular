@@ -1,42 +1,26 @@
 <nav class="border-gray-200 bg-transparent fixed top-0 left-0 w-full z-50">
-  <div
-    class="max-w-[90vw] flex flex-wrap items-center justify-around mx-auto p-4 bg-primary rounded-xl mt-2"
-  >
+  <div class="max-w-[90vw] flex flex-wrap items-center justify-around mx-auto p-4 bg-primary rounded-xl mt-2">
     <a routerLink="/" class="flex flex-col lg:flex-row items-center space-x-3 rtl:space-x-reverse">
-      <img
-        src="assets/images/logos-leves/webp/oceanosdeplastico.webp"
-        class="h-32 w-auto"
-        alt="Logo oceanos de plástico"
-        k
-      />
-      <span
-        class="self-center text-xl lg:text-3xl font-semibold whitespace-nowrap text-white"
-      >
+      <img src="assets/images/logos-leves/webp/oceanosdeplastico.webp"
+        class="h-32 w-auto rounded-full" alt="Logo oceanos de plástico" k />
+      <span class="self-center text-xl lg:text-3xl font-semibold whitespace-nowrap text-white hover:cursor-default">
         Oceanos de Plástico
       </span>
     </a>
-    <div
-      class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse justify-between"
-    >
-      <button
-        type="button"
-        data-dropdown-toggle="language-dropdown-menu"
-        class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-secondary hover:text-white"
-      >
+    <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse justify-between">
+      <button type="button" data-dropdown-toggle="language-dropdown-menu"
+        class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-secondary hover:text-white">
         <app-flag-brazil />
         Brasil (PT-BR)
       </button>
       <div
         class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-secondary"
-        id="language-dropdown-menu"
-      >
+        id="language-dropdown-menu">
         <ul class="py-2 font-medium" role="none">
           <li>
-            <a
-              href="#"
+            <a href="#"
               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-blue-700 dark:hover:text-white"
-              role="menuitem"
-            >
+              role="menuitem">
               <div class="inline-flex items-center">
                 <app-flag-us />
                 English (US)
@@ -45,118 +29,60 @@
           </li>
         </ul>
       </div>
-      <button
-        data-collapse-toggle="navbar-language"
-        type="button"
+      <button data-collapse-toggle="navbar-language" type="button"
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-textWhite rounded-lg md:hidden hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-textWhite dark:hover:bg-secondary dark:focus:ring-gray-600"
-        aria-controls="navbar-language"
-        aria-expanded="false"
-      >
+        aria-controls="navbar-language" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
     </div>
-    <div
-      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-"
-      id="navbar-language"
-    >
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-" id="navbar-language">
       <ul
-        class="flex flex-col font-medium md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700 bg-primary py-4 min-h-16 min-w-[30vw] items-center justify-center"
-      >
+        class="flex flex-col font-medium md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700 bg-primary py-4 min-h-16 min-w-[30vw] items-center justify-center">
         <li>
-          <button
-            id="dropdownNavbarLink"
-            data-dropdown-toggle="dropdownNavbar"
+          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
             class="flex items-center justify-between w-full py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-            routerLinkActive="router-link-active"
-            routerLink="/equipe"
-          >
+            routerLinkActive="router-link-active" routerLink="/equipe">
             Equipe
-            <svg
-              class="w-2.5 h-2.5 ms-2.5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 4 4 4-4"
-              />
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 4 4 4-4" />
             </svg>
           </button>
-          <div
-            id="dropdownNavbar"
-            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-secondary dark:divide-gray-600"
-          >
-            <ul
-              class="py-2 text-sm text-textWhite dark:text-text"
-              aria-labelledby="dropdownLargeButton"
-            >
+          <div id="dropdownNavbar"
+            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-secondary dark:divide-gray-600">
+            <ul class="py-2 text-sm text-textWhite dark:text-text" aria-labelledby="dropdownLargeButton">
               <li>
-                <a
-                  routerLink="/equipe/ppgasa"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white"
-                  >PPGASA</a
-                >
+                <a routerLink="/equipe/ppgasa"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white">PPGASA</a>
               </li>
               <li>
-                <a
-                  routerLink="/equipe/lere"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white"
-                  >LERE</a
-                >
+                <a routerLink="/equipe/lere"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white">LERE</a>
               </li>
               <li>
-                <a
-                  routerLink="/equipe/univassouras"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white"
-                  >Univassouras</a
-                >
+                <a routerLink="/equipe/univassouras"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-blue-700 dark:hover:text-white">Univassouras</a>
               </li>
             </ul>
           </div>
         </li>
         <li>
-          <a
-            routerLink="/projetos"
-            routerLinkActive="router-link-active"
-            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Projetos</a
-          >
+          <a routerLink="/projetos" routerLinkActive="router-link-active"
+            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projetos</a>
         </li>
         <li>
-          <a
-            routerLink="/contato"
-            routerLinkActive="router-link-active"
-            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Contato</a
-          >
+          <a routerLink="/contato" routerLinkActive="router-link-active"
+            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contato</a>
         </li>
         <li>
-          <a
-            routerLink="/divulgacao-cientifica"
-            routerLinkActive="router-link-active"
-            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Divulgação Científica</a
-          >
+          <a routerLink="/divulgacao-cientifica" routerLinkActive="router-link-active"
+            class="block py-2 px-3 md:p-0 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Divulgação
+            Científica</a>
         </li>
       </ul>
     </div>
