@@ -1,27 +1,29 @@
-import { NgClass, NgFor, NgStyle } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [NgFor, NgStyle, NgClass],
+  imports: [NgFor, NgClass],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css',
 })
 export class CarouselComponent {
-  @Input() images: string[] = [];
-  currentIndex = 0;
+  @Input()
+  images: string[] = [];
 
-  next() {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  activeIndex: number = 0;
+
+  setActiveIndex(index: number): void {
+    this.activeIndex = index;
   }
 
-  prev() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.images.length) % this.images.length;
+  previousImage(): void {
+    this.activeIndex =
+      (this.activeIndex - 1 + this.images.length) % this.images.length;
   }
 
-  goTo(index: number) {
-    this.currentIndex = index;
+  nextImage(): void {
+    this.activeIndex = (this.activeIndex + 1) % this.images.length;
   }
 }
