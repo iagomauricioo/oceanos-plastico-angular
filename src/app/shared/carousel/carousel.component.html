@@ -1,0 +1,56 @@
+<div id="default-carousel" class="relative w-full md:w-[25vw] overflow-hidden">
+  <div class="relative w-full h-[40vh] md:h-[60vh] lg:h-[75vh] overflow-hidden">
+    <div
+      class="flex transition-transform duration-500 ease-in-out"
+      [ngStyle]="{ transform: 'translateX(' + -currentIndex * 100 + '%)' }"
+    >
+      <div *ngFor="let image of images" class="min-w-full">
+        <img [src]="image" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider indicators -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <button
+      *ngFor="let image of images; let i = index"
+      type="button"
+      class="w-2 h-2 md:w-3 md:h-3 rounded-full"
+      [ngClass]="{
+        'bg-white': currentIndex === i,
+        'bg-gray-400': currentIndex !== i
+      }"
+      (click)="goTo(i)"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+    ></button>
+  </div>
+
+  <!-- Botão Anterior -->
+  <button
+    type="button"
+    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 p-3 rounded-full text-white
+    hover:bg-white hover:bg-opacity-70 transition-all"
+    (click)="prev()"
+  >
+    <svg class="w-5 md:w-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 10 10">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1L1 5l4 4" />
+    </svg>
+  </button>
+
+  <!-- Botão Próximo -->
+  <button
+    type="button"
+    class="absolute top-1/2 right-2 transform -translate-y-1/2 flex items-center justify-center p-2 rounded-full bg-white/30 dark:bg-gray-800/30 hover:bg-white/50 dark:hover:bg-gray-800/60"
+    (click)="next()"
+  >
+    <svg class="w-5 md:w-6" aria-hidden="true" fill="none" viewBox="0 0 6 10">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1l4 4-4 4" />
+    </svg>
+  </button>
+</div>
+
+<style>
+  button {
+    transition: all 0.3s ease;
+  }
+</style>
