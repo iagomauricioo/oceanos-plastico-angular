@@ -8,6 +8,7 @@ import { DivulgacaoCientificaComponent } from './components/divulgacao-cientific
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { JanelaAmbientalComponent } from './components/janela-ambiental/janela-ambiental.component';
+import { CarouselComponent } from './shared/carousel/carousel.component';
 
 
 export const routes: Routes = [
@@ -54,5 +55,9 @@ export const routes: Routes = [
     {
         path: "janela-ambiental",
         component: JanelaAmbientalComponent
+    },
+    {
+        path: "carousel",
+        component: CarouselComponent
     }
 ];
