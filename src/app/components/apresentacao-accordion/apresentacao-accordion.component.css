@@ -1,0 +1,12 @@
+[data-accordion-target][aria-expanded="true"] {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+}
+
+[data-accordion-target][aria-expanded="true"]:hover {
+  background-color: rgb(241, 241, 241) !important;
+}
+
+[data-accordion-target][aria-expanded="false"] {
+  color: var(--primary-color) !important;
+}

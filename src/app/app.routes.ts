@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { JanelaAmbientalComponent } from './components/janela-ambiental/janela-ambiental.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
+import { RealizacoesAcademicasComponent } from './components/realizacoes-academicas/realizacoes-academicas.component';
+import { LinhaDoTempoComponent } from './components/linha-do-tempo/linha-do-tempo.component';
 
 
 export const routes: Routes = [
@@ -59,5 +61,13 @@ export const routes: Routes = [
     {
         path: "carousel",
         component: CarouselComponent
-    }
+    },
+    {
+        path: "realizacoes-academicas",
+        component: RealizacoesAcademicasComponent
+    },
+    {
+        path: "linha-do-tempo",
+        component: LinhaDoTempoComponent
+    },
 ];
