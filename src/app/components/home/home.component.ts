@@ -11,7 +11,7 @@ import { ApresentacaoAccordionComponent } from "../apresentacao-accordion/aprese
     MainComponent,
     ProjetosComponent,
     ParceirosComponent,
-    ApresentacaoAccordionComponent
+    ApresentacaoAccordionComponent,
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
