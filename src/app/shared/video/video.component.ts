@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './video.component.css'
 })
 export class VideoComponent {
-  @Input() url: any;
+  @Input() src!: string;
 }
