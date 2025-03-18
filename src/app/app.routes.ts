@@ -11,6 +11,7 @@ import { JanelaAmbientalComponent } from './components/janela-ambiental/janela-a
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { RealizacoesAcademicasComponent } from './components/realizacoes-academicas/realizacoes-academicas.component';
 import { LinhaDoTempoComponent } from './components/linha-do-tempo/linha-do-tempo.component';
+import { SkeletonCardComponent } from './shared/skeleton-card/skeleton-card.component';
 
 
 export const routes: Routes = [
@@ -69,5 +70,9 @@ export const routes: Routes = [
     {
         path: "linha-do-tempo",
         component: LinhaDoTempoComponent
+    },
+    {
+        path: "skeleton",
+        component: SkeletonCardComponent
     },
 ];

@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
 import { ColaboradoresService } from '../../service/colaboradores/colaboradores.service';
 import { Router } from '@angular/router';
+import { SkeletonCardComponent } from '../../shared/skeleton-card/skeleton-card.component';
 
 @Component({
   selector: 'app-colaboradores',
   standalone: true,
-  imports: [ProfileCardComponent, NgFor],
+  imports: [ProfileCardComponent, NgFor, NgIf, SkeletonCardComponent],
   templateUrl: './colaboradores.component.html',
   styleUrl: './colaboradores.component.css',
 })
 export class ColaboradoresComponent {
   pessoas: any[] = [];
   colaboradores: PessoaDto[] = [];
-
+  loading = true;
 
   constructor(
     private colaboradoresService: ColaboradoresService,
@@ -28,7 +29,11 @@ export class ColaboradoresComponent {
     else if (this.router.url === '/equipe/lere') {
       this.colaboradoresService.getColaboradores().subscribe((data) => {
         this.colaboradores = data;
+        this.loading = false;
       });
+    }
+    else {
+      this.loading = false;
     }
   }
 
@@ -42,4 +47,8 @@ export class ColaboradoresComponent {
       isActived: true
     },
   ];
+
+  async sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 }
