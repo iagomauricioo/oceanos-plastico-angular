@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CarouselComponent } from "../../shared/carousel/carousel.component";
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-janela-ambiental',
   standalone: true,
-  imports: [CarouselComponent],
+  imports: [CarouselComponent, NgFor],
   templateUrl: './janela-ambiental.component.html',
   styleUrl: './janela-ambiental.component.css'
 })
