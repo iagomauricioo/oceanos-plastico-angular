@@ -27,8 +27,7 @@ export class ColaboradoresComponent {
     else if (this.router.url === '/equipe/univassouras')
       this.colaboradores = this.desconhecido;
     else if (this.router.url === '/equipe/lere') {
-      this.colaboradoresService.getColaboradores().subscribe(async (data) => {
-        await this.sleep(1000);
+      this.colaboradoresService.getColaboradores().subscribe((data) => {
         this.colaboradores = data;
         this.loading = false;
       });
@@ -49,7 +48,7 @@ export class ColaboradoresComponent {
     },
   ];
 
-  async sleep(ms: number): Promise<void> {
+  sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
