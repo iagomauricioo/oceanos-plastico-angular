@@ -27,7 +27,8 @@ export class ColaboradoresComponent {
     else if (this.router.url === '/equipe/univassouras')
       this.colaboradores = this.desconhecido;
     else if (this.router.url === '/equipe/lere') {
-      this.colaboradoresService.getColaboradores().subscribe((data) => {
+      this.colaboradoresService.getColaboradores().subscribe(async (data) => {
+        await this.sleep(1000);
         this.colaboradores = data;
         this.loading = false;
       });
