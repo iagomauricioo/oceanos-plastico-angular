@@ -22,13 +22,14 @@ import { MessageDTO } from '../../shared/dto/message-dto';
 export class ChatbotComponent {
   userMessage: string = '';
   messages: MessageDTO[] = [];
+  isTyping: boolean = false;
 
   constructor(
     private chatbotService: ChatbotService,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   sendMessage(): void {
     if (!this.userMessage.trim()) {
@@ -46,13 +47,15 @@ export class ChatbotComponent {
       message: this.userMessage,
     });
 
+    this.isTyping = true;
+
     this.chatbotService.sendMessage(this.userMessage).subscribe({
       next: (response) => {
-        const formattedMessage = this.formatMessage(response.message);
+        this.isTyping = false;
         this.messages.push({
           sender: 'EcoHero',
           time: currentTime,
-          message: formattedMessage,
+          message: response.message,
         });
 
         this.cdr.detectChanges();
@@ -62,20 +65,5 @@ export class ChatbotComponent {
       },
     });
     this.userMessage = '';
-  }
-
-  formatMessage(message: string): string {
-    let formattedMessage = message;
-
-    formattedMessage = formattedMessage.replace(
-      /(\* [A-Za-z]+ \:)/g,
-      '<span style="font-weight: bold; color: #0000FF;">$1</span>'
-    );
-
-    formattedMessage = formattedMessage.replace(
-      /\*\*([A-Za-z]+)\*\*/g,
-      '<span style="font-weight: bold; color: #FF0000;">$1</span>'
-    );
-    return formattedMessage;
   }
 }
