@@ -3,6 +3,7 @@ import { MainComponent } from '../main/main.component';
 import { ProjetosComponent } from '../projetos/projetos.component';
 import { ParceirosComponent } from "../parceiros/parceiros.component";
 import { ApresentacaoAccordionComponent } from "../apresentacao-accordion/apresentacao-accordion.component";
+import { ChatbotComponent } from "../chatbot/chatbot.component";
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import { ApresentacaoAccordionComponent } from "../apresentacao-accordion/aprese
     ProjetosComponent,
     ParceirosComponent,
     ApresentacaoAccordionComponent,
+    ChatbotComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

@@ -1,0 +1,73 @@
+<main class="min-h-screen p-10 flex items-start justify-center rounded-lg mb-2">
+  <div
+    class="flex flex-col w-full max-w-screen-md h-full space-y-4 overflow-y-auto items-center"
+  >
+    <h1
+      class="flex items-center justify-center font-extrabold text-white text-3xl sm:text-4xl md:text-6xl"
+    >
+      EcoHero
+    </h1>
+    <h2 class="flex items-center justify-center text-center text-white text-xl">
+      Conheço nossa inteligência artificial treinada para responder suas dúvidas
+      sobre o meio-ambiente, o EcoHero!
+    </h2>
+    <img
+      src="assets/images/ecohero/ecohero-pessoa.png"
+      alt="ecohero"
+      class="w-full h-auto rounded-lg"
+    />
+
+    <!-- Mensagem inicial do EcoHero -->
+    <!-- <app-message-left
+      class="self-center"
+      [sender]="'EcoHero'"
+      [message]="
+        'Olá! Eu sou o EcoHero, um assistente especializado em meio ambiente, sustentabilidade, combate ao plástico e reciclagem. Fui criado para responder perguntas relacionadas ao meio ambiente e te ajudar com práticas e soluções sustentáveis.\n Escreva mensagens para mim e vamos conversar! 😄'
+      "
+    >
+    </app-message-left> -->
+
+    <!-- Mensagens do Chat -->
+    <div class="flex flex-col items-center w-full">
+      <div
+        *ngFor="let msg of messages"
+        class="flex flex-col items-center w-full"
+      >
+        <app-message-left
+          *ngIf="msg.sender === 'EcoHero'"
+          class="self-center mb-3"
+          [sender]="msg.sender"
+          [time]="msg.time"
+          [message]="msg.message"
+        >
+        </app-message-left>
+
+        <app-message-right
+          *ngIf="msg.sender === 'Você'"
+          class="self-center mb-3"
+          [sender]="msg.sender"
+          [time]="msg.time"
+          [message]="msg.message"
+        >
+        </app-message-right>
+      </div>
+    </div>
+
+    <!-- Campo de entrada para o usuário -->
+    <div class="flex items-center mt-4 space-x-2 w-full max-w-lg">
+      <input
+        [(ngModel)]="userMessage"
+        type="text"
+        class="w-full p-3 rounded-md border border-gray-300"
+        placeholder="Digite sua mensagem..."
+        (keydown.enter)="sendMessage()"
+      />
+      <button
+        class="bg-primary text-white p-2 rounded-full"
+        (click)="sendMessage()"
+      >
+        Enviar
+      </button>
+    </div>
+  </div>
+</main>
