@@ -8,7 +8,7 @@ import { PessoaDto } from '../../shared/dto/pessoa-dto';
 })
 export class ColaboradoresService {
   colaboradores: any[] = [];
-  private apiUrl = 'https://api.oceanosdeplastico.com.br/colaborador';
+  private apiUrl = 'https://iagomauricio.tech/colaborador';
 
   constructor(private http: HttpClient) {}
 
