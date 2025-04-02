@@ -9,7 +9,7 @@ export class ChatbotService {
   constructor(private http: HttpClient) {}
   sendMessage(question: string): Observable<{ message: string }> {
     return this.http.post<{ message: string }>(
-      'https://api.oceanosdeplastico.com.br/chatbot/ask',
+      'https://iagomauricio.tech/chatbot/ask',
       {
         question: question,
       }
