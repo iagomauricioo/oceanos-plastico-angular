@@ -5,6 +5,7 @@ import { PessoaDto } from '../../shared/dto/pessoa-dto';
 import { ColaboradoresService } from '../../service/colaboradores/colaboradores.service';
 import { Router } from '@angular/router';
 import { SkeletonCardComponent } from '../../shared/skeleton-card/skeleton-card.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-colaboradores',
@@ -20,20 +21,24 @@ export class ColaboradoresComponent {
 
   constructor(
     private colaboradoresService: ColaboradoresService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {
-    if (this.router.url === '/equipe/ppgasa')
-      this.colaboradores = this.desconhecido;
-    else if (this.router.url === '/equipe/univassouras')
-      this.colaboradores = this.desconhecido;
-    else if (this.router.url === '/equipe/lere') {
-      this.colaboradoresService.getColaboradores().subscribe((data) => {
-        this.colaboradores = data;
-        this.loading = false;
-      });
-    }
-    else {
-      this.loading = false;
+    const urlPath = this.router.url.split('/').pop(); // pega 'lere', 'ppgasa', etc.
+    console.log(urlPath);
+    if (
+      urlPath === 'lere' ||
+      urlPath === 'ppgasa' ||
+      urlPath === 'univassouras'
+    ) {
+      this.colaboradoresService
+        .getColaboradoresByInstituicao(urlPath)
+        .subscribe({
+          next: (data) => {
+            this.colaboradores = data;
+            this.loading = false;
+          },
+        });
     }
   }
 
@@ -44,11 +49,11 @@ export class ColaboradoresComponent {
       foto: 'assets/images/profile.png',
       linkedin: '',
       lattes: '',
-      isActived: true
+      isActived: true,
     },
   ];
 
   sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }

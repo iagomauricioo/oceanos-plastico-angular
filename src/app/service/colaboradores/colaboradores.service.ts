@@ -28,11 +28,35 @@ export class ColaboradoresService {
             foto: `assets/images/${primeiroNome}.png`,
             linkedin: colaborador.linkedin,
             lattes: colaborador.lattes,
-            isActived: colaborador.isActived
+            isActived: colaborador.isActived,
           };
         })
       )
     );
+  }
+
+  getColaboradoresByInstituicao(instituicao: string): Observable<PessoaDto[]> {
+    return this.http
+      .get<PessoaDto[]>(`${this.apiUrl}/instituicao/${instituicao}`)
+      .pipe(
+        map((colaboradores) =>
+          colaboradores.map((colaborador) => {
+            const primeiroNome = colaborador.nome
+              .split(' ')[0]
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .toLowerCase();
+            return {
+              nome: colaborador.nome,
+              cargo: colaborador.cargo,
+              foto: `assets/images/equipe/${primeiroNome}.png`,
+              linkedin: colaborador.linkedin,
+              lattes: colaborador.lattes,
+              isActived: colaborador.isActived,
+            };
+          })
+        )
+      );
   }
 
   ngOnInit(): void {
