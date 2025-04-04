@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
 import { NgFor, NgIf } from '@angular/common';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
@@ -14,32 +14,34 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './colaboradores.component.html',
   styleUrl: './colaboradores.component.css',
 })
-export class ColaboradoresComponent {
+export class ColaboradoresComponent implements OnInit {
   pessoas: any[] = [];
   colaboradores: PessoaDto[] = [];
   loading = true;
+  instituicao!: string;
 
   constructor(
     private colaboradoresService: ColaboradoresService,
     private router: Router,
     private route: ActivatedRoute
-  ) {
-    const urlPath = this.router.url.split('/').pop(); // pega 'lere', 'ppgasa', etc.
-    console.log(urlPath);
-    if (
-      urlPath === 'lere' ||
-      urlPath === 'ppgasa' ||
-      urlPath === 'univassouras'
-    ) {
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      this.instituicao = params['instituicao'];
       this.colaboradoresService
-        .getColaboradoresByInstituicao(urlPath)
+        .getColaboradoresByInstituicao(this.instituicao)
         .subscribe({
           next: (data) => {
             this.colaboradores = data;
             this.loading = false;
           },
+          error: () => {
+            this.colaboradores = [];
+            this.loading = false;
+          },
         });
-    }
+    });
   }
 
   desconhecido = [

@@ -13,66 +13,57 @@ import { RealizacoesAcademicasComponent } from './components/realizacoes-academi
 import { LinhaDoTempoComponent } from './components/linha-do-tempo/linha-do-tempo.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
-
 export const routes: Routes = [
-    {
-        path: "",
-        component: HomeComponent
-    },
-    {
-        path: "equipe/lere",
-        component: ColaboradoresComponent
-    },
-    {
-        path: "equipe/ppgasa",
-        component: ColaboradoresComponent
-    },
-    {
-        path: "equipe/univassouras",
-        component: ColaboradoresComponent
-    },
-    {
-        path: "contato",
-        component: ContatoComponent
-    },
-    {
-        path: "divulgacao-cientifica",
-        component: DivulgacaoCientificaComponent
-    },
-    {
-        path: "projetos",
-        component: SolucoesComponent
-    },
-    {
-        path: "licenca-acpn",
-        component: LicencaAcpnComponent
-    },
-    {
-        path: "admin",
-        component: AdminComponent,
-    },
-    {
-        path: "login",
-        component: LoginComponent
-    },
-    {
-        path: "janela-ambiental",
-        component: JanelaAmbientalComponent
-    },
-    {
-        path: "carousel",
-        component: CarouselComponent
-    },
-    {
-        path: "realizacoes-academicas",
-        component: RealizacoesAcademicasComponent
-    },
-    {
-        path: "linha-do-tempo",
-        component: LinhaDoTempoComponent
-    },
-    {
-        path: "ecohero",
-        component: ChatbotComponent
-    },
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'equipe/:instituicao',
+    component: ColaboradoresComponent,
+  },
+  {
+    path: 'contato',
+    component: ContatoComponent,
+  },
+  {
+    path: 'divulgacao-cientifica',
+    component: DivulgacaoCientificaComponent,
+  },
+  {
+    path: 'projetos',
+    component: SolucoesComponent,
+  },
+  {
+    path: 'licenca-acpn',
+    component: LicencaAcpnComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'janela-ambiental',
+    component: JanelaAmbientalComponent,
+  },
+  {
+    path: 'carousel',
+    component: CarouselComponent,
+  },
+  {
+    path: 'realizacoes-academicas',
+    component: RealizacoesAcademicasComponent,
+  },
+  {
+    path: 'linha-do-tempo',
+    component: LinhaDoTempoComponent,
+  },
+  {
+    path: 'ecohero',
+    component: ChatbotComponent,
+  },
 ];
