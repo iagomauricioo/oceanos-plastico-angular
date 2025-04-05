@@ -19,6 +19,10 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'equipe',
+    component: ColaboradoresComponent,
+  },
+  {
     path: 'equipe/:instituicao',
     component: ColaboradoresComponent,
   },

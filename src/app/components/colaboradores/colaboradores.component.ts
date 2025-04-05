@@ -29,6 +29,16 @@ export class ColaboradoresComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.instituicao = params['instituicao'];
+      if (!this.instituicao) {
+        this.router.navigate(['/equipe']);
+        this.colaboradoresService.getColaboradores().subscribe({
+          next: (data) => {
+            this.colaboradores = data;
+            this.loading = false;
+          }
+        });
+        return;
+      }
       this.colaboradoresService
         .getColaboradoresByInstituicao(this.instituicao)
         .subscribe({
