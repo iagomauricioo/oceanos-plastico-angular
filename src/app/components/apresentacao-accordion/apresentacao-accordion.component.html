@@ -1,89 +1,52 @@
 <main class="min-h-screen text-primary bg-white rounded-lg mb-2">
   <div id="accordion-nested-parent" data-accordion="collapse">
     <h2 id="accordion-collapse-heading-1">
-      <button
-        type="button"
+      <button type="button"
         class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-1 hover:bg-gray-100 focus:ring-gray-200 gap-3 rounded-lg bg-white"
-        data-accordion-target="#accordion-collapse-body-1"
-        aria-expanded="true"
-        aria-controls="accordion-collapse-body-1"
-      >
+        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+        aria-controls="accordion-collapse-body-1">
         <span class="text-primary">APRESENTAÇÃO</span>
-        <svg
-          data-accordion-icon
-          class="w-3 h-3 rotate-180 shrink-0"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 10 6"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5 5 1 1 5"
-          />
+        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5 5 1 1 5" />
         </svg>
       </button>
     </h2>
-    <div
-      id="accordion-collapse-body-1"
-      class="hidden"
-      aria-labelledby="accordion-collapse-heading-1"
-    >
+    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
       <div class="p-5 border border-b-0 border-gray-200">
         <p class="mb-2 text-primary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          quibusdam eveniet consequuntur quo ab, sapiente rerum? Nisi et
-          doloribus sit architecto corrupti quisquam voluptatem dolore. Id
-          maxime earum, consequuntur quidem nulla autem repudiandae laborum
-          alias accusantium quam voluptates, esse quaerat cumque consequatur
-          distinctio at facilis. Rerum sequi eligendi odit dolore!
-        </p>
-        <p class="mb-2 text-primary">
-          Conheça nossa equipe de colaboradores
-          <a href="#" class="text-blue-600 hover:underline">clicando aqui</a>
-          e veja nosso lattes e linkedin!
-        </p>
-        <p class="mb-4 text-primary">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem,
-          ipsum!
+          O Projeto de Pesquisa <b>Oceanos de Plástico</b> do Centro Universitário Cesmac, aprovado pelo Conselho Nacional de
+          Desenvolvimento Científico e Tecnológico (<b>CNPq</b>), tem como objetivo o monitoramento da cadeia produtiva do
+          plástico, integrando estratégias de descarte e reciclagem para enfrentamento da poluição dos oceanos.
+
+          Liderado pela Coordenação do Programa de Pós-Graduação em Análise de Sistemas Ambientais (<b>PPGASA</b>), o projeto
+          conta com o suporte da empresa <b>Policoncret</b>, focada na produção de artefatos de concreto com adição de
+          polímeros reciclados.
+
+          Com o foco na sustentabilidade, a partir da compreensão de que a reciclagem linear do plástico é pouco
+          valorizada, o projeto, coordenado pelo <b>Dr. Prof. Jessé Marques</b>, foca em <strong class="text-lg"> proporcionar a diminuição da poluição
+          marinha e de áreas alagadas, como os mangues, através da definição de estratégias de descarte e de reciclagem
+          do lixo plástico oceânico.</strong> O projeto reúne mais de 60 pesquisadores de diversas instituições de ensino, sob a
+          coordenação do Centro Universitário Cesmac.
         </p>
         <!-- Nested accordion -->
         <div id="accordion-nested-collapse" data-accordion="collapse">
           <h2 id="accordion-nested-collapse-heading-1">
-            <button
-              type="button"
+            <button type="button"
               class="flex items-center justify-between w-full p-5 rounded-t-xl font-medium rtl:text-right text-primary border border-b-0 border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3"
-              data-accordion-target="#accordion-nested-collapse-body-1"
-              aria-expanded="false"
-              aria-controls="accordion-nested-collapse-body-1"
-            >
+              data-accordion-target="#accordion-nested-collapse-body-1" aria-expanded="false"
+              aria-controls="accordion-nested-collapse-body-1">
               <span>O que fazemos?</span>
-              <svg
-                data-accordion-icon
-                class="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
               </svg>
             </button>
           </h2>
-          <div
-            id="accordion-nested-collapse-body-1"
-            class="hidden"
-            aria-labelledby="accordion-nested-collapse-heading-1"
-          >
+          <div id="accordion-nested-collapse-body-1" class="hidden"
+            aria-labelledby="accordion-nested-collapse-heading-1">
             <div class="p-5 border border-b-0 border-gray-200">
               <p class="text-primary">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -94,37 +57,20 @@
             </div>
           </div>
           <h2 id="accordion-nested-collapse-heading-2">
-            <button
-              type="button"
+            <button type="button"
               class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-b-0 border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3"
-              data-accordion-target="#accordion-nested-collapse-body-2"
-              aria-expanded="false"
-              aria-controls="accordion-nested-collapse-body-2"
-            >
+              data-accordion-target="#accordion-nested-collapse-body-2" aria-expanded="false"
+              aria-controls="accordion-nested-collapse-body-2">
               <span>Onde estamos localizados?</span>
-              <svg
-                data-accordion-icon
-                class="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
               </svg>
             </button>
           </h2>
-          <div
-            id="accordion-nested-collapse-body-2"
-            class="hidden"
-            aria-labelledby="accordion-nested-collapse-heading-2"
-          >
+          <div id="accordion-nested-collapse-body-2" class="hidden"
+            aria-labelledby="accordion-nested-collapse-heading-2">
             <div class="p-5 border border-b-0 border-gray-200">
               <p class="text-primary">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -135,37 +81,20 @@
             </div>
           </div>
           <h2 id="accordion-nested-collapse-heading-3">
-            <button
-              type="button"
+            <button type="button"
               class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3"
-              data-accordion-target="#accordion-nested-collapse-body-3"
-              aria-expanded="false"
-              aria-controls="accordion-nested-collapse-body-3"
-            >
+              data-accordion-target="#accordion-nested-collapse-body-3" aria-expanded="false"
+              aria-controls="accordion-nested-collapse-body-3">
               <span>Como posso contribuir?</span>
-              <svg
-                data-accordion-icon
-                class="w-3 h-3 rotate-180 shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5 5 1 1 5"
-                />
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
               </svg>
             </button>
           </h2>
-          <div
-            id="accordion-nested-collapse-body-3"
-            class="hidden"
-            aria-labelledby="accordion-nested-collapse-heading-3"
-          >
+          <div id="accordion-nested-collapse-body-3" class="hidden"
+            aria-labelledby="accordion-nested-collapse-heading-3">
             <div class="p-5 border border-gray-200">
               <p class="mb-2 text-primary">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
@@ -176,19 +105,35 @@
               <p class="mb-2 text-primary">Lorem ipsum dolor sit amet.</p>
               <ul class="ps-5 text-primary list-disc">
                 <li>
-                  <a href="#" class="text-blue-600 hover:underline"
-                    >Clique aqui!</a
-                  >
+                  <a href="#" class="text-blue-600 hover:underline">Clique aqui!</a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    rel="nofollow"
-                    class="text-blue-600 hover:underline"
-                    >Clique aqui! 2</a
-                  >
+                  <a href="#" rel="nofollow" class="text-blue-600 hover:underline">Clique aqui! 2</a>
                 </li>
               </ul>
+            </div>
+          </div>
+          <h2 id="accordion-nested-collapse-heading-4">
+            <button type="button"
+              class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3"
+              data-accordion-target="#accordion-nested-collapse-body-4" aria-expanded="false"
+              aria-controls="accordion-nested-collapse-body-4">
+              <span>Quem trabalha no projeto?</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5 5 1 1 5" />
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-nested-collapse-body-4" class="hidden"
+            aria-labelledby="accordion-nested-collapse-heading-4">
+            <div class="p-5 border border-gray-200">
+              <p class="mb-2 text-primary">
+                Conheça nossa equipe de colaboradores
+                <a routerLink="/equipe/lere" class="text-blue-600 hover:underline">clicando aqui</a>
+                e veja nosso lattes e linkedin!
+              </p>
             </div>
           </div>
         </div>
@@ -197,51 +142,29 @@
     </div>
 
     <h2 id="accordion-collapse-heading-2">
-      <button
-        type="button"
+      <button type="button"
         class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-1 hover:bg-gray-100 focus:ring-gray-200 gap-3 rounded-lg bg-white"
-        data-accordion-target="#accordion-collapse-body-1"
-        aria-expanded="true"
-        aria-controls="accordion-collapse-body-2"
-        routerLink="realizacoes-academicas"
-      >
+        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+        aria-controls="accordion-collapse-body-2" routerLink="realizacoes-academicas">
         <span class="text-primary">REALIZAÇÕES ACADÊMICAS</span>
         <i class="pi pi-external-link"></i>
       </button>
     </h2>
 
     <h2 id="accordion-collapse-heading-3">
-      <button
-        type="button"
+      <button type="button"
         class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border border-gray-200 focus:ring-1 focus:ring-gray-200 hover:bg-gray-100 gap-3 rounded-lg"
-        data-accordion-target="#accordion-collapse-body-3"
-        aria-expanded="false"
-        aria-controls="accordion-collapse-body-3"
-      >
+        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+        aria-controls="accordion-collapse-body-3">
         <span class="text-primary">UNIP</span>
-        <svg
-          data-accordion-icon
-          class="w-3 h-3 rotate-180 shrink-0"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 10 6"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5 5 1 1 5"
-          />
+        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5 5 1 1 5" />
         </svg>
       </button>
     </h2>
-    <div
-      id="accordion-collapse-body-3"
-      class="hidden"
-      aria-labelledby="accordion-collapse-heading-3"
-    >
+    <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
       <div class="p-5 border border-gray-200">
         <p class="mb-2 text-primary">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
@@ -258,15 +181,13 @@
     </div>
 
     <h2 id="accordion-collapse-heading-4">
-        <button
-          type="button"
-          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-1 hover:bg-gray-100 focus:ring-gray-200 gap-3 rounded-lg bg-white"
-          routerLink="linha-do-tempo"
-        >
-          <span class="text-primary">LINHA DO TEMPO</span>
-          <i class="pi pi-external-link text-primary"></i>
-        </button>
-      </h2>
+      <button type="button"
+        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-1 hover:bg-gray-100 focus:ring-gray-200 gap-3 rounded-lg bg-white"
+        routerLink="linha-do-tempo">
+        <span class="text-primary">LINHA DO TEMPO</span>
+        <i class="pi pi-external-link text-primary"></i>
+      </button>
+    </h2>
 
   </div>
 </main>
