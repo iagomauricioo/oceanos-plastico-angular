@@ -24,7 +24,7 @@ export class ColaboradoresComponent implements OnInit {
     private colaboradoresService: ColaboradoresService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -34,10 +34,6 @@ export class ColaboradoresComponent implements OnInit {
         .subscribe({
           next: (data) => {
             this.colaboradores = data;
-            this.loading = false;
-          },
-          error: () => {
-            this.colaboradores = [];
             this.loading = false;
           },
         });
