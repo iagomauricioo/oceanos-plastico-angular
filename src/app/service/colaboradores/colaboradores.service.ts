@@ -49,6 +49,9 @@ export class ColaboradoresService {
             if (colaborador.nome === 'Ana Vládia') {
               primeiroNome = 'anavladia';
             }
+            if (colaborador.nome === 'Daniela Lima') {
+              primeiroNome = 'danielalima';
+            }
             const caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
             return {
               nome: colaborador.nome,
