@@ -10,7 +10,7 @@ export class ColaboradoresService {
   colaboradores: any[] = [];
   private apiUrl = 'https://server.oceanosdeplastico.com.br/colaborador';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getColaboradores(): Observable<PessoaDto[]> {
     return this.http.get<PessoaDto[]>(this.apiUrl).pipe(
@@ -41,15 +41,19 @@ export class ColaboradoresService {
       .pipe(
         map((colaboradores) =>
           colaboradores.map((colaborador) => {
-            const primeiroNome = colaborador.nome
+            let primeiroNome = colaborador.nome
               .split(' ')[0]
               .normalize('NFD')
               .replace(/[\u0300-\u036f]/g, '')
               .toLowerCase();
+            if (colaborador.nome === 'Ana Vládia') {
+              primeiroNome = 'anavladia';
+            }
+            const caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
             return {
               nome: colaborador.nome,
               cargo: colaborador.cargo,
-              foto: `assets/images/equipe/${primeiroNome}.png`,
+              foto: caminhoFoto,
               linkedin: colaborador.linkedin,
               lattes: colaborador.lattes,
               isActived: colaborador.isActived,
