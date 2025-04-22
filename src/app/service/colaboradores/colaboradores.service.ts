@@ -57,6 +57,12 @@ export class ColaboradoresService {
             if (colaborador.nome === 'Filipe Mateus') {
               colaborador.baixarCurriculo = 'assets/docs/cv-algarve-filipe.pdf';
             }
+            if (colaborador.nome === 'Helena Fernandez') {
+              colaborador.baixarCurriculo = 'assets/docs/breve_CV_Helena Fernandez.pdf';
+            }
+            if (colaborador.nome === 'Fernando Miguel') {
+              colaborador.baixarCurriculo = 'assets/docs/CV_breve_fernando_miguel.pdf';
+            }
             return {
               nome: colaborador.nome,
               cargo: colaborador.cargo,
