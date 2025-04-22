@@ -35,6 +35,7 @@ export class ColaboradoresService {
             linkedin: colaborador.linkedin,
             lattes: colaborador.lattes,
             isActived: colaborador.isActived,
+            baixarCurriculo: colaborador.baixarCurriculo,
           };
         })
       )
@@ -53,6 +54,9 @@ export class ColaboradoresService {
               .replace(/[\u0300-\u036f]/g, '')
               .toLowerCase();
             const caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
+            if (colaborador.nome === 'Filipe Mateus') {
+              colaborador.baixarCurriculo = 'assets/docs/cv-algarve-filipe.pdf';
+            }
             return {
               nome: colaborador.nome,
               cargo: colaborador.cargo,
@@ -60,6 +64,7 @@ export class ColaboradoresService {
               linkedin: colaborador.linkedin,
               lattes: colaborador.lattes,
               isActived: colaborador.isActived,
+              baixarCurriculo: colaborador.baixarCurriculo,
             };
           })
         )
