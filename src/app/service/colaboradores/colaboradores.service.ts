@@ -10,7 +10,7 @@ export class ColaboradoresService {
   colaboradores: any[] = [];
   private apiUrl = 'https://server.oceanosdeplastico.com.br/colaborador';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getColaboradores(): Observable<PessoaDto[]> {
     return this.http.get<PessoaDto[]>(this.apiUrl).pipe(
@@ -21,13 +21,9 @@ export class ColaboradoresService {
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
             .toLowerCase();
-          if (colaborador.nome === 'Ana Vládia') {
-            primeiroNome = 'anavladia';
-          }
-          if (colaborador.nome === 'Daniela Lima') {
-            primeiroNome = 'danielalima';
-          }
-          const caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
+
+          let caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
+          this.validarFotoECurriculo(primeiroNome, colaborador, caminhoFoto);
           return {
             nome: colaborador.nome,
             cargo: colaborador.cargo,
@@ -53,16 +49,8 @@ export class ColaboradoresService {
               .normalize('NFD')
               .replace(/[\u0300-\u036f]/g, '')
               .toLowerCase();
-            const caminhoFoto = `assets/images/equipe/${primeiroNome}.png`;
-            if (colaborador.nome === 'Filipe Mateus') {
-              colaborador.baixarCurriculo = 'assets/docs/cv-algarve-filipe.pdf';
-            }
-            if (colaborador.nome === 'Helena Fernandez') {
-              colaborador.baixarCurriculo = 'assets/docs/breve_CV_Helena Fernandez.pdf';
-            }
-            if (colaborador.nome === 'Fernando Miguel') {
-              colaborador.baixarCurriculo = 'assets/docs/CV_breve_fernando_miguel.pdf';
-            }
+            let caminhoFotoTemp = `assets/images/equipe/${primeiroNome}.png`;
+            const [caminhoFoto, baixarCurriculo] = this.validarFotoECurriculo(primeiroNome, colaborador, caminhoFotoTemp);
             return {
               nome: colaborador.nome,
               cargo: colaborador.cargo,
@@ -81,5 +69,30 @@ export class ColaboradoresService {
     this.getColaboradores().subscribe((data) => {
       this.colaboradores = data;
     });
+  }
+
+  validarFotoECurriculo(nome: string, colaborador: PessoaDto, caminhoFoto: string): [string, string] {
+    let primeiroNome = nome
+      .split(' ')[0]
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+    if (colaborador.nome === 'Ana Vládia') {
+      primeiroNome = 'anavladia';
+    }
+    if (colaborador.nome === 'Daniela Lima') {
+      caminhoFoto = 'assets/images/equipe/danielalima.png';
+    }
+    if (colaborador.nome === 'Filipe Mateus') {
+      colaborador.baixarCurriculo = 'assets/docs/cv-algarve-filipe.pdf';
+    }
+    if (colaborador.nome === 'Helena Fernandez') {
+      caminhoFoto = 'assets/images/equipe/helena-fernandez.png';
+      colaborador.baixarCurriculo = 'assets/docs/breve_CV_Helena Fernandez.pdf';
+    }
+    if (colaborador.nome === 'Fernando Miguel') {
+      colaborador.baixarCurriculo = 'assets/docs/CV_breve_fernando_miguel.pdf';
+    }
+    return [caminhoFoto, colaborador.baixarCurriculo];
   }
 }
