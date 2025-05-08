@@ -58,7 +58,7 @@ export class ColaboradoresService {
               linkedin: colaborador.linkedin,
               lattes: colaborador.lattes,
               isActived: colaborador.isActived,
-              baixarCurriculo: colaborador.baixarCurriculo,
+              baixarCurriculo: baixarCurriculo,
             };
           })
         )
