@@ -26,4 +26,5 @@ export class CarouselComponent {
   nextImage(): void {
     this.activeIndex = (this.activeIndex + 1) % this.images.length;
   }
+  
 }

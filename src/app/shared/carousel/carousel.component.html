@@ -1,11 +1,5 @@
-<div
-  id="indicators-carousel"
-  class="relative"
-  data-carousel="static"
->
-  <div
-    class="relative w-64 h-96 md:w-80 md:mb-4 overflow-hidden rounded-lg"
-  >
+<div id="indicators-carousel" class="relative sm:hidden" data-carousel="static">
+  <div class="relative w-64 h-96 md:w-80 md:mb-4 overflow-hidden rounded-lg">
     <!-- Iteração sobre as imagens -->
     <div
       *ngFor="let image of images; let i = index"
