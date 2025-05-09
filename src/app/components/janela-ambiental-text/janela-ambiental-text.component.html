@@ -10,11 +10,8 @@
     <p class="sm:text-lg md:text-xl lg:text-2xl mb-8 text-white text-center">
       {{ description }}
     </p>
-    <div class="flex justify-center">
-      <a
-        href="{{ instagramLink }}"
-        target="_blank"
-      >
+    <div class="flex justify-center" *ngIf="instagramLink">
+      <a href="{{ instagramLink }}" target="_blank">
         <button
           type="button"
           data-twe-ripple-init

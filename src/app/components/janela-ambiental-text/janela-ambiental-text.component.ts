@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-janela-ambiental-text',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './janela-ambiental-text.component.html',
   styleUrl: './janela-ambiental-text.component.css'
 })
