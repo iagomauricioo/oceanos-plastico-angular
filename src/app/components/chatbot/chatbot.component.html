@@ -1,50 +1,107 @@
-<main class="min-h-screen p-10 flex items-start justify-center rounded-lg mb-2">
-  <div class="flex flex-col w-full max-w-screen-md h-full space-y-4 overflow-y-auto items-center">
-    <h1 class="flex items-center justify-center font-extrabold text-white text-3xl sm:text-4xl md:text-6xl">
-      EcoHero
-    </h1>
-    <h2 class="flex items-center justify-center text-center text-white text-xl">
-      Conheço nossa inteligência artificial treinada para responder suas dúvidas
-      sobre o meio-ambiente, o EcoHero!
-    </h2>
-    <img src="assets/images/ecohero/ecohero-pessoa.png" alt="ecohero" class="w-full h-auto rounded-lg" />
+<!-- Container principal com fundo gradiente e efeito de vidro -->
+<main class="min-h-screen p-4 sm:p-6 lg:p-8 flex items-start justify-center bg-gradient-to-br from-emerald-800 to-teal-900">
+  <div class="flex flex-col w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-6 space-y-6">
+    
+    <!-- Cabeçalho com animação -->
+    <header class="text-center space-y-4 animate-fade-in">
+      <div class="flex items-center justify-center space-x-3">
+        <img src="assets/images/ecohero/ecohero-pessoa.png" 
+          alt="EcoHero Avatar" 
+          class="w-16 h-16 rounded-full border-4 border-emerald-400 shadow-lg"
+        />
+        <h1 class="font-extrabold text-white text-4xl sm:text-5xl tracking-tight">
+          EcoHero
+        </h1>
+      </div>
+      <h2 class="text-white/90 text-lg sm:text-xl leading-relaxed font-medium max-w-2xl mx-auto">
+        Conheça nossa inteligência artificial treinada para responder suas dúvidas
+        sobre o meio ambiente!
+      </h2>
+    </header>
 
-    <!-- Mensagem inicial do EcoHero -->
-    <!-- <app-message-left
-      class="self-center"
-      [sender]="'EcoHero'"
-      [message]="
-        'Olá! Eu sou o EcoHero, um assistente especializado em meio ambiente, sustentabilidade, combate ao plástico e reciclagem. Fui criado para responder perguntas relacionadas ao meio ambiente e te ajudar com práticas e soluções sustentáveis.\n Escreva mensagens para mim e vamos conversar! 😄'
-      "
-    >
-    </app-message-left> -->
+    <!-- Container de mensagens com scroll suave -->
+    <section class="flex-1 min-h-[400px] max-h-[600px] overflow-y-auto px-4 space-y-4 scrollbar-thin scrollbar-thumb-emerald-500 scrollbar-track-transparent">
+      <!-- Mensagem de boas-vindas -->
+      <div *ngIf="messages.length === 0" 
+        class="flex justify-center items-center h-full animate-fade-in-up">
+        <div class="text-center p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 shadow-lg max-w-lg">
+          <div class="text-5xl mb-4">👋</div>
+          <p class="text-white text-lg">
+            Olá! Sou o EcoHero, seu assistente virtual especializado em questões ambientais.
+            Como posso ajudar você hoje?
+          </p>
+        </div>
+      </div>
 
-    <!-- Mensagens do Chat -->
-    <div class="flex flex-col items-center w-full">
-      <div *ngFor="let msg of messages" class="flex flex-col items-center w-full">
-        <app-message-left *ngIf="msg.sender === 'EcoHero'" class="self-center mb-3" [sender]="msg.sender"
-          [time]="msg.time" [message]="msg.message">
+      <!-- Lista de mensagens -->
+      <div *ngFor="let msg of messages; let i = index" 
+        class="animate-fade-in-up" 
+        [style.animation-delay]="i * 100 + 'ms'">
+        
+        <app-message-left *ngIf="msg.sender === 'EcoHero'"
+          class="block mb-4 transform transition-all duration-200 hover:scale-[1.02]"
+          [sender]="msg.sender"
+          [time]="msg.time"
+          [message]="msg.message">
         </app-message-left>
 
-        <app-message-right *ngIf="msg.sender === 'Você'" class="self-center mb-3" [sender]="msg.sender"
-          [time]="msg.time" [message]="msg.message">
+        <app-message-right *ngIf="msg.sender === 'Você'"
+          class="block mb-4 transform transition-all duration-200 hover:scale-[1.02]"
+          [sender]="msg.sender"
+          [time]="msg.time"
+          [message]="msg.message">
         </app-message-right>
       </div>
 
-      <!-- Indicador de "Digitando..." -->
-      <app-message-left *ngIf="isTyping" class="self-center mb-3" [sender]="'EcoHero'" [time]="''"
-        [message]="'Digitando...'">
-      </app-message-left>
-    </div>
+      <!-- Indicador de digitação -->
+      <div *ngIf="isTyping" class="animate-pulse">
+        <app-message-left
+          [sender]="'EcoHero'"
+          [time]="''"
+          [message]="'Digitando...'"
+          class="opacity-75">
+        </app-message-left>
+      </div>
+    </section>
 
+    <!-- Seção de input com efeito de vidro -->
+    <footer class="pt-4 border-t border-white/20">
+      <form (ngSubmit)="sendMessage()" class="flex items-end gap-3">
+        <div class="flex-1 relative">
+          <textarea
+            [(ngModel)]="userMessage"
+            name="userMessage"
+            rows="1"
+            class="w-full p-4 pr-12 rounded-xl bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white placeholder-white/50 focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/20 focus:outline-none resize-none transition-all duration-200"
+            placeholder="Digite sua mensagem..."
+            (keydown.enter)="$event.preventDefault(); sendMessage()"
+            [disabled]="isTyping"
+            maxlength="500">
+          </textarea>
+          <div class="absolute bottom-2 right-2 text-xs text-white/50">
+            {{ userMessage?.length || 0 }}/500
+          </div>
+        </div>
 
-    <!-- Campo de entrada para o usuário -->
-    <div class="flex items-center mt-4 space-x-2 w-full max-w-lg">
-      <input [(ngModel)]="userMessage" type="text" class="w-full p-3 rounded-md border border-gray-300"
-        placeholder="Digite sua mensagem..." (keydown.enter)="sendMessage()" />
-      <button class="bg-primary text-white p-2 rounded-full" (click)="sendMessage()">
-        Enviar
-      </button>
-    </div>
+        <!-- Botão de enviar com animação -->
+        <button
+          type="submit"
+          [disabled]="!userMessage?.trim() || isTyping"
+          class="group relative bg-emerald-500 hover:bg-emerald-600 disabled:bg-gray-500 text-white p-4 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95 disabled:hover:scale-100 focus:ring-4 focus:ring-emerald-500/50 focus:outline-none">
+          <svg
+            class="w-6 h-6 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+            />
+          </svg>
+        </button>
+      </form>
+    </footer>
   </div>
 </main>

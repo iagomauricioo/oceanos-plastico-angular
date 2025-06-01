@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ArticleSectionComponent } from '../divulgacao-cientifica/article-section/article-section.component';
+import { DomSanitizer } from '@angular/platform-browser';
 import { CarouselComponent } from "../../shared/carousel/carousel.component";
 import { NgFor } from '@angular/common';
 import { JanelaAmbientalTextComponent } from "../janela-ambiental-text/janela-ambiental-text.component";
@@ -7,11 +10,17 @@ import { JanelaAmbientalImagesComponent } from "../janela-ambiental-images/janel
 @Component({
   selector: 'app-janela-ambiental',
   standalone: true,
-  imports: [CarouselComponent, NgFor, JanelaAmbientalTextComponent, JanelaAmbientalImagesComponent],
+  imports: [CommonModule, ArticleSectionComponent, CarouselComponent, NgFor, JanelaAmbientalTextComponent, JanelaAmbientalImagesComponent],
   templateUrl: './janela-ambiental.component.html',
   styleUrl: './janela-ambiental.component.css'
 })
 export class JanelaAmbientalComponent {
+  constructor(private sanitizer: DomSanitizer) {}
+
+  getSafeUrl(url: string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
   quadrinhos_01 = [
     'assets/images/quadrinhos/01/quadrinho1.jpeg',
     'assets/images/quadrinhos/01/quadrinho2.jpeg',

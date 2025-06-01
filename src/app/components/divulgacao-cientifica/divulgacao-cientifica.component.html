@@ -1,35 +1,56 @@
-<main class="flex flex-col lg:flex-row justify-center items-center bg-transparent min-h-[80vh] pb-10 text-left">
-  <!-- Texto -->
-  <div class="container mx-auto px-4 sm:px-10 lg:px-20 py-10 w-full md:w-1/2 flex flex-col">
-    <h2 class="text-3xl sm:text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-4">
-      Entre o plástico e o mar.
-    </h2>
-    <h3 class="text-white text-2xl mb-4 font-bold">Oceanos de plástico</h3>
-    <p class="sm:text-lg md:text-xl max-w-2xl mb-8 text-textWhite text-justify">
-      O curta-metragem documental Entre o plástico e o Mar, produzido em 2024
-      pelo Projeto Oceanos de Plástico, retrata como a poluição plástica afeta o
-      trabalho dos pescadores na orla de Maceió. Além disso, mostra como a
-      equipe de pesquisa do projeto busca compreender esse problema ambiental.
-    </p>
+<main>
+  <app-article-section title="Documentário: Entre o plástico e o mar." subtitle="Oceanos de plástico"
+    content="O curta-metragem documental Entre o plástico e o Mar, produzido em 2024 pelo Projeto Oceanos de Plástico, retrata como a poluição plástica afeta o trabalho dos pescadores na orla de Maceió. Além disso, mostra como a equipe de pesquisa do projeto busca compreender esse problema ambiental."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/WAbsDXNGXWc?autoplay=1&mute=1')"
+    [youtubeChannelUrl]="'https://www.youtube.com/@OceanosdePlastico.'"></app-article-section>
 
-    <div class="flex justify-center md:justify-start">
-      <a href="https://www.youtube.com/@OceanosdePlastico." target="_blank"
-        class="inline-flex items-center py-2 px-4 bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-white rounded-md transition duration-300">
-        <svg class="w-8 h-8 fill-current mr-2" viewBox="0 0 24 24">
-          <path
-            d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
-        </svg>
-        <span>Inscreva-se no nosso canal</span>
-      </a>
-    </div>
-  </div>
+  <app-article-section title="Operação Oceano" subtitle="Oceanos de plástico"
+    content="Operação Oceano, série jornalística e documental produzida pela TV Pajuçara (Pajuçara Sistema de Comunicação - PSCOM), exibida em abril de 2024 no TNH1 e na Rádio Pajuçara FM Maceió, foi vencedora do Prêmio AMRIGS (Associação Médica do Rio Grande do Sul) de Jornalismo, nessa última sexta-feira 18/10/2024, o prêmio foi entregue em uma solenidade no Teatro AMRIGS, em Porto Alegre (RS). A premiação teve como propósito reconhecer trabalhos que abordaram a Saúde e a Medicina, com a temática escolhida para esta edição intitulada 'Desafios Climáticos e o Papel da Medicina'. A produção da Tv Pajuçara foi uma das 26 agraciadas com o reconhecimento. A série abordou temas como o turismo nas praias alagoanas, a degradação ambiental e o descarte inadequado de lixo no oceano. O 05° episódio da série, que retrata a realidade da poluição na orla de Maceió foi o finalista da premiação e contou entre seus entrevistados com os integrantes do Projeto Oceanos de Plástico e da startup Policoncret Coordenados pelo Prof. Dr. Jessé Marques Pavão. O Projeto Oceanos de Plástico em nome de seu coordenador Prof. Dr. Jessé Marques Pavão, parabeniza todos os profissionais envolvidos na produção da série e expressa muita felicidade em poder ter contribuindo com essa produção audiovisual."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/N4h-OTPrKIs?&mute=1')"
+    [youtubeChannelUrl]="'https://www.youtube.com/@OceanosdePlastico.'" [reverseLayout]="true"></app-article-section>
 
-  <!-- Vídeo -->
-  <div class="container mx-auto h-full flex justify-center items-center p-4 w-full md:w-1/2">
-    <div class="relative w-full pb-[56.25%]">
-      <!-- Mantém a proporção 16:9 -->
-      <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-        src="https://www.youtube.com/embed/WAbsDXNGXWc?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
+  <app-article-section
+    title="Reportagem cadeia produtiva de artefatos de concreto feitos a partir do plástico retirados do oceano."
+    subtitle="Oceanos de plástico"
+    content="No dia 8 de fevereiro, a equipe do projeto Oceano de Plástico foi entrevistada pela TV Pajuçara para falar sobre os avanços no monitoramento das plumas de resíduos plásticos que atingem Alagoas. A entrevista destacou o impacto das fortes chuvas do dia anterior, 7 de fevereiro, que intensificaram o deslocamento desses resíduos."
+    [instagramUrl]="'https://www.instagram.com/reel/DF8k52KsMh2/?igsh=MWU1Z3FvODJucXZpYQ=='"></app-article-section>
+
+  <app-article-section title="Reportagem: Conheça o projeto que transforma plástico em pisos e até bancos de praça"
+    subtitle="TNH1"
+    content="Conheça o Projeto que Transforma Plástico em Pisos e Bancos de Praça Em meio à crescente preocupação com a poluição dos oceanos, uma iniciativa inovadora está transformando o que seria lixo plástico em mobiliário urbano e materiais de construção sustentáveis. O projeto, que une tecnologia e consciência ambiental, já conseguiu dar nova vida a toneladas de resíduos plásticos que poderiam ter acabado em nossos mares."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/WesrG2kWbgE?&mute=1')"
+    [reportUrl]="'https://www.youtube.com/embed/WesrG2kWbgE?&mute=1'"></app-article-section>
+
+  <app-article-section title="Visita de campo dos pesquisadores do projeto Oceanos de Plástico"
+    subtitle="Oceanos de plástico" content="Visita de campo dos pesquisadores do projeto Oceanos de Plástico, para fazer a comparação dos dados obtidos por satélite com os dados vistos no campo, o local escolhido para realização da pesquisa foram as
+    piscina naturais na praia da Pajuçara em Maceió."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/KQm_uMbTQCc')"
+    [instagramUrl]="'https://www.instagram.com/reel/C_tG2bwJ9s5/'"></app-article-section>
+
+  <app-article-section
+    title="Expedição para averiguar a presença de resíduos plásticos nas águas da praia da Ponta Verde, em Maceió."
+    subtitle="De acordo com uma hipótese levantada pelo Prof. Marcelo, existe a possibilidade de haver mais resíduos plásticos no lado norte das águas da praia da Ponta Verde, devido à prevalência do vento nordeste na época do verão, que estaria acumulando mais resíduos na direção das correntes marítimas induzidas pelo vento. O acúmulo de resíduos plásticos também é efeito de uma maior pressão antrópica."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/NjQ7anBwJrU')"
+    [instagramUrl]="'https://www.instagram.com/reel/CzkDuwTLr6i/'" [reverseLayout]="true"></app-article-section>
+
+  <app-article-section title="Entrevista sobre o descarte de lixo na águas da praia da Pajuçara" subtitle="Oceanos de plástico"
+    content="Entrevista do Prof. Jessé Marques a respeito do descarte do lixo produzido nas imediações das piscinas naturais de Pajuçara com a senhora Poliane, que é parte de uma família dona de um bar flutuante localizado na região."
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/hMBzSUUlk9k')"
+    [instagramUrl]="'https://www.instagram.com/reel/C_vvMjFvwC7/'"></app-article-section>
+
+  <app-article-section title="Divulgação Científica - Episódio 4" subtitle="Oceanos de plástico"
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/Ov9fDCH60zY')"
+    [instagramUrl]="'https://www.instagram.com/reel/DAM1bgpJ3eJ/'" [reverseLayout]="true"></app-article-section>
+
+  <app-article-section title="Divulgação Científica - Episódio 5" subtitle="Oceanos de plástico"
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/Aja2gB39pps')"
+    [instagramUrl]="'https://www.instagram.com/reel/DDe40LfRmQZ/'"></app-article-section>
+
+  <app-article-section title="Divulgação Científica - Episódio 6" subtitle="Oceanos de plástico"
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/msoo1CnpZLU')"
+    [instagramUrl]="'https://www.instagram.com/reel/DB1Fms4RTl8/'" [reverseLayout]="true"></app-article-section>
+
+  <app-article-section title="Divulgação Científica - Episódio 7" subtitle="Oceanos de plástico"
+    [videoUrl]="getSafeUrl('https://www.youtube.com/embed/Y2JmnnwIrJk')"
+    [instagramUrl]="'https://www.instagram.com/reel/DGN-YxyRnvw/'"></app-article-section>
 </main>
