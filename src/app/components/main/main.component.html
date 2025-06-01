@@ -1,15 +1,15 @@
 <main
-  class="flex flex-wrap sm:flex-col md:flex-row justify-center items-center bg-transparent min-h-[80vh] pb-10"
+  class="flex flex-wrap sm:flex-col md:flex-row justify-center items-center min-h-[80vh] pb-10 reveal"
 >
   <div
     class="container mx-auto px-4 sm:px-10 lg:px-20 py-10 w-full sm:w-3/4 lg:w-1/2 flex flex-col"
   >
     <h2
-      class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-textWhite leading-tight mb-4 text-center sm:text-left"
+      class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-textWhite leading-tight mb-6 text-center sm:text-left"
     >
       Oceanos de Plástico do <br />
       Centro Universitário <br />
-      CESMAC
+      <span class="text-blue-400">CESMAC</span>
     </h2>
     <p
       class="text-base sm:text-lg md:text-xl max-w-2xl mb-8 text-textWhite text-center sm:text-left"
@@ -20,14 +20,31 @@
       do plástico, integrando estratégias de descarte e reciclagem para
       enfrentamento da poluição dos oceanos.
     </p>
+    <div class="flex flex-wrap gap-4 justify-center sm:justify-start">
+      <a
+        routerLink="/divulgacao-cientifica"
+        class="group relative px-6 py-3 bg-blue-600 text-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/50 cursor-pointer"
+      >
+        <span class="relative z-10">Conheça o Projeto</span>
+        <div class="absolute inset-0 h-full w-0 bg-blue-700 transition-all duration-300 group-hover:w-full"></div>
+      </a>
+      <a
+        routerLink="/equipe"
+        class="group relative px-6 py-3 border-2 border-blue-600 text-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/50 cursor-pointer"
+      >
+        <span class="relative z-10">Nossa Equipe</span>
+        <div class="absolute inset-0 h-full w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></div>
+      </a>
+    </div>
   </div>
   <div
-    class="container w-full sm:w-1/2 mx-auto h-full flex justify-center items-center"
+    class="container w-full sm:w-1/2 mx-auto h-full flex justify-center items-center reveal2"
   >
     <img
-      class="rounded-lg sm:max-w-md max-w-80 md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-contain"
+      class="rounded-lg sm:max-w-md max-w-80 md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto object-contain hover:opacity-90 transition-opacity duration-300"
       src="https://cdn.jsdelivr.net/gh/iagomauricioo/oceanos-plastico-angular/src/assets/images/logotipos/webp/OceanosDePlastico.webp"
-      alt="image description"
+      alt="Logotipo do Projeto Oceanos de Plástico - Uma iniciativa do Centro Universitário CESMAC"
+      loading="lazy"
     />
   </div>
 </main>

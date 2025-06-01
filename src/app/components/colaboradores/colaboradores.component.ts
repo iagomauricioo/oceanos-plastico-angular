@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileCardComponent } from '../../shared/profile-card/profile-card.component';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { NgFor, NgIf } from '@angular/common';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
 import { ColaboradoresService } from '../../service/colaboradores/colaboradores.service';

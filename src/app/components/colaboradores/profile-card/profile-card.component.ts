@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PessoaDto } from '../dto/pessoa-dto';
+import { PessoaDto } from '../../../shared/dto/pessoa-dto';
 import { NgIf } from '@angular/common';
 
 @Component({

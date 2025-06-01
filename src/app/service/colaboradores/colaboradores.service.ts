@@ -78,7 +78,7 @@ export class ColaboradoresService {
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase();
     if (colaborador.nome === 'Ana Vládia') {
-      primeiroNome = 'anavladia';
+      caminhoFoto = 'assets/images/equipe/anavladia2.png';
     }
     if (colaborador.nome === 'Daniela Lima') {
       caminhoFoto = 'assets/images/equipe/danielalima.png';
