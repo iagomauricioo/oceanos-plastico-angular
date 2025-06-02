@@ -1,23 +1,32 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticleSectionComponent } from '../divulgacao-cientifica/article-section/article-section.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { CarouselComponent } from "../../shared/carousel/carousel.component";
 import { NgFor } from '@angular/common';
 import { JanelaAmbientalTextComponent } from "../janela-ambiental-text/janela-ambiental-text.component";
 import { JanelaAmbientalImagesComponent } from "../janela-ambiental-images/janela-ambiental-images.component";
+import { InstagramButtonComponent } from '../shared/instagram-button/instagram-button.component';
 
 @Component({
   selector: 'app-janela-ambiental',
   standalone: true,
-  imports: [CommonModule, ArticleSectionComponent, CarouselComponent, NgFor, JanelaAmbientalTextComponent, JanelaAmbientalImagesComponent],
+  imports: [
+    CommonModule,
+    ArticleSectionComponent,
+    CarouselComponent,
+    NgFor,
+    JanelaAmbientalTextComponent,
+    JanelaAmbientalImagesComponent,
+    InstagramButtonComponent
+  ],
   templateUrl: './janela-ambiental.component.html',
   styleUrl: './janela-ambiental.component.css'
 })
 export class JanelaAmbientalComponent {
   constructor(private sanitizer: DomSanitizer) {}
 
-  getSafeUrl(url: string) {
+  getSafeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 

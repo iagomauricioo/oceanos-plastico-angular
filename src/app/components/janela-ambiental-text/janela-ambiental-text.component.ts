@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { InstagramButtonComponent } from '../shared/instagram-button/instagram-button.component';
 @Component({
   selector: 'app-janela-ambiental-text',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, InstagramButtonComponent],
   templateUrl: './janela-ambiental-text.component.html',
   styleUrl: './janela-ambiental-text.component.css'
 })
