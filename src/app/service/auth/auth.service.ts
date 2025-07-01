@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://server.oceanosdeplastico.com.br';
+  private apiUrl = 'http://186.235.156.135:8080';
 
   constructor(private http: HttpClient) {}
 
