@@ -83,7 +83,7 @@ export class ColaboradoresService {
     if (colaborador.nome === 'Daniela Lima') {
       caminhoFoto = 'assets/images/equipe/danielalima.png';
     }
-    if (colaborador.nome === 'Filipe Mateus') {
+    if (colaborador.nome === 'Filipe Pereira') {
       colaborador.baixarCurriculo = 'assets/docs/cv-algarve-filipe.pdf';
     }
     if (colaborador.nome === 'Helena Fernandez') {
