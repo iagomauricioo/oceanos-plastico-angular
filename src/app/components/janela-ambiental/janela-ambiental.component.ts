@@ -55,7 +55,9 @@ export class JanelaAmbientalComponent {
     'assets/images/quadrinhos/03/quadrinho4.jpeg',
     'assets/images/quadrinhos/03/quadrinho5.jpeg',
     'assets/images/quadrinhos/03/quadrinho6.jpeg',
-    'assets/images/quadrinhos/03/quadrinho7.jpeg'
+    'assets/images/quadrinhos/03/quadrinho7.jpeg',
+    
+  
   ];
 
   quadrinhos_04 = [
@@ -66,6 +68,12 @@ export class JanelaAmbientalComponent {
     'assets/images/quadrinhos/04/quadrinho5.jpeg',
     'assets/images/quadrinhos/04/quadrinho6.jpeg',
     'assets/images/quadrinhos/04/quadrinho7.jpeg',
+    'assets/images/quadrinhos/03/quadrinho8.jpeg',
+  'assets/images/quadrinhos/03/quadrinho9.jpeg',
+  'assets/images/quadrinhos/03/quadrinho10.jpeg',
+  'assets/images/quadrinhos/03/quadrinho11.jpeg',
+  "assets/images/quadrinhos/03/quadrinho12.jpeg",
+  
   ]
 
   quadrinhos_05 = [
