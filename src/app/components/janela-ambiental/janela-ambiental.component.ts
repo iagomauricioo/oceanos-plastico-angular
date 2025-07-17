@@ -69,7 +69,7 @@ export class JanelaAmbientalComponent {
     'assets/images/quadrinhos/04/quadrinho6.jpeg',
     'assets/images/quadrinhos/04/quadrinho7.jpeg',
     'assets/images/quadrinhos/04/quadrinho8.jpeg',
-    'assets/images/quadrinhos/03/quadrinho9.jpeg',
+    'assets/images/quadrinhos/04/quadrinho9.jpeg',
     'assets/images/quadrinhos/04/quadrinho10.jpeg',
     'assets/images/quadrinhos/04/quadrinho11.jpeg',
     "assets/images/quadrinhos/04/quadrinho12.jpeg",
