@@ -68,13 +68,13 @@ export class JanelaAmbientalComponent {
     'assets/images/quadrinhos/04/quadrinho5.jpeg',
     'assets/images/quadrinhos/04/quadrinho6.jpeg',
     'assets/images/quadrinhos/04/quadrinho7.jpeg',
-    'assets/images/quadrinhos/03/quadrinho8.jpeg',
-  'assets/images/quadrinhos/03/quadrinho9.jpeg',
-  'assets/images/quadrinhos/03/quadrinho10.jpeg',
-  'assets/images/quadrinhos/03/quadrinho11.jpeg',
-  "assets/images/quadrinhos/03/quadrinho12.jpeg",
+    'assets/images/quadrinhos/04/quadrinho8.jpeg',
+    'assets/images/quadrinhos/03/quadrinho9.jpeg',
+    'assets/images/quadrinhos/04/quadrinho10.jpeg',
+    'assets/images/quadrinhos/04/quadrinho11.jpeg',
+    "assets/images/quadrinhos/04/quadrinho12.jpeg",
   
-  ]
+  ];
 
   quadrinhos_05 = [
     'assets/images/quadrinhos/05/quadrinho1.jpeg',
