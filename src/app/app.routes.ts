@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { OceanosDePlasticoComponent } from './components/oceanos-de-plastico/oceanos-de-plastico.component';
 import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContatoComponent } from './components/contato/contato.component';
@@ -33,6 +34,11 @@ export const routes: Routes = [
   {
     path: 'divulgacao-cientifica',
     component: DivulgacaoCientificaComponent,
+  },
+
+  {
+    path: 'divulgacao-cientifica/oceanos-de-plastico',
+    component: OceanosDePlasticoComponent
   },
   {
     path: 'projetos',
