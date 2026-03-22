@@ -13,6 +13,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { RealizacoesAcademicasComponent } from './components/realizacoes-academicas/realizacoes-academicas.component';
 import { LinhaDoTempoComponent } from './components/linha-do-tempo/linha-do-tempo.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { Iwppo2026Component } from './components/iwppo-2026/iwppo-2026.component';
 
 export const routes: Routes = [
   {
@@ -76,4 +77,10 @@ export const routes: Routes = [
     path: 'ecohero',
     component: ChatbotComponent,
   },
+
+  {
+  path: 'iwppo/2026',
+  component: Iwppo2026Component,
+  },
+  
 ];
