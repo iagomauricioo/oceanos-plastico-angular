@@ -1,0 +1,773 @@
+{
+  "event": {
+    "edition": "3rd IWPPO",
+    "name": "3rd International Workshop on Plastic Pollution in the Oceans",
+    "fullName": "3rd International Workshop on Plastic Pollution in the Oceans (IWPPO) - Environmental Policies and Technological Innovations: Strategies for Reducing Plastic Pollution in the Pan-Amazon Region",
+    "theme": "Políticas Ambientais e Inovações Tecnológicas: Estratégias para Redução da Poluição Plástica na Pan-Amazônia",
+    "shortTheme": "Poluição plástica, Pan-Amazônia, políticas ambientais e inovação tecnológica",
+    "startDate": "2026-08-26",
+    "endDate": "2026-08-28",
+    "city": "Manaus",
+    "state": "AM",
+    "country": "Brasil",
+    "modality": "Semipresencial",
+    "scope": "Internacional",
+    "periodicity": "Anual",
+    "evaluationArea": "Ciências Ambientais",
+    "homepage": "",
+    "description": "O III Workshop Internacional sobre a Poluição Plástica nos Oceanos consolida um espaço internacional de articulação entre ciência, políticas públicas e inovação. A edição de 2026 será realizada em Manaus, com foco na Pan-Amazônia, reunindo pesquisadores, representantes governamentais, organizações da sociedade civil, setor produtivo, jovens pesquisadores e comunidades impactadas pela poluição plástica."
+  },
+  "institutional": {
+    "fundingProgram": "PAEP - Programa de Apoio a Eventos no País",
+    "call": "PAEP-2026",
+    "proponent": {
+      "name": "Jesse Marques da Silva Junior Pavão",
+      "nationality": "Brasil",
+      "institutionalRole": "Coordenador",
+      "email": "jesse.marques@cesmac.edu.br",
+      "phone": "+55 (82) 996942018"
+    },
+    "institution": {
+      "name": "Centro Universitário Cesmac",
+      "program": "Análise de Sistemas Ambientais"
+    }
+  },
+  "promotingInstitution": {
+    "name": "Centro Universitário Cesmac",
+    "website": "https://acesso.cesmac.edu.br/abertura",
+    "country": "Brasil",
+    "type": "Instituição de Ensino Superior",
+    "address": "Rua Cônego Machado, Farol, 918, Maceió/AL, Brasil, 57051160",
+    "director": {
+      "name": "Douglas Apratto Tenorio",
+      "role": "Pró-Reitor",
+      "country": "Brasil"
+    }
+  },
+  "hero": {
+    "badge": "3rd IWPPO • Edição 2026 • Pan-Amazônia",
+    "title": "International Workshop on Plastic Pollution in the Oceans",
+    "highlight": "Pan-Amazônia, ciência e inovação contra a poluição plástica",
+    "description": "A edição 2026 conecta rios, florestas, oceanos, biodiversidade, políticas ambientais e tecnologias emergentes para discutir estratégias de redução da poluição plástica na Pan-Amazônia.",
+    "primaryButton": "Submissões",
+    "secondaryButton": "Programação",
+    "tags": [
+      "Pan-Amazônia",
+      "Oceanos",
+      "Poluição Plástica",
+      "Sustentabilidade",
+      "Tecnologia Ambiental"
+    ]
+  },
+  "about": {
+    "title": "A Pan-Amazônia no centro do debate sobre poluição plástica",
+    "paragraphs": [
+      "O III IWPPO propõe um espaço de diálogo internacional voltado à construção de soluções para a poluição plástica em ambientes aquáticos amazônicos e marinho-costeiros.",
+      "O evento busca fortalecer a cooperação entre ciência, governo, organizações, setor produtivo e sociedade, promovendo debates sobre monitoramento, rastreamento, reciclagem, economia circular e políticas ambientais.",
+      "A edição de 2026 será realizada em Manaus, trazendo para o centro da discussão os desafios ambientais da Pan-Amazônia, região estratégica para a conservação da biodiversidade, dos rios, das florestas e dos ecossistemas conectados aos oceanos."
+    ]
+  },
+  "history": {
+    "title": "Histórico do IWPPO",
+    "paragraphs": [
+      "O IWPPO surgiu da necessidade de encontrar soluções para a poluição plástica em corpos hídricos, especialmente mares e oceanos.",
+      "O 1st IWPPO ocorreu em novembro de 2024, em Curitiba-PR, na PUC-Curitiba, com o tema “Desafios e Soluções sobre o Monitoramento e Reciclagem da Produção de Plástico para Proteger os Oceanos”.",
+      "O 2nd IWPPO ocorreu em setembro de 2025, em Maceió-AL, com o tema “Oceanos em crise, ciência com propósito: transformando conhecimento em esperança”.",
+      "A proposta do IWPPO nasceu de discussões realizadas no VI Congresso de Estudos sobre o Meio Ambiente, promovido em 2023 pelo Programa de Pós-Graduação em Análise de Sistemas Ambientais do Centro Universitário Cesmac.",
+      "Desde suas primeiras edições, o evento busca integrar ensino, pesquisa, extensão, inovação e diálogo entre academia, sociedade, setor produtivo e poder público."
+    ]
+  },
+  "justification": {
+    "title": "Justificativa",
+    "paragraphs": [
+      "A realização do III Workshop Internacional sobre a Poluição Plástica nos Oceanos, em Manaus, apresenta-se como uma iniciativa estratégica diante dos desafios ambientais e socioeconômicos relacionados à poluição plástica na Pan-Amazônia.",
+      "A Pan-Amazônia abrange diferentes países da América Latina e sofre impactos crescentes decorrentes do descarte inadequado de resíduos plásticos, que afetam ambientes aquáticos, terrestres, comunidades tradicionais e povos indígenas.",
+      "O evento propõe a integração entre ciência, políticas públicas, inovação tecnológica e saberes locais, reunindo pesquisadores, formuladores de políticas, representantes da sociedade civil, setor privado e comunidades locais.",
+      "A escolha da Pan-Amazônia é estratégica porque a região demanda ações coordenadas, específicas e sensíveis às suas particularidades ambientais, sociais, culturais e econômicas.",
+      "O III IWPPO busca fomentar cooperação internacional e regional, orientar políticas públicas, estimular a economia circular e apoiar o uso de tecnologias voltadas à redução da poluição plástica."
+    ]
+  },
+  "professionalContribution": {
+    "title": "Contribuição para profissionais envolvidos no evento",
+    "paragraphs": [
+      "O III IWPPO oferece aos profissionais envolvidos uma oportunidade de atualização científica e tecnológica sobre monitoramento, mitigação, rastreamento, reciclagem e gestão da poluição plástica.",
+      "O evento favorece a interdisciplinaridade ao reunir pesquisadores, gestores públicos, representantes do setor produtivo, organizações sociais, jovens pesquisadores e comunidades locais.",
+      "A programação estimula a criação e o fortalecimento de redes de cooperação internacional e regional, ampliando parcerias científicas, políticas públicas e iniciativas privadas voltadas à redução da poluição plástica.",
+      "O workshop também contribui para a formação de profissionais preparados para atuar em gestão ambiental, economia circular, inovação tecnológica, governança e políticas ambientais aplicadas à realidade amazônica.",
+      "A valorização dos saberes de comunidades tradicionais e povos indígenas amplia o alcance das soluções ambientais, garantindo que o enfrentamento da poluição plástica considere os contextos sociais, culturais e territoriais da Pan-Amazônia."
+    ]
+  },
+  "thematicAxes": [
+    {
+      "title": "Políticas Ambientais",
+      "description": "Discussão sobre marcos regulatórios, governança ambiental, instrumentos econômicos e estratégias públicas para redução da poluição plástica."
+    },
+    {
+      "title": "Inovação Tecnológica",
+      "description": "Aplicação de tecnologias emergentes, rastreabilidade, monitoramento remoto, inteligência artificial, sensores, drones e soluções de Indústria 4.0."
+    },
+    {
+      "title": "Economia Circular",
+      "description": "Debates sobre reuso, reciclagem, logística reversa, bioplásticos, biorremediação e novos modelos produtivos sustentáveis."
+    },
+    {
+      "title": "Saberes e Justiça Ambiental",
+      "description": "Valorização de comunidades tradicionais, povos indígenas, educação ambiental e participação social na proteção dos ecossistemas aquáticos."
+    }
+  ],
+  "participatingPrograms": [
+    {
+      "institution": "Universidade Paulista",
+      "program": "Engenharia de Produção",
+      "grade": 4,
+      "description": "A participação do Programa de Pós-Graduação em Engenharia de Produção da Universidade Paulista, por meio do Laboratório de Produção e Meio Ambiente, fortalece a discussão sobre produção sustentável, inovação tecnológica, reaproveitamento de resíduos plásticos e estratégias de redução da poluição plástica."
+    },
+    {
+      "institution": "Universidade Federal do Amazonas",
+      "program": "Ciências do Ambiente e Sustentabilidade na Amazônia",
+      "grade": 4,
+      "description": "O programa contribui com expertise sobre desafios ambientais amazônicos, sustentabilidade, conservação, políticas públicas, manejo de resíduos e soluções específicas para a realidade da região."
+    },
+    {
+      "institution": "Universidade Federal de Alagoas",
+      "program": "Diversidade Biológica e Conservação nos Trópicos",
+      "grade": 5,
+      "description": "O programa contribui com pesquisas sobre biodiversidade, conservação, impactos humanos nos ecossistemas tropicais e efeitos da poluição plástica sobre ambientes aquáticos e terrestres."
+    },
+    {
+      "institution": "Universidade Federal de Alagoas - Campus Arapiraca",
+      "program": "Ciências Ambientais",
+      "grade": null,
+      "description": "O programa contribui com estudos ambientais voltados ao desenvolvimento sustentável, gestão de resíduos, inovação e formação de redes de colaboração acadêmica e social."
+    },
+    {
+      "institution": "Universidade Federal do Espírito Santo",
+      "program": "Oceanografia Ambiental",
+      "grade": 4,
+      "description": "O programa contribui com conhecimento técnico-científico sobre poluentes em ambientes aquáticos, monitoramento de sistemas costeiros e marinhos e estudos sobre microplásticos."
+    },
+    {
+      "institution": "Universidade de Brasília",
+      "program": "Desenvolvimento Sustentável",
+      "grade": 7,
+      "description": "O programa contribui com abordagem interdisciplinar em política, gestão ambiental, sustentabilidade, território, sociedade, consumo e formulação de estratégias para redução da poluição plástica."
+    }
+  ],
+  "targetAudience": [
+    {
+      "type": "Alunos de Graduação",
+      "north": 150,
+      "northeast": 50,
+      "southeast": 30,
+      "south": 30,
+      "midwest": 0,
+      "foreigners": 20,
+      "fee": "R$ 50,00"
+    },
+    {
+      "type": "Alunos de Pós-Graduação",
+      "north": 40,
+      "northeast": 20,
+      "southeast": 20,
+      "south": 20,
+      "midwest": 0,
+      "foreigners": 20,
+      "fee": "R$ 70,00"
+    },
+    {
+      "type": "Professores da Educação Básica",
+      "north": 30,
+      "northeast": 10,
+      "southeast": 10,
+      "south": 10,
+      "midwest": 0,
+      "foreigners": 0,
+      "fee": "R$ 0,00"
+    },
+    {
+      "type": "Professores / Pesquisadores",
+      "north": 20,
+      "northeast": 10,
+      "southeast": 10,
+      "south": 5,
+      "midwest": 0,
+      "foreigners": 0,
+      "fee": "R$ 100,00"
+    },
+    {
+      "type": "Palestrantes",
+      "north": 1,
+      "northeast": 2,
+      "southeast": 1,
+      "south": 1,
+      "midwest": 0,
+      "foreigners": 5,
+      "fee": "R$ 0,00"
+    }
+  ],
+  "organizingCommittee": [
+    {
+      "name": "Jesse Marques da Silva Junior Pavão",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg",
+      "lattes": "http://lattes.cnpq.br/2811263859126204"
+    },
+    {
+      "name": "Cristiane Gomes Barreto",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
+      "lattes": "http://lattes.cnpq.br/3536396604369119"
+    },
+    {
+      "name": "Selenobaldo Alexinaldo Cabral de Sant Anna",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/selenobaldo-santanna.jpg",
+      "lattes": "http://lattes.cnpq.br/4011554123832368"
+    },
+    {
+      "name": "Marília Gabriela Gondim Rezende",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
+      "lattes": "http://lattes.cnpq.br/4449108765997603"
+    },
+    {
+      "name": "José Eduardo Martinelli Filho",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jose-eduardo-martinelli.jpg",
+      "lattes": "http://lattes.cnpq.br/2080628833884538"
+    },
+    {
+      "name": "João Paulo Seabra de Lima",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/joao-paulo-seabra.jpg",
+      "lattes": "http://lattes.cnpq.br/6072111926866157"
+    },
+    {
+      "name": "Clarissa Nascimento Soares Rener",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/clarissa-rener.jpg",
+      "lattes": "http://lattes.cnpq.br/5106375055470886"
+    },
+    {
+      "name": "Márcio Roberto Santos Berto",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marcio-berto.jpg",
+      "lattes": "http://lattes.cnpq.br/5527925471049709"
+    },
+    {
+      "name": "Fernando Miguel Granja Martins",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/fernando-miguel-granja-martins.jpg",
+      "lattes": ""
+    }
+  ],
+  "scientificCommittee": [
+    {
+      "name": "Richard James Ladle",
+      "nationality": "Reino Unido",
+      "country": "Reino Unido",
+      "photo": "assets/images/iwppo-2026/people/richard-james-ladle.jpg",
+      "lattes": "http://lattes.cnpq.br/9442171708024416"
+    },
+    {
+      "name": "Jarcilene Silva de Almeida",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jarcilene-almeida.jpg",
+      "lattes": "http://lattes.cnpq.br/3305390900674832"
+    },
+    {
+      "name": "Jairo Lizandro Schmitt",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jairo-schmitt.jpg",
+      "lattes": "http://lattes.cnpq.br/9831871479916100"
+    },
+    {
+      "name": "Cecilia Maria Villas Boas de Almeida",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/cecilia-villas-boas.jpg",
+      "lattes": "http://lattes.cnpq.br/1608486925932672"
+    },
+    {
+      "name": "Ubirata Tortato",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/ubirata-tortato.jpg",
+      "lattes": "http://lattes.cnpq.br/9713975312522659"
+    },
+    {
+      "name": "Federico Sulis",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/federico-sulis.jpg",
+      "lattes": "http://lattes.cnpq.br/3008783829641984"
+    },
+    {
+      "name": "Robson Guimarães dos Santos",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/robson-guimaraes.jpg",
+      "lattes": "http://lattes.cnpq.br/3415855125714979"
+    },
+    {
+      "name": "Kátia Viana Cavalcante",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/katia-viana.jpg",
+      "lattes": "http://lattes.cnpq.br/2715253110435470"
+    },
+    {
+      "name": "Taciana Kramer de Oliveira Pinto",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/taciana-kramer.jpg",
+      "lattes": "http://lattes.cnpq.br/4590437453711867"
+    },
+    {
+      "name": "Claudio Luis Santos Sampaio",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/claudio-sampaio.jpg",
+      "lattes": "http://lattes.cnpq.br/2526336992077506"
+    },
+    {
+      "name": "Ana Filipa da Silva Bessa",
+      "nationality": "Estrangeira",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/ana-filipa-bessa.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Alireza Moghayedi",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/alireza-moghayedi.jpg",
+      "lattes": ""
+    }
+  ],
+  "speakers": [
+    {
+      "name": "Henrique dos Santos Pereira",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/henrique-pereira.jpg",
+      "lattes": "http://lattes.cnpq.br/1352117560279931",
+      "affiliation": "Instituto Nacional de Pesquisas da Amazônia - INPA"
+    },
+    {
+      "name": "Fabian Sá",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/fabian-sa.jpg",
+      "lattes": "http://lattes.cnpq.br/9329106914297651"
+    },
+    {
+      "name": "Marcell Mariano Correa Maceno",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marcell-maceno.jpg",
+      "lattes": "http://lattes.cnpq.br/5020237977975416"
+    },
+    {
+      "name": "Feni Dalano Roosevelt Agostinho",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/feni-agostinho.jpg",
+      "lattes": "http://lattes.cnpq.br/2739577358518765"
+    },
+    {
+      "name": "Jemilli Castiglioni Viaggi",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jemilli-viaggi.jpg",
+      "lattes": "http://lattes.cnpq.br/1461526810377278"
+    },
+    {
+      "name": "Alexandre Urban Borbely",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/alexandre-borbely.jpg",
+      "lattes": "http://lattes.cnpq.br/3999711350740879"
+    },
+    {
+      "name": "Carlos Alberto Cioce Sampaio",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/carlos-sampaio.jpg",
+      "lattes": "http://lattes.cnpq.br/9034603212802471"
+    },
+    {
+      "name": "Jesse Marques da Silva Junior Pavão",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg",
+      "lattes": "http://lattes.cnpq.br/2811263859126204"
+    },
+    {
+      "name": "José Eduardo Martinelli Filho",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/jose-eduardo-martinelli.jpg",
+      "lattes": "http://lattes.cnpq.br/2080628833884538"
+    },
+    {
+      "name": "Marcos Paulo Alves de Sousa",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marcos-paulo-sousa.jpg",
+      "lattes": "http://lattes.cnpq.br/6713232502495902"
+    },
+    {
+      "name": "Robson Guimarães dos Santos",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/robson-guimaraes.jpg",
+      "lattes": "http://lattes.cnpq.br/3415855125714979"
+    },
+    {
+      "name": "Richard James Ladle",
+      "nationality": "Reino Unido",
+      "country": "Reino Unido",
+      "photo": "assets/images/iwppo-2026/people/richard-james-ladle.jpg",
+      "lattes": "http://lattes.cnpq.br/9442171708024416"
+    },
+    {
+      "name": "Alireza Moghayedi",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/alireza-moghayedi.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Brendan P. Kelaher",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/brendan-kelaher.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Scott Wilson",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/scott-wilson.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Fernando Miguel Granja Martins",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/fernando-miguel-granja-martins.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Ian Vázquez Rowe",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/ian-vazquez-rowe.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Bankole Ositadimma Awuzie",
+      "nationality": "Estrangeiro",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/bankole-awuzie.jpg",
+      "lattes": ""
+    },
+    {
+      "name": "Ana Filipa da Silva Bessa",
+      "nationality": "Estrangeira",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/ana-filipa-bessa.jpg",
+      "lattes": ""
+    }
+  ],
+  "schedule": [
+    {
+      "date": "2026-08-26",
+      "dayLabel": "26 de agosto de 2026",
+      "activities": [
+        {
+          "time": "09:00",
+          "title": "Cine Ambiental",
+          "type": "Outro",
+          "room": "",
+          "speakers": [
+            "Jesse Marques Pavão"
+          ],
+          "description": "Iniciativa educativa voltada à conscientização de alunos da rede básica de Manaus sobre a preservação do meio ambiente e os impactos da poluição plástica em rios, lagoas e oceanos."
+        },
+        {
+          "time": "17:30",
+          "title": "Credenciamento",
+          "type": "Credenciamento",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de entrega do kit aos congressistas."
+        },
+        {
+          "time": "18:30",
+          "title": "Abertura Oficial do III IWPPO",
+          "type": "Abertura",
+          "room": "",
+          "speakers": [
+            "Jesse Marques Pavão",
+            "Marília Gabriela Gondim Rezende"
+          ],
+          "description": "Cerimônia oficial de abertura do evento."
+        },
+        {
+          "time": "19:00",
+          "title": "Palestra Magna de Abertura: O Desafio Global da Poluição Plástica e os Compromissos na Pan-Amazônia",
+          "type": "Palestra",
+          "room": "",
+          "speakers": [
+            "Henrique dos Santos Pereira"
+          ],
+          "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia."
+        },
+        {
+          "time": "20:00",
+          "title": "Coffee Break de Abertura",
+          "type": "Abertura",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
+        },
+        {
+          "time": "20:20",
+          "title": "Apresentação Cultural",
+          "type": "Abertura",
+          "room": "",
+          "speakers": [],
+          "description": "Apresentação cultural conectando cultura amazônica e preservação ambiental."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "dayLabel": "27 de agosto de 2026",
+      "activities": [
+        {
+          "time": "09:30",
+          "title": "Sala 1 Painel: Evidências científicas sobre impactos da poluição plástica na Pan-Amazônia",
+          "type": "Painel",
+          "room": "Sala 1",
+          "speakers": [
+            "José Eduardo Martinelli Filho",
+            "Fabian Sá",
+            "Jemilli Castiglioni Viaggi"
+          ],
+          "description": "Apresentação de pesquisas recentes sobre impactos da poluição plástica na Pan-Amazônia, incluindo contaminação de rios, solos, ecossistemas locais e efeitos sobre biodiversidade e comunidades ribeirinhas."
+        },
+        {
+          "time": "09:30",
+          "title": "Sala 2 Painel: Monitoramento remoto, bioindicadores e rastreabilidade de resíduos",
+          "type": "Painel",
+          "room": "Sala 2",
+          "speakers": [
+            "Jesse Marques Pavão",
+            "Robson Guimarães dos Santos",
+            "Scott Wilson"
+          ],
+          "description": "Discussão sobre tecnologias e metodologias para monitorar a poluição plástica, incluindo satélites e drones."
+        },
+        {
+          "time": "10:40",
+          "title": "Coffee Break",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
+        },
+        {
+          "time": "11:00",
+          "title": "Sessão técnica de jovens pesquisadores: apresentação de pôsteres",
+          "type": "Apresentação de pôsteres",
+          "room": "",
+          "speakers": [],
+          "description": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções."
+        },
+        {
+          "time": "12:00",
+          "title": "Intervalo para almoço",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Intervalo para almoço."
+        },
+        {
+          "time": "13:00",
+          "title": "Keynote Internacional: Tecnologias emergentes de captura e reciclagem",
+          "type": "Mesa redonda",
+          "room": "",
+          "speakers": [
+            "Alireza Moghayedi",
+            "Brendan P. Kelaher"
+          ],
+          "description": "Apresentação de inovações para coleta de plásticos dos oceanos e transformação desses materiais em novas matérias-primas."
+        },
+        {
+          "time": "14:00",
+          "title": "Painel 1: Biorremediação, enzimas e startups de bioplásticos",
+          "type": "Painel",
+          "room": "",
+          "speakers": [
+            "Marcell Mariano Correa Maceno",
+            "Marcos Paulo Alves de Sousa",
+            "Alexandre Urban Borbely"
+          ],
+          "description": "Discussão sobre biorremediação, uso de enzimas na degradação de plásticos e inovações de startups focadas em bioplásticos."
+        },
+        {
+          "time": "15:00",
+          "title": "Coffee Break",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
+        },
+        {
+          "time": "15:30",
+          "title": "Painel 2: Economia circular aplicada a bacias hidrográficas e oceânicas",
+          "type": "Painel",
+          "room": "",
+          "speakers": [
+            "Ian Vázquez Rowe"
+          ],
+          "description": "Debate sobre economia circular como estratégia para gestão sustentável de bacias hidrográficas e oceânicas."
+        },
+        {
+          "time": "16:30",
+          "title": "Apresentação Cultural",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Apresentação teatral sobre poluição plástica, cultura local e preservação ambiental na Pan-Amazônia."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "dayLabel": "28 de agosto de 2026",
+      "activities": [
+        {
+          "time": "09:30",
+          "title": "Mesa Redonda 2: Instrumentos econômicos: logística reversa, taxação e créditos ambientais",
+          "type": "Mesa redonda",
+          "room": "",
+          "speakers": [
+            "Feni Dalano Roosevelt Agostinho"
+          ],
+          "description": "Discussão sobre instrumentos econômicos para combater a poluição plástica, incluindo logística reversa, taxação e créditos ambientais."
+        },
+        {
+          "time": "09:30",
+          "title": "Mesa Redonda 1: Acordo Global do Plástico da ONU e desdobramentos na Pan-Amazônia",
+          "type": "Mesa redonda",
+          "room": "",
+          "speakers": [
+            "Fernando Miguel Granja Martins",
+            "Jemilli Castiglioni Viaggi",
+            "Ana Filipa da Silva Bessa"
+          ],
+          "description": "Discussão sobre o Acordo Global do Plástico promovido pela ONU e suas implicações para a Pan-Amazônia."
+        },
+        {
+          "time": "10:40",
+          "title": "Coffee Break",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
+        },
+        {
+          "time": "11:00",
+          "title": "Sala 2 Painel comunitário: Toolkit Amazônico de Ação Contra o Plástico",
+          "type": "Painel",
+          "room": "Sala 2",
+          "speakers": [
+            "José Eduardo Martinelli Filho"
+          ],
+          "description": "Discussão sobre estratégias de conscientização, práticas de redução de resíduos e iniciativas de educação ambiental."
+        },
+        {
+          "time": "11:00",
+          "title": "Sala 1 Painel comunitário: Saberes indígenas e justiça ambiental",
+          "type": "Painel",
+          "room": "Sala 1",
+          "speakers": [
+            "Richard James Ladle",
+            "Bankole Ositadimma Awuzie"
+          ],
+          "description": "Debate sobre saberes indígenas, justiça ambiental e práticas sustentáveis de proteção dos ecossistemas aquáticos."
+        },
+        {
+          "time": "12:00",
+          "title": "Intervalo para almoço",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Intervalo para almoço."
+        },
+        {
+          "time": "13:00",
+          "title": "Painel 2: Indústria 4.0, rastreabilidade e logística reversa",
+          "type": "Painel",
+          "room": "",
+          "speakers": [
+            "Alireza Moghayedi"
+          ],
+          "description": "Discussão sobre IoT, big data e inteligência artificial aplicadas à gestão de resíduos, rastreabilidade e logística reversa."
+        },
+        {
+          "time": "14:30",
+          "title": "Coffee Break",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
+        },
+        {
+          "time": "15:00",
+          "title": "Grupo de trabalho: redação de policy brief",
+          "type": "Oficina",
+          "room": "",
+          "speakers": [
+            "Scott Wilson"
+          ],
+          "description": "Atividade voltada à elaboração de um policy brief com recomendações práticas para governos, organizações e comunidades."
+        },
+        {
+          "time": "17:30",
+          "title": "Sessão de premiação",
+          "type": "Outro",
+          "room": "",
+          "speakers": [],
+          "description": "Reconhecimento das melhores contribuições em artigos, pôsteres e protótipos inovadores."
+        },
+        {
+          "time": "18:00",
+          "title": "Encerramento: Carta Científica do III IWPPO",
+          "type": "Outro",
+          "room": "",
+          "speakers": [
+            "Jesse Marques Pavão",
+            "Selenobaldo Alexinaldo Santana"
+          ],
+          "description": "Apresentação da Carta Científica do III IWPPO, reunindo conclusões e recomendações do evento."
+        }
+      ]
+    }
+  ]
+}

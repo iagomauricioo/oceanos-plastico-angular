@@ -1,61 +1,139 @@
-<main class="min-h-screen bg-[#FAFBF8]">
+<main *ngIf="pageData" class="min-h-screen bg-[#FAFBF8] text-[#17221D]">
 
-  <!-- HERO AMAZÔNICO -->
-  <section class="relative overflow-hidden">
+  <!-- HERO -->
+  <section class="relative overflow-hidden min-h-screen flex items-center">
     <div class="absolute inset-0">
       <img
-        src="assets/images/iwppo-2026/amazonia-hero.jpg"
-        alt="Paisagem amazônica"
+        src="assets/images/iwppo-2026/ocean-bg.jpg"
+        [alt]="pageData.ui.alt.waterTexture"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0F3D2E]/95 via-[#0F3D2E]/80 to-[#2A6F97]/70"></div>
+
+      <div class="absolute inset-0 bg-gradient-to-br from-[#063A4A]/95 via-[#0F7F5F]/85 to-[#1CA6B8]/70"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-6 pt-40 pb-24">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
+    <div class="relative max-w-7xl mx-auto px-6 pt-32 pb-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
 
         <div>
-          <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-semibold mb-6 border border-white/20">
-            IWPPO 2026 • Amazonia Edition
+          <!-- IDIOMAS -->
+          <div class="flex gap-2 mb-6">
+            <button
+              *ngFor="let language of languages; trackBy: trackByLanguage"
+              type="button"
+              (click)="setLanguage(language)"
+              [class.bg-[#F2C230]]="isCurrentLanguage(language)"
+              [class.text-[#17221D]]="isCurrentLanguage(language)"
+              class="px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 font-bold uppercase"
+            >
+              {{ language }}
+            </button>
+          </div>
+
+          <span class="inline-flex items-center px-5 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-semibold mb-6 border border-white/20">
+            {{ pageData.hero.badge }}
           </span>
 
           <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-            International Workshop on
-            <span class="block text-green-300">Plastic Pollution in the Oceans</span>
+            {{ pageData.hero.title }}
+
+            <span class="block text-[#F2C230]">
+              {{ pageData.hero.highlight }}
+            </span>
           </h1>
 
-          <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-8 max-w-2xl">
-            A edição 2026 do IWPPO posiciona a Amazônia no centro do debate científico
-            sobre poluição plástica, conectando rios, florestas, comunidades, tecnologia
-            e cooperação internacional.
+          <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl">
+            {{ pageData.hero.description }}
           </p>
 
-          <div class="flex flex-wrap gap-4 mb-8">
-            <a class="px-6 py-3 rounded-xl bg-[#2F6B3E] hover:bg-[#245632] text-white font-semibold transition">
-              Submissões
-            </a>
-
-            <a class="px-6 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition">
-              Programação
-            </a>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span
+              *ngFor="let tag of pageData.hero.tags; trackBy: trackByText"
+              class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20"
+            >
+              {{ tag }}
+            </span>
           </div>
 
-          <div class="flex flex-wrap gap-3">
-            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20">Amazonia</span>
-            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20">Plastic Pollution</span>
-            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20">Remote Sensing</span>
-            <span class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20">Sustainability</span>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#submissoes"
+              class="px-7 py-3 rounded-xl bg-[#F2C230] hover:bg-[#d8aa1d] text-[#17221D] font-bold transition shadow-lg"
+            >
+              {{ pageData.hero.primaryButton }}
+            </a>
+
+            <a
+              href="#programacao"
+              class="px-7 py-3 rounded-xl border border-white/40 text-white hover:bg-white/10 transition font-semibold"
+            >
+              {{ pageData.hero.secondaryButton }}
+            </a>
           </div>
         </div>
 
+        <!-- CARD DO EVENTO -->
         <div class="hidden lg:block">
-          <div class="relative">
-            <div class="absolute -inset-4 rounded-[2rem] bg-white/10 blur-2xl"></div>
-            <img
-              src="assets/images/iwppo-2026/amazon-river.jpg"
-              alt="Rio amazônico"
-              class="relative w-full h-[520px] object-cover rounded-[2rem] shadow-2xl border border-white/10"
-            />
+          <div class="relative max-w-md ml-auto">
+            <div class="absolute -inset-6 rounded-[3rem] bg-[#F2C230]/20 blur-3xl"></div>
+
+            <div class="relative rounded-[3rem] bg-white/95 p-10 shadow-2xl border border-white/40 text-center">
+              <img
+                src="assets/images/iwppo-2026/logo-iwppo-2026.png"
+                [alt]="pageData.ui.alt.iwppoLogo"
+                class="w-72 mx-auto mb-8"
+              />
+
+              <h2 class="text-5xl font-black text-[#9A7600] leading-none">
+                {{ pageData.event.edition }}
+              </h2>
+
+              <p class="mt-4 text-[#063A4A] text-lg leading-snug">
+                {{ pageData.event.name }}
+              </p>
+
+              <div class="mt-6 grid grid-cols-2 gap-3 text-left">
+                <div class="rounded-2xl bg-[#F4EFE6] p-4">
+                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                    {{ pageData.ui.eventCard.start }}
+                  </p>
+                  <p class="text-sm font-black text-[#063A4A]">
+                    {{ pageData.event.startDate }}
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-[#F4EFE6] p-4">
+                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                    {{ pageData.ui.eventCard.end }}
+                  </p>
+                  <p class="text-sm font-black text-[#063A4A]">
+                    {{ pageData.event.endDate }}
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-[#F4EFE6] p-4">
+                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                    {{ pageData.ui.eventCard.location }}
+                  </p>
+                  <p class="text-sm font-black text-[#063A4A]">
+                    {{ pageData.event.city }}/{{ pageData.event.state }}
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-[#F4EFE6] p-4">
+                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                    {{ pageData.ui.eventCard.modality }}
+                  </p>
+                  <p class="text-sm font-black text-[#063A4A]">
+                    {{ pageData.event.modality }}
+                  </p>
+                </div>
+              </div>
+
+              <p class="mt-6 text-sm text-gray-600">
+                {{ pageData.event.scope }} • {{ pageData.event.periodicity }} • {{ pageData.event.evaluationArea }}
+              </p>
+            </div>
           </div>
         </div>
 
@@ -63,219 +141,547 @@
     </div>
   </section>
 
-  <!-- DIVISOR ORGÂNICO -->
-  <div class="w-full overflow-hidden leading-none -mt-1">
-    <svg viewBox="0 0 1440 100" class="w-full h-20 fill-[#F4EFE6]">
-      <path d="M0,40 C220,110 470,0 760,35 C1030,70 1220,15 1440,30 L1440,100 L0,100 Z"></path>
-    </svg>
-  </div>
-
   <!-- SOBRE -->
-  <section class="bg-[#F4EFE6] py-16">
+  <section id="sobre" class="py-20 bg-[#F4EFE6]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div class="max-w-4xl">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.about }}
+        </span>
 
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4 mb-6">
+          {{ pageData.about.title }}
+        </h2>
+
+        <p
+          *ngFor="let paragraph of pageData.about.paragraphs; trackBy: trackByText"
+          class="text-lg text-gray-700 leading-relaxed mb-4"
+        >
+          {{ paragraph }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTÓRICO -->
+  <section id="historico" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
         <div>
-          <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-            Sobre o evento
+          <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+            {{ pageData.ui.sections.history }}
           </span>
 
-          <h2 class="text-3xl md:text-4xl font-bold text-[#0F3D2E] mt-3 mb-5">
-            Amazônia como território científico, hídrico e estratégico
+          <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+            {{ pageData.history.title }}
           </h2>
-
-          <p class="text-lg text-gray-700 leading-relaxed mb-4">
-            O IWPPO 2026 amplia as discussões internacionais sobre poluição plástica
-            nos oceanos ao incorporar a Amazônia como território central para compreensão
-            das conexões entre rios, florestas, comunidades e circulação de resíduos.
-          </p>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            A proposta é fortalecer a cooperação interdisciplinar e internacional,
-            reunindo ciência, inovação, monitoramento ambiental e soluções sustentáveis.
-          </p>
         </div>
 
-        <div class="bg-white rounded-[2rem] p-8 shadow-xl border border-[#E8E1D6]">
-          <h3 class="text-2xl font-bold text-[#0F3D2E] mb-4">Por que a Amazônia?</h3>
-          <ul class="space-y-4 text-gray-700">
-            <li>• Integração entre rios, bacias e zonas costeiras</li>
-            <li>• Relevância ecológica e climática global</li>
-            <li>• Impacto direto sobre comunidades e biodiversidade</li>
-            <li>• Potencial para pesquisa aplicada e inovação ambiental</li>
-          </ul>
+        <div class="rounded-[2rem] bg-[#FAFBF8] border border-[#DCE7E1] p-8 shadow-sm">
+          <p
+            *ngFor="let paragraph of pageData.history.paragraphs; trackBy: trackByText"
+            class="text-lg text-gray-700 leading-relaxed mb-4 last:mb-0"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUSTIFICATIVA -->
+  <section id="justificativa" class="py-20 bg-[#F4EFE6]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.justification }}
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.justification.title }}
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <article
+          *ngFor="let paragraph of pageData.justification.paragraphs; trackBy: trackByText"
+          class="rounded-[1.8rem] bg-white border border-[#DCE7E1] p-7 shadow-sm"
+        >
+          <p class="text-gray-700 leading-relaxed">
+            {{ paragraph }}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUIÇÃO PROFISSIONAL -->
+  <section id="contribuicao" class="py-20 bg-[#063A4A] text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+        <div>
+          <span class="uppercase tracking-[0.25em] text-sm text-[#F2C230] font-bold">
+            {{ pageData.ui.sections.professionalContribution }}
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-extrabold mt-4">
+            {{ pageData.professionalContribution.title }}
+          </h2>
         </div>
 
+        <div class="space-y-4">
+          <article
+            *ngFor="let paragraph of pageData.professionalContribution.paragraphs; trackBy: trackByText"
+            class="rounded-[1.5rem] bg-white/10 border border-white/15 p-6 backdrop-blur-md"
+          >
+            <p class="text-white/90 leading-relaxed">
+              {{ paragraph }}
+            </p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EIXOS TEMÁTICOS -->
-  <section class="py-16 bg-[#FAFBF8]">
+  <section id="eixos" class="py-20 bg-[#FAFBF8]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-          Eixos temáticos
+      <div class="text-center mb-14">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.thematicAxes }}
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#0F3D2E] mt-3">
-          Ciência, tecnologia, sociedade e sustentabilidade
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.event.theme }}
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="rounded-[1.5rem] p-6 bg-[#EAF4EC] shadow-sm border border-[#D7E7DA] hover:-translate-y-1 transition">
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-3">Monitoramento</h3>
+        <article
+          *ngFor="let axis of pageData.thematicAxes; trackBy: trackByAxis"
+          class="rounded-[1.8rem] p-7 bg-white shadow-sm border border-[#DCE7E1] hover:-translate-y-2 hover:shadow-xl transition"
+        >
+          <div class="w-12 h-12 rounded-2xl bg-[#F2C230]/25 mb-5"></div>
+
+          <h3 class="text-xl font-black text-[#063A4A] mb-3">
+            {{ axis.title }}
+          </h3>
+
           <p class="text-gray-700">
-            Observação, mapeamento e análise de detritos plásticos em rios, estuários e zonas costeiras.
+            {{ axis.description }}
           </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMAS PARTICIPANTES -->
+  <section id="programas" class="py-20 bg-[#F4EFE6]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.participatingPrograms }}
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.participatingGraduatePrograms }}
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <article
+          *ngFor="let program of pageData.participatingPrograms; trackBy: trackByProgram"
+          class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm"
+        >
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-black text-[#063A4A]">
+                {{ program.institution }}
+              </h3>
+
+              <p class="text-[#9A7600] font-bold mt-1">
+                {{ program.program }}
+              </p>
+            </div>
+
+            <span
+              *ngIf="program.grade !== null"
+              class="shrink-0 rounded-full bg-[#F2C230]/25 px-4 py-2 text-sm font-black text-[#9A7600]"
+            >
+              {{ pageData.ui.labels.grade }} {{ program.grade }}
+            </span>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed">
+            {{ program.description }}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÚBLICO-ALVO -->
+  <section id="publico-alvo" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.targetAudience }}
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.targetAudienceFees }}
+        </h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-[2rem] border border-[#DCE7E1] bg-white shadow-sm">
+        <table class="w-full min-w-[900px] text-left">
+          <thead class="bg-[#063A4A] text-white">
+            <tr>
+              <th class="p-4">{{ pageData.ui.table.category }}</th>
+              <th class="p-4">{{ pageData.ui.table.north }}</th>
+              <th class="p-4">{{ pageData.ui.table.northeast }}</th>
+              <th class="p-4">{{ pageData.ui.table.southeast }}</th>
+              <th class="p-4">{{ pageData.ui.table.south }}</th>
+              <th class="p-4">{{ pageData.ui.table.midwest }}</th>
+              <th class="p-4">{{ pageData.ui.table.foreigners }}</th>
+              <th class="p-4">{{ pageData.ui.table.registration }}</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr
+              *ngFor="let audience of pageData.targetAudience; trackBy: trackByAudience"
+              class="border-t border-[#DCE7E1] hover:bg-[#FAFBF8]"
+            >
+              <td class="p-4 font-bold text-[#063A4A]">
+                {{ audience.type }}
+              </td>
+              <td class="p-4">{{ audience.north }}</td>
+              <td class="p-4">{{ audience.northeast }}</td>
+              <td class="p-4">{{ audience.southeast }}</td>
+              <td class="p-4">{{ audience.south }}</td>
+              <td class="p-4">{{ audience.midwest }}</td>
+              <td class="p-4">{{ audience.foreigners }}</td>
+              <td class="p-4 font-black text-[#9A7600]">
+                {{ audience.fee }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PALESTRANTES -->
+  <section id="palestrantes" class="py-20 bg-[#F4EFE6]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.speakers }}
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.invitedSpeakers }}
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article
+          *ngFor="let speaker of pageData.speakers; trackBy: trackByName"
+          class="bg-white rounded-[2rem] border border-[#DCE7E1] shadow-sm overflow-hidden hover:-translate-y-2 hover:shadow-xl transition"
+        >
+          <img
+            [src]="speaker.photo"
+            [alt]="speaker.name"
+            class="w-full h-64 object-cover bg-[#DCE7E1]"
+          />
+
+          <div class="p-5">
+            <h3 class="text-xl font-black text-[#063A4A]">
+              {{ speaker.name }}
+            </h3>
+
+            <p class="text-sm text-[#9A7600] font-semibold mt-2">
+              {{ speaker.nationality }}
+            </p>
+
+            <p
+              *ngIf="hasAffiliation(speaker)"
+              class="text-sm text-gray-600 mt-2"
+            >
+              {{ speaker.affiliation }}
+            </p>
+
+            <a
+              *ngIf="hasLattes(speaker)"
+              [href]="speaker.lattes"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-4 text-sm text-[#0F7F5F] font-bold"
+            >
+              {{ pageData.ui.labels.lattes }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMISSÕES -->
+  <section id="comissoes" class="py-20 bg-[#FAFBF8]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.committees }}
+        </span>
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.committeesTitle }}
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl font-black text-[#9A7600] mb-6">
+            {{ pageData.ui.sections.organizingCommittee }}
+          </h3>
+
+          <div class="space-y-4">
+            <article
+              *ngFor="let person of pageData.organizingCommittee; trackBy: trackByName"
+              class="bg-white border border-[#DCE7E1] rounded-2xl p-5 shadow-sm"
+            >
+              <h4 class="font-black text-[#063A4A]">
+                {{ person.name }}
+              </h4>
+
+              <p class="text-sm text-[#9A7600] font-semibold">
+                {{ person.nationality }}
+              </p>
+
+              <a
+                *ngIf="hasLattes(person)"
+                [href]="person.lattes"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-3 text-sm text-[#0F7F5F] font-bold"
+              >
+                Lattes
+              </a>
+            </article>
+          </div>
         </div>
 
-        <div class="rounded-[1.5rem] p-6 bg-[#E8F2F7] shadow-sm border border-[#D7E6EE] hover:-translate-y-1 transition">
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-3">Tecnologia</h3>
-          <p class="text-gray-700">
-            Sensoriamento remoto, inteligência artificial, ciência de dados e inovação aplicada.
-          </p>
-        </div>
+        <div>
+          <h3 class="text-2xl font-black text-[#9A7600] mb-6">
+            {{ pageData.ui.sections.scientificCommittee }}
+          </h3>
 
-        <div class="rounded-[1.5rem] p-6 bg-[#F8F1DA] shadow-sm border border-[#ECDDAD] hover:-translate-y-1 transition">
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-3">Sociedade</h3>
-          <p class="text-gray-700">
-            Educação ambiental, participação social, governança e impacto nas comunidades.
-          </p>
-        </div>
+          <div class="space-y-4">
+            <article
+              *ngFor="let person of pageData.scientificCommittee; trackBy: trackByName"
+              class="bg-white border border-[#DCE7E1] rounded-2xl p-5 shadow-sm"
+            >
+              <h4 class="font-black text-[#063A4A]">
+                {{ person.name }}
+              </h4>
 
-        <div class="rounded-[1.5rem] p-6 bg-[#F2E5DD] shadow-sm border border-[#E7D0C1] hover:-translate-y-1 transition">
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-3">Sustentabilidade</h3>
-          <p class="text-gray-700">
-            Reuso, economia circular, políticas públicas e Objetivos de Desenvolvimento Sustentável.
-          </p>
+              <p class="text-sm text-[#9A7600] font-semibold">
+                {{ person.nationality }}
+              </p>
+
+              <a
+                *ngIf="hasLattes(person)"
+                [href]="person.lattes"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-3 text-sm text-[#0F7F5F] font-bold"
+              >
+                Lattes
+              </a>
+            </article>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROGRAMAÇÃO -->
-  <section class="py-16 bg-white">
+  <section id="programacao" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-10">
-        <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-          Programação
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.schedule }}
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#0F3D2E] mt-3">
-          Estrutura preliminar do evento
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.scheduleTitle }}
         </h2>
       </div>
 
-      <div class="space-y-5">
-        <div class="rounded-[1.5rem] border border-[#DCE7E1] bg-[#FAFBF8] p-6 shadow-sm">
-          <p class="text-sm text-[#2A6F97] font-semibold mb-2">Em breve</p>
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-2">Abertura institucional</h3>
-          <p class="text-gray-700">Detalhes da cerimônia de abertura e da mesa inaugural serão divulgados em breve.</p>
-        </div>
+      <div class="space-y-10">
+        <div *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay">
+          <h3 class="text-2xl font-black text-[#9A7600] mb-5">
+            {{ day.dayLabel }}
+          </h3>
 
-        <div class="rounded-[1.5rem] border border-[#DCE7E1] bg-[#FAFBF8] p-6 shadow-sm">
-          <p class="text-sm text-[#2A6F97] font-semibold mb-2">Em breve</p>
-          <h3 class="text-xl font-bold text-[#0F3D2E] mb-2">Palestras e mesas temáticas</h3>
-          <p class="text-gray-700">A programação científica completa será disponibilizada nesta seção.</p>
+          <div class="space-y-5">
+            <article
+              *ngFor="let activity of day.activities; trackBy: trackByActivity"
+              class="rounded-[1.8rem] border border-[#DCE7E1] bg-[#FAFBF8] p-6 shadow-sm"
+            >
+              <div class="flex flex-col md:flex-row gap-5">
+                <div class="text-[#0F7F5F] font-black text-xl min-w-[80px]">
+                  {{ activity.time }}
+                </div>
+
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <p class="text-sm text-[#9A7600] font-bold">
+                      {{ activity.type }}
+                    </p>
+
+                    <span
+                      *ngIf="activity.room"
+                      class="px-3 py-1 rounded-full bg-[#F2C230]/20 text-[#9A7600] text-xs font-black"
+                    >
+                      {{ activity.room }}
+                    </span>
+                  </div>
+
+                  <h4 class="text-xl font-black text-[#063A4A] mb-2">
+                    {{ activity.title }}
+                  </h4>
+
+                  <p class="text-gray-700 mb-3">
+                    {{ activity.description }}
+                  </p>
+
+                  <div *ngIf="hasSpeakers(activity)" class="flex flex-wrap gap-2">
+                    <span
+                      *ngFor="let name of activity.speakers; trackBy: trackByText"
+                      class="px-3 py-1 rounded-full bg-[#0F7F5F]/10 text-[#0F7F5F] text-sm font-semibold"
+                    >
+                      {{ name }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PALESTRANTES -->
-  <section class="py-16 bg-[#F4EFE6]">
+  <!-- INSTITUCIONAL -->
+  <section id="institucional" class="py-20 bg-[#F4EFE6]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-10">
-        <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-          Palestrantes
+      <div class="mb-12">
+        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+          {{ pageData.ui.sections.institutional }}
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#0F3D2E] mt-3">
-          Convidados da edição 2026
+
+        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+          {{ pageData.ui.sections.institutionalTitle }}
         </h2>
       </div>
 
-      <div class="rounded-[1.5rem] bg-white border border-[#E7DDD0] p-8 shadow-sm">
-        <p class="text-gray-700 text-lg">
-          Os nomes dos palestrantes convidados serão anunciados em breve.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMISSÕES -->
-  <section class="py-16 bg-[#FAFBF8]">
-    <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-6">
-        <div class="rounded-[1.5rem] bg-white border border-[#DCE7E1] p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-[#0F3D2E] mb-4">Comissão organizadora</h2>
-          <p class="text-gray-700">Composição em atualização.</p>
-        </div>
+        <article class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm">
+          <h3 class="text-2xl font-black text-[#063A4A] mb-5">
+            {{ pageData.ui.labels.proponentData }}
+          </h3>
 
-        <div class="rounded-[1.5rem] bg-white border border-[#DCE7E1] p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-[#0F3D2E] mb-4">Comitê científico</h2>
-          <p class="text-gray-700">Composição em atualização.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="space-y-3 text-gray-700">
+            <p>
+              <strong>{{ pageData.ui.labels.fundingProgram }}:</strong>
+              {{ pageData.institutional.fundingProgram }}
+            </p>
 
-  <!-- SUBMISSÕES -->
-  <section class="py-16 bg-[#0F3D2E]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10">
-        <span class="uppercase tracking-[0.2em] text-sm text-green-300 font-semibold">
-          Submissões
-        </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mt-3 mb-5">
-          Trabalhos, templates e prazos
-        </h2>
+            <p>
+              <strong>{{ pageData.ui.labels.call }}:</strong>
+              {{ pageData.institutional.call }}
+            </p>
 
-        <p class="text-gray-200 text-lg mb-6 max-w-3xl">
-          Informações sobre submissão de trabalhos, cronograma, templates e orientações
-          para autores serão publicadas nesta seção.
-        </p>
+            <p>
+              <strong>{{ pageData.ui.labels.proponent }}:</strong>
+              {{ pageData.institutional.proponent.name }}
+            </p>
 
-        <button class="px-6 py-3 rounded-xl bg-[#2F6B3E] text-white font-semibold opacity-80 cursor-not-allowed">
-          Em breve
-        </button>
-      </div>
-    </div>
-  </section>
+            <p>
+              <strong>{{ pageData.ui.labels.role }}:</strong>
+              {{ pageData.institutional.proponent.institutionalRole }}
+            </p>
 
-  <!-- LOCAL -->
-  <section class="py-16 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="rounded-[2rem] bg-white border border-[#E7DDD0] p-8 shadow-sm">
-        <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-          Local e informações
-        </span>
-        <h2 class="text-3xl font-bold text-[#0F3D2E] mt-3 mb-4">
-          Edição Amazônia
-        </h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          A edição 2026 será realizada na Amazônia. Mais informações sobre cidade,
-          datas, hospedagem e logística serão divulgadas em breve.
-        </p>
-      </div>
-    </div>
-  </section>
+            <p>
+              <strong>{{ pageData.ui.labels.email }}:</strong>
+              {{ pageData.institutional.proponent.email }}
+            </p>
 
-  <!-- PARCEIROS -->
-  <section class="py-16 bg-[#FAFBF8]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-10">
-        <span class="uppercase tracking-[0.2em] text-sm text-[#2A6F97] font-semibold">
-          Parceiros
-        </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#0F3D2E] mt-3">
-          Instituições organizadoras e apoiadores
-        </h2>
-      </div>
+            <p>
+              <strong>{{ pageData.ui.labels.phone }}:</strong>
+              {{ pageData.institutional.proponent.phone }}
+            </p>
 
-      <div class="rounded-[1.5rem] bg-white border border-[#DCE7E1] p-8 shadow-sm">
-        <p class="text-gray-700 text-lg">
-          Instituições organizadoras, apoiadores e parceiros serão apresentados em breve.
-        </p>
+            <p>
+              <strong>{{ pageData.ui.labels.institution }}:</strong>
+              {{ pageData.institutional.institution.name }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.program }}:</strong>
+              {{ pageData.institutional.institution.program }}
+            </p>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm">
+          <h3 class="text-2xl font-black text-[#063A4A] mb-5">
+            {{ pageData.ui.labels.promotingInstitution }}
+          </h3>
+
+          <div class="space-y-3 text-gray-700">
+            <p>
+              <strong>{{ pageData.ui.labels.name }}:</strong>
+              {{ pageData.promotingInstitution.name }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.type }}:</strong>
+              {{ pageData.promotingInstitution.type }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.country }}:</strong>
+              {{ pageData.promotingInstitution.country }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.address }}:</strong>
+              {{ pageData.promotingInstitution.address }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.director }}:</strong>
+              {{ pageData.promotingInstitution.director.name }}
+            </p>
+
+            <p>
+              <strong>{{ pageData.ui.labels.position }}:</strong>
+              {{ pageData.promotingInstitution.director.role }}
+            </p>
+
+            <a
+              [href]="pageData.promotingInstitution.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-4 text-[#0F7F5F] font-bold"
+            >
+              {{ pageData.ui.labels.accessInstitutionalWebsite }}
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
