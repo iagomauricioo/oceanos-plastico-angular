@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+
 
 import ptData from '../../../assets/data/iwppo-2026/pt.json';
 import enData from '../../../assets/data/iwppo-2026/en.json';
@@ -410,7 +412,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
   templateUrl: './iwppo-2026.component.html',
   styleUrl: './iwppo-2026.component.css'
 })
-export class Iwppo2026Component implements OnInit {
+export class Iwppo2026Component implements OnInit, AfterViewInit{
   currentLanguage: Language = 'pt';
   pageData!: IwppoPageData;
 
@@ -419,6 +421,25 @@ export class Iwppo2026Component implements OnInit {
   ngOnInit(): void {
     this.setLanguage(this.currentLanguage);
   }
+
+  ngAfterViewInit(): void {
+  const elements = document.querySelectorAll('.iwppo-reveal');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  elements.forEach((element) => observer.observe(element));
+}
 
   setLanguage(language: Language): void {
     this.currentLanguage = language;

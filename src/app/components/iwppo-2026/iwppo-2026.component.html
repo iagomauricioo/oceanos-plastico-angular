@@ -1,55 +1,60 @@
-<main *ngIf="pageData" class="min-h-screen bg-[#FAFBF8] text-[#17221D]">
+<main *ngIf="pageData" class="min-h-screen bg-[#F7F3EA] text-[#17221D] overflow-hidden">
 
   <!-- HERO -->
-  <section class="relative overflow-hidden min-h-screen flex items-center">
+  <section class="relative min-h-screen flex items-center overflow-hidden bg-[#06182E]">
     <div class="absolute inset-0">
       <img
         src="assets/images/iwppo-2026/ocean-bg.jpg"
         [alt]="pageData.ui.alt.waterTexture"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover scale-105"
       />
 
-      <div class="absolute inset-0 bg-gradient-to-br from-[#063A4A]/95 via-[#0F7F5F]/85 to-[#1CA6B8]/70"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(242,194,48,0.30),transparent_34%),linear-gradient(115deg,rgba(6,24,46,0.98)_0%,rgba(8,45,73,0.94)_45%,rgba(12,91,111,0.82)_100%)]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(6,24,46,0.42)_58%,#06182E_100%)]"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-6 pt-32 pb-24">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-[#F2C230]/20 blur-[90px]"></div>
+    <div class="absolute top-1/2 -left-48 w-[420px] h-[420px] rounded-full bg-[#1CA6B8]/20 blur-[100px]"></div>
 
-        <div>
+    <div class="relative max-w-7xl mx-auto px-6 pt-32 pb-24 w-full">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+
+        <div class="iwppo-reveal">
           <!-- IDIOMAS -->
-          <div class="flex gap-2 mb-6">
+          <div class="flex flex-wrap gap-2 mb-7">
             <button
               *ngFor="let language of languages; trackBy: trackByLanguage"
               type="button"
               (click)="setLanguage(language)"
               [class.bg-[#F2C230]]="isCurrentLanguage(language)"
-              [class.text-[#17221D]]="isCurrentLanguage(language)"
-              class="px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 font-bold uppercase"
+              [class.text-[#06182E]]="isCurrentLanguage(language)"
+              [class.border-[#F2C230]]="isCurrentLanguage(language)"
+              class="px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 backdrop-blur-md text-xs font-black uppercase tracking-widest hover:bg-white/20 transition"
             >
               {{ language }}
             </button>
           </div>
 
-          <span class="inline-flex items-center px-5 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-semibold mb-6 border border-white/20">
+          <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-bold mb-6 border border-white/20">
+            <span class="w-2 h-2 rounded-full bg-[#F2C230]"></span>
             {{ pageData.hero.badge }}
           </span>
 
-          <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-[-0.05em] mb-7">
             {{ pageData.hero.title }}
-
             <span class="block text-[#F2C230]">
               {{ pageData.hero.highlight }}
             </span>
           </h1>
 
-          <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-2xl">
+          <p class="text-lg md:text-xl text-white/85 leading-relaxed mb-8 max-w-2xl">
             {{ pageData.hero.description }}
           </p>
 
-          <div class="flex flex-wrap gap-3 mb-8">
+          <div class="flex flex-wrap gap-3 mb-9">
             <span
               *ngFor="let tag of pageData.hero.tags; trackBy: trackByText"
-              class="px-3 py-1 bg-white/10 text-white rounded-full text-sm border border-white/20"
+              class="px-4 py-2 bg-white/10 text-white rounded-full text-sm border border-white/15 backdrop-blur-md"
             >
               {{ tag }}
             </span>
@@ -58,14 +63,15 @@
           <div class="flex flex-wrap gap-4">
             <a
               href="#submissoes"
-              class="px-7 py-3 rounded-xl bg-[#F2C230] hover:bg-[#d8aa1d] text-[#17221D] font-bold transition shadow-lg"
+              class="group inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#F2C230] hover:bg-[#d8aa1d] text-[#06182E] font-black transition shadow-[0_18px_45px_rgba(242,194,48,0.32)]"
             >
               {{ pageData.hero.primaryButton }}
+              <span class="ml-2 group-hover:translate-x-1 transition">→</span>
             </a>
 
             <a
               href="#programacao"
-              class="px-7 py-3 rounded-xl border border-white/40 text-white hover:bg-white/10 transition font-semibold"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-2xl border border-white/30 text-white hover:bg-white/10 transition font-bold backdrop-blur-md"
             >
               {{ pageData.hero.secondaryButton }}
             </a>
@@ -73,64 +79,66 @@
         </div>
 
         <!-- CARD DO EVENTO -->
-        <div class="hidden lg:block">
+        <div class="hidden lg:block iwppo-reveal">
           <div class="relative max-w-md ml-auto">
             <div class="absolute -inset-6 rounded-[3rem] bg-[#F2C230]/20 blur-3xl"></div>
 
-            <div class="relative rounded-[3rem] bg-white/95 p-10 shadow-2xl border border-white/40 text-center">
-              <img
-                src="assets/images/iwppo-2026/logo-iwppo-2026.png"
-                [alt]="pageData.ui.alt.iwppoLogo"
-                class="w-72 mx-auto mb-8"
-              />
+            <div class="relative rounded-[2.5rem] bg-white/95 p-8 shadow-2xl border border-white/40">
+              <div class="rounded-[2rem] bg-[#F7F3EA] p-6 mb-7">
+                <img
+                  src="assets/images/iwppo-2026/logo-iwppo-2026.png"
+                  [alt]="pageData.ui.alt.iwppoLogo"
+                  class="w-72 mx-auto"
+                />
+              </div>
 
-              <h2 class="text-5xl font-black text-[#9A7600] leading-none">
+              <h2 class="text-6xl font-black text-[#9A7600] leading-none tracking-[-0.06em]">
                 {{ pageData.event.edition }}
               </h2>
 
-              <p class="mt-4 text-[#063A4A] text-lg leading-snug">
+              <p class="mt-4 text-[#063A4A] text-lg font-semibold leading-snug">
                 {{ pageData.event.name }}
               </p>
 
-              <div class="mt-6 grid grid-cols-2 gap-3 text-left">
-                <div class="rounded-2xl bg-[#F4EFE6] p-4">
-                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+              <div class="mt-7 grid grid-cols-2 gap-3">
+                <div class="rounded-2xl bg-white border border-[#E6DDC8] p-4">
+                  <p class="text-[10px] uppercase tracking-widest font-black text-[#0F7F5F]">
                     {{ pageData.ui.eventCard.start }}
                   </p>
-                  <p class="text-sm font-black text-[#063A4A]">
+                  <p class="text-sm font-black text-[#063A4A] mt-1">
                     {{ pageData.event.startDate }}
                   </p>
                 </div>
 
-                <div class="rounded-2xl bg-[#F4EFE6] p-4">
-                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                <div class="rounded-2xl bg-white border border-[#E6DDC8] p-4">
+                  <p class="text-[10px] uppercase tracking-widest font-black text-[#0F7F5F]">
                     {{ pageData.ui.eventCard.end }}
                   </p>
-                  <p class="text-sm font-black text-[#063A4A]">
+                  <p class="text-sm font-black text-[#063A4A] mt-1">
                     {{ pageData.event.endDate }}
                   </p>
                 </div>
 
-                <div class="rounded-2xl bg-[#F4EFE6] p-4">
-                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                <div class="rounded-2xl bg-white border border-[#E6DDC8] p-4">
+                  <p class="text-[10px] uppercase tracking-widest font-black text-[#0F7F5F]">
                     {{ pageData.ui.eventCard.location }}
                   </p>
-                  <p class="text-sm font-black text-[#063A4A]">
+                  <p class="text-sm font-black text-[#063A4A] mt-1">
                     {{ pageData.event.city }}/{{ pageData.event.state }}
                   </p>
                 </div>
 
-                <div class="rounded-2xl bg-[#F4EFE6] p-4">
-                  <p class="text-xs uppercase font-bold text-[#0F7F5F]">
+                <div class="rounded-2xl bg-white border border-[#E6DDC8] p-4">
+                  <p class="text-[10px] uppercase tracking-widest font-black text-[#0F7F5F]">
                     {{ pageData.ui.eventCard.modality }}
                   </p>
-                  <p class="text-sm font-black text-[#063A4A]">
+                  <p class="text-sm font-black text-[#063A4A] mt-1">
                     {{ pageData.event.modality }}
                   </p>
                 </div>
               </div>
 
-              <p class="mt-6 text-sm text-gray-600">
+              <p class="mt-6 text-sm text-gray-600 leading-relaxed">
                 {{ pageData.event.scope }} • {{ pageData.event.periodicity }} • {{ pageData.event.evaluationArea }}
               </p>
             </div>
@@ -138,103 +146,139 @@
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="py-20 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-4xl">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
-          {{ pageData.ui.sections.about }}
-        </span>
-
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4 mb-6">
-          {{ pageData.about.title }}
-        </h2>
-
-        <p
-          *ngFor="let paragraph of pageData.about.paragraphs; trackBy: trackByText"
-          class="text-lg text-gray-700 leading-relaxed mb-4"
-        >
-          {{ paragraph }}
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HISTÓRICO -->
-  <section id="historico" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
-        <div>
-          <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
-            {{ pageData.ui.sections.history }}
-          </span>
-
-          <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
-            {{ pageData.history.title }}
-          </h2>
-        </div>
-
-        <div class="rounded-[2rem] bg-[#FAFBF8] border border-[#DCE7E1] p-8 shadow-sm">
-          <p
-            *ngFor="let paragraph of pageData.history.paragraphs; trackBy: trackByText"
-            class="text-lg text-gray-700 leading-relaxed mb-4 last:mb-0"
-          >
-            {{ paragraph }}
+      <!-- CARDS DE IMPACTO -->
+      <div class="relative mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 iwppo-reveal">
+        <article class="rounded-[1.8rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 text-white">
+          <p class="text-4xl font-black text-[#F2C230]">
+            {{ pageData.event.edition }}
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <p class="text-sm uppercase tracking-widest font-bold mt-2">
+            Edição
+          </p>
+        </article>
 
-  <!-- JUSTIFICATIVA -->
-  <section id="justificativa" class="py-20 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-4xl mx-auto text-center mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
-          {{ pageData.ui.sections.justification }}
-        </span>
+        <article class="rounded-[1.8rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 text-white">
+          <p class="text-4xl font-black text-[#F2C230]">
+            {{ pageData.schedule.length }}
+          </p>
+          <p class="text-sm uppercase tracking-widest font-bold mt-2">
+            Dias de programação
+          </p>
+        </article>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
-          {{ pageData.justification.title }}
-        </h2>
-      </div>
+        <article class="rounded-[1.8rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 text-white">
+          <p class="text-4xl font-black text-[#F2C230]">
+            {{ pageData.speakers.length }}
+          </p>
+          <p class="text-sm uppercase tracking-widest font-bold mt-2">
+            Palestrantes
+          </p>
+        </article>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <article
-          *ngFor="let paragraph of pageData.justification.paragraphs; trackBy: trackByText"
-          class="rounded-[1.8rem] bg-white border border-[#DCE7E1] p-7 shadow-sm"
-        >
-          <p class="text-gray-700 leading-relaxed">
-            {{ paragraph }}
+        <article class="rounded-[1.8rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 text-white">
+          <p class="text-4xl font-black text-[#F2C230]">
+            {{ pageData.thematicAxes.length }}
+          </p>
+          <p class="text-sm uppercase tracking-widest font-bold mt-2">
+            Eixos temáticos
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- CONTRIBUIÇÃO PROFISSIONAL -->
-  <section id="contribuicao" class="py-20 bg-[#063A4A] text-white">
-    <div class="max-w-6xl mx-auto px-6">
+  <!-- SOBRE -->
+  <section id="sobre" class="relative py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
-        <div>
-          <span class="uppercase tracking-[0.25em] text-sm text-[#F2C230] font-bold">
+        <div class="iwppo-reveal">
+          <span class="iwppo-section-label">
+            {{ pageData.ui.sections.about }}
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 leading-tight tracking-[-0.04em]">
+            {{ pageData.about.title }}
+          </h2>
+        </div>
+
+        <div class="iwppo-reveal rounded-[2.2rem] bg-white border border-[#E6DDC8] p-8 md:p-10 shadow-[0_24px_70px_rgba(6,24,46,0.08)]">
+          <p
+            *ngFor="let paragraph of pageData.about.paragraphs; trackBy: trackByText"
+            class="text-lg text-gray-700 leading-relaxed mb-5 last:mb-0"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTÓRICO + JUSTIFICATIVA -->
+  <section id="historico" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <article class="iwppo-reveal rounded-[2.2rem] bg-[#06182E] text-white p-8 md:p-10 shadow-xl">
+          <span class="text-[#F2C230] uppercase tracking-[0.25em] text-xs font-black">
+            {{ pageData.ui.sections.history }}
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-black mt-5 mb-7 tracking-[-0.04em]">
+            {{ pageData.history.title }}
+          </h2>
+
+          <p
+            *ngFor="let paragraph of pageData.history.paragraphs; trackBy: trackByText"
+            class="text-white/82 leading-relaxed mb-5 last:mb-0"
+          >
+            {{ paragraph }}
+          </p>
+        </article>
+
+        <article id="justificativa" class="iwppo-reveal rounded-[2.2rem] bg-[#F7F3EA] border border-[#E6DDC8] p-8 md:p-10 shadow-sm">
+          <span class="iwppo-section-label">
+            {{ pageData.ui.sections.justification }}
+          </span>
+
+          <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 mb-7 tracking-[-0.04em]">
+            {{ pageData.justification.title }}
+          </h2>
+
+          <div class="space-y-4">
+            <p
+              *ngFor="let paragraph of pageData.justification.paragraphs; trackBy: trackByText"
+              class="text-gray-700 leading-relaxed"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUIÇÃO PROFISSIONAL -->
+  <section id="contribuicao" class="relative py-24 bg-[#06182E] text-white overflow-hidden">
+    <div class="absolute -top-32 right-0 w-[420px] h-[420px] rounded-full bg-[#F2C230]/20 blur-[100px]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 items-start">
+        <div class="iwppo-reveal">
+          <span class="uppercase tracking-[0.25em] text-xs text-[#F2C230] font-black">
             {{ pageData.ui.sections.professionalContribution }}
           </span>
 
-          <h2 class="text-3xl md:text-5xl font-extrabold mt-4">
+          <h2 class="text-3xl md:text-5xl font-black mt-5 tracking-[-0.04em] leading-tight">
             {{ pageData.professionalContribution.title }}
           </h2>
         </div>
 
-        <div class="space-y-4">
+        <div class="iwppo-reveal grid md:grid-cols-2 gap-4">
           <article
             *ngFor="let paragraph of pageData.professionalContribution.paragraphs; trackBy: trackByText"
-            class="rounded-[1.5rem] bg-white/10 border border-white/15 p-6 backdrop-blur-md"
+            class="rounded-[1.8rem] bg-white/10 border border-white/15 p-6 backdrop-blur-md hover:bg-white/15 transition"
           >
-            <p class="text-white/90 leading-relaxed">
+            <p class="text-white/86 leading-relaxed">
               {{ paragraph }}
             </p>
           </article>
@@ -244,30 +288,36 @@
   </section>
 
   <!-- EIXOS TEMÁTICOS -->
-  <section id="eixos" class="py-20 bg-[#FAFBF8]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="eixos" class="py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-14 iwppo-reveal">
+        <span class="iwppo-section-label">
           {{ pageData.ui.sections.thematicAxes }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em] leading-tight">
           {{ pageData.event.theme }}
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <article
-          *ngFor="let axis of pageData.thematicAxes; trackBy: trackByAxis"
-          class="rounded-[1.8rem] p-7 bg-white shadow-sm border border-[#DCE7E1] hover:-translate-y-2 hover:shadow-xl transition"
+          *ngFor="let axis of pageData.thematicAxes; trackBy: trackByAxis; let index = index"
+          class="iwppo-reveal group rounded-[2rem] p-7 bg-white shadow-sm border border-[#E6DDC8] hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(6,24,46,0.12)] transition duration-300"
         >
-          <div class="w-12 h-12 rounded-2xl bg-[#F2C230]/25 mb-5"></div>
+          <div class="flex items-center justify-between mb-7">
+            <div class="w-14 h-14 rounded-2xl bg-[#F2C230]/25 grid place-items-center text-[#9A7600] font-black">
+              {{ index + 1 }}
+            </div>
 
-          <h3 class="text-xl font-black text-[#063A4A] mb-3">
+            <span class="text-3xl text-[#063A4A]/15 group-hover:text-[#F2C230] transition">✦</span>
+          </div>
+
+          <h3 class="text-xl font-black text-[#063A4A] mb-3 leading-tight">
             {{ axis.title }}
           </h3>
 
-          <p class="text-gray-700">
+          <p class="text-gray-700 leading-relaxed">
             {{ axis.description }}
           </p>
         </article>
@@ -276,14 +326,14 @@
   </section>
 
   <!-- PROGRAMAS PARTICIPANTES -->
-  <section id="programas" class="py-20 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="programas" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="iwppo-section-label">
           {{ pageData.ui.sections.participatingPrograms }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
           {{ pageData.ui.sections.participatingGraduatePrograms }}
         </h2>
       </div>
@@ -291,7 +341,7 @@
       <div class="grid md:grid-cols-2 gap-6">
         <article
           *ngFor="let program of pageData.participatingPrograms; trackBy: trackByProgram"
-          class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm"
+          class="iwppo-reveal rounded-[2rem] bg-[#F7F3EA] border border-[#E6DDC8] p-7 shadow-sm hover:bg-white hover:-translate-y-1 hover:shadow-xl transition"
         >
           <div class="flex items-start justify-between gap-4 mb-4">
             <div>
@@ -321,48 +371,48 @@
   </section>
 
   <!-- PÚBLICO-ALVO -->
-  <section id="publico-alvo" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="publico-alvo" class="py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="iwppo-section-label">
           {{ pageData.ui.sections.targetAudience }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
           {{ pageData.ui.sections.targetAudienceFees }}
         </h2>
       </div>
 
-      <div class="overflow-x-auto rounded-[2rem] border border-[#DCE7E1] bg-white shadow-sm">
+      <div class="iwppo-reveal overflow-x-auto rounded-[2rem] border border-[#E6DDC8] bg-white shadow-[0_24px_70px_rgba(6,24,46,0.08)]">
         <table class="w-full min-w-[900px] text-left">
-          <thead class="bg-[#063A4A] text-white">
+          <thead class="bg-[#06182E] text-white">
             <tr>
-              <th class="p-4">{{ pageData.ui.table.category }}</th>
-              <th class="p-4">{{ pageData.ui.table.north }}</th>
-              <th class="p-4">{{ pageData.ui.table.northeast }}</th>
-              <th class="p-4">{{ pageData.ui.table.southeast }}</th>
-              <th class="p-4">{{ pageData.ui.table.south }}</th>
-              <th class="p-4">{{ pageData.ui.table.midwest }}</th>
-              <th class="p-4">{{ pageData.ui.table.foreigners }}</th>
-              <th class="p-4">{{ pageData.ui.table.registration }}</th>
+              <th class="p-5">{{ pageData.ui.table.category }}</th>
+              <th class="p-5">{{ pageData.ui.table.north }}</th>
+              <th class="p-5">{{ pageData.ui.table.northeast }}</th>
+              <th class="p-5">{{ pageData.ui.table.southeast }}</th>
+              <th class="p-5">{{ pageData.ui.table.south }}</th>
+              <th class="p-5">{{ pageData.ui.table.midwest }}</th>
+              <th class="p-5">{{ pageData.ui.table.foreigners }}</th>
+              <th class="p-5">{{ pageData.ui.table.registration }}</th>
             </tr>
           </thead>
 
           <tbody>
             <tr
               *ngFor="let audience of pageData.targetAudience; trackBy: trackByAudience"
-              class="border-t border-[#DCE7E1] hover:bg-[#FAFBF8]"
+              class="border-t border-[#E6DDC8] hover:bg-[#F7F3EA] transition"
             >
-              <td class="p-4 font-bold text-[#063A4A]">
+              <td class="p-5 font-black text-[#063A4A]">
                 {{ audience.type }}
               </td>
-              <td class="p-4">{{ audience.north }}</td>
-              <td class="p-4">{{ audience.northeast }}</td>
-              <td class="p-4">{{ audience.southeast }}</td>
-              <td class="p-4">{{ audience.south }}</td>
-              <td class="p-4">{{ audience.midwest }}</td>
-              <td class="p-4">{{ audience.foreigners }}</td>
-              <td class="p-4 font-black text-[#9A7600]">
+              <td class="p-5">{{ audience.north }}</td>
+              <td class="p-5">{{ audience.northeast }}</td>
+              <td class="p-5">{{ audience.southeast }}</td>
+              <td class="p-5">{{ audience.south }}</td>
+              <td class="p-5">{{ audience.midwest }}</td>
+              <td class="p-5">{{ audience.foreigners }}</td>
+              <td class="p-5 font-black text-[#9A7600]">
                 {{ audience.fee }}
               </td>
             </tr>
@@ -373,41 +423,54 @@
   </section>
 
   <!-- PALESTRANTES -->
-  <section id="palestrantes" class="py-20 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
-          {{ pageData.ui.sections.speakers }}
-        </span>
+  <section id="palestrantes" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 iwppo-reveal">
+        <div>
+          <span class="iwppo-section-label">
+            {{ pageData.ui.sections.speakers }}
+          </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
-          {{ pageData.ui.sections.invitedSpeakers }}
-        </h2>
+          <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
+            {{ pageData.ui.sections.invitedSpeakers }}
+          </h2>
+        </div>
+
+        <a
+          href="#programacao"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#06182E] text-white font-bold hover:bg-[#0B2A4C] transition"
+        >
+          Ver programação
+        </a>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <article
           *ngFor="let speaker of pageData.speakers; trackBy: trackByName"
-          class="bg-white rounded-[2rem] border border-[#DCE7E1] shadow-sm overflow-hidden hover:-translate-y-2 hover:shadow-xl transition"
+          class="iwppo-reveal group bg-[#F7F3EA] rounded-[2rem] border border-[#E6DDC8] shadow-sm overflow-hidden hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(6,24,46,0.12)] transition duration-300"
         >
-          <img
-            [src]="speaker.photo"
-            [alt]="speaker.name"
-            class="w-full h-64 object-cover bg-[#DCE7E1]"
-          />
+          <div class="relative overflow-hidden">
+            <img
+              [src]="speaker.photo"
+              [alt]="speaker.name"
+              class="w-full h-72 object-cover bg-[#DCE7E1] group-hover:scale-105 transition duration-500"
+            />
 
-          <div class="p-5">
-            <h3 class="text-xl font-black text-[#063A4A]">
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#06182E]/80 to-transparent"></div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-black text-[#063A4A] leading-tight">
               {{ speaker.name }}
             </h3>
 
-            <p class="text-sm text-[#9A7600] font-semibold mt-2">
+            <p class="text-sm text-[#9A7600] font-bold mt-2">
               {{ speaker.nationality }}
             </p>
 
             <p
               *ngIf="hasAffiliation(speaker)"
-              class="text-sm text-gray-600 mt-2"
+              class="text-sm text-gray-600 mt-3 leading-relaxed"
             >
               {{ speaker.affiliation }}
             </p>
@@ -417,9 +480,9 @@
               [href]="speaker.lattes"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block mt-4 text-sm text-[#0F7F5F] font-bold"
+              class="inline-flex mt-5 text-sm text-[#0F7F5F] font-black hover:text-[#063A4A] transition"
             >
-              {{ pageData.ui.labels.lattes }}
+              {{ pageData.ui.labels.lattes }} →
             </a>
           </div>
         </article>
@@ -428,20 +491,20 @@
   </section>
 
   <!-- COMISSÕES -->
-  <section id="comissoes" class="py-20 bg-[#FAFBF8]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="comissoes" class="py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="iwppo-section-label">
           {{ pageData.ui.sections.committees }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
           {{ pageData.ui.sections.committeesTitle }}
         </h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-10">
-        <div>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
           <h3 class="text-2xl font-black text-[#9A7600] mb-6">
             {{ pageData.ui.sections.organizingCommittee }}
           </h3>
@@ -449,13 +512,13 @@
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.organizingCommittee; trackBy: trackByName"
-              class="bg-white border border-[#DCE7E1] rounded-2xl p-5 shadow-sm"
+              class="rounded-2xl p-5 bg-[#F7F3EA] border border-[#E6DDC8]"
             >
               <h4 class="font-black text-[#063A4A]">
                 {{ person.name }}
               </h4>
 
-              <p class="text-sm text-[#9A7600] font-semibold">
+              <p class="text-sm text-[#9A7600] font-semibold mt-1">
                 {{ person.nationality }}
               </p>
 
@@ -472,7 +535,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
           <h3 class="text-2xl font-black text-[#9A7600] mb-6">
             {{ pageData.ui.sections.scientificCommittee }}
           </h3>
@@ -480,13 +543,13 @@
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.scientificCommittee; trackBy: trackByName"
-              class="bg-white border border-[#DCE7E1] rounded-2xl p-5 shadow-sm"
+              class="rounded-2xl p-5 bg-[#F7F3EA] border border-[#E6DDC8]"
             >
               <h4 class="font-black text-[#063A4A]">
                 {{ person.name }}
               </h4>
 
-              <p class="text-sm text-[#9A7600] font-semibold">
+              <p class="text-sm text-[#9A7600] font-semibold mt-1">
                 {{ person.nationality }}
               </p>
 
@@ -507,37 +570,50 @@
   </section>
 
   <!-- PROGRAMAÇÃO -->
-  <section id="programacao" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="programacao" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="iwppo-section-label">
           {{ pageData.ui.sections.schedule }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
           {{ pageData.ui.sections.scheduleTitle }}
         </h2>
       </div>
 
-      <div class="space-y-10">
-        <div *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay">
-          <h3 class="text-2xl font-black text-[#9A7600] mb-5">
-            {{ day.dayLabel }}
-          </h3>
+      <div class="space-y-12">
+        <div
+          *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay"
+          class="iwppo-reveal"
+        >
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#F2C230] text-[#06182E] grid place-items-center font-black">
+              ✦
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-black text-[#9A7600]">
+              {{ day.dayLabel }}
+            </h3>
+          </div>
 
           <div class="space-y-5">
             <article
               *ngFor="let activity of day.activities; trackBy: trackByActivity"
-              class="rounded-[1.8rem] border border-[#DCE7E1] bg-[#FAFBF8] p-6 shadow-sm"
+              class="group rounded-[1.8rem] border border-[#E6DDC8] bg-[#F7F3EA] p-6 md:p-7 shadow-sm hover:bg-white hover:shadow-xl transition"
             >
-              <div class="flex flex-col md:flex-row gap-5">
-                <div class="text-[#0F7F5F] font-black text-xl min-w-[80px]">
-                  {{ activity.time }}
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-28">
+                  <div class="rounded-2xl bg-[#06182E] text-white p-4 text-center">
+                    <p class="text-xl font-black">
+                      {{ activity.time }}
+                    </p>
+                  </div>
                 </div>
 
-                <div>
-                  <div class="flex flex-wrap items-center gap-2 mb-2">
-                    <p class="text-sm text-[#9A7600] font-bold">
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <p class="text-sm text-[#9A7600] font-black uppercase tracking-wider">
                       {{ activity.type }}
                     </p>
 
@@ -549,18 +625,18 @@
                     </span>
                   </div>
 
-                  <h4 class="text-xl font-black text-[#063A4A] mb-2">
+                  <h4 class="text-xl md:text-2xl font-black text-[#063A4A] mb-3 leading-tight">
                     {{ activity.title }}
                   </h4>
 
-                  <p class="text-gray-700 mb-3">
+                  <p class="text-gray-700 mb-4 leading-relaxed">
                     {{ activity.description }}
                   </p>
 
                   <div *ngIf="hasSpeakers(activity)" class="flex flex-wrap gap-2">
                     <span
                       *ngFor="let name of activity.speakers; trackBy: trackByText"
-                      class="px-3 py-1 rounded-full bg-[#0F7F5F]/10 text-[#0F7F5F] text-sm font-semibold"
+                      class="px-3 py-1 rounded-full bg-[#0F7F5F]/10 text-[#0F7F5F] text-sm font-bold"
                     >
                       {{ name }}
                     </span>
@@ -575,92 +651,90 @@
   </section>
 
   <!-- INSTITUCIONAL -->
-  <section id="institucional" class="py-20 bg-[#F4EFE6]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="uppercase tracking-[0.25em] text-sm text-[#0F7F5F] font-bold">
+  <section id="institucional" class="py-24 bg-[#06182E] text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="uppercase tracking-[0.25em] text-xs text-[#F2C230] font-black">
           {{ pageData.ui.sections.institutional }}
         </span>
 
-        <h2 class="text-3xl md:text-5xl font-extrabold text-[#063A4A] mt-4">
+        <h2 class="text-3xl md:text-5xl font-black mt-5 tracking-[-0.04em]">
           {{ pageData.ui.sections.institutionalTitle }}
         </h2>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-6">
-        <article class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm">
-          <h3 class="text-2xl font-black text-[#063A4A] mb-5">
+        <article class="iwppo-reveal rounded-[2rem] bg-white/10 border border-white/15 p-7 md:p-8 backdrop-blur-md">
+          <h3 class="text-2xl font-black text-[#F2C230] mb-6">
             {{ pageData.ui.labels.proponentData }}
           </h3>
 
-          <div class="space-y-3 text-gray-700">
+          <div class="space-y-4 text-white/86">
             <p>
-              <strong>{{ pageData.ui.labels.fundingProgram }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.fundingProgram }}:</strong>
               {{ pageData.institutional.fundingProgram }}
             </p>
 
-
             <p>
-              <strong>{{ pageData.ui.labels.proponent }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.proponent }}:</strong>
               {{ pageData.institutional.proponent.name }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.role }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.role }}:</strong>
               {{ pageData.institutional.proponent.institutionalRole }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.email }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.email }}:</strong>
               {{ pageData.institutional.proponent.email }}
             </p>
 
-
             <p>
-              <strong>{{ pageData.ui.labels.institution }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.institution }}:</strong>
               {{ pageData.institutional.institution.name }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.program }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.program }}:</strong>
               {{ pageData.institutional.institution.program }}
             </p>
           </div>
         </article>
 
-        <article class="rounded-[2rem] bg-white border border-[#DCE7E1] p-7 shadow-sm">
-          <h3 class="text-2xl font-black text-[#063A4A] mb-5">
+        <article class="iwppo-reveal rounded-[2rem] bg-white/10 border border-white/15 p-7 md:p-8 backdrop-blur-md">
+          <h3 class="text-2xl font-black text-[#F2C230] mb-6">
             {{ pageData.ui.labels.promotingInstitution }}
           </h3>
 
-          <div class="space-y-3 text-gray-700">
+          <div class="space-y-4 text-white/86">
             <p>
-              <strong>{{ pageData.ui.labels.name }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.name }}:</strong>
               {{ pageData.promotingInstitution.name }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.type }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.type }}:</strong>
               {{ pageData.promotingInstitution.type }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.country }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.country }}:</strong>
               {{ pageData.promotingInstitution.country }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.address }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.address }}:</strong>
               {{ pageData.promotingInstitution.address }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.director }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.director }}:</strong>
               {{ pageData.promotingInstitution.director.name }}
             </p>
 
             <p>
-              <strong>{{ pageData.ui.labels.position }}:</strong>
+              <strong class="text-white">{{ pageData.ui.labels.position }}:</strong>
               {{ pageData.promotingInstitution.director.role }}
             </p>
 
@@ -668,7 +742,7 @@
               [href]="pageData.promotingInstitution.website"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block mt-4 text-[#0F7F5F] font-bold"
+              class="inline-flex mt-4 px-5 py-3 rounded-2xl bg-[#F2C230] text-[#06182E] font-black hover:bg-[#d8aa1d] transition"
             >
               {{ pageData.ui.labels.accessInstitutionalWebsite }}
             </a>

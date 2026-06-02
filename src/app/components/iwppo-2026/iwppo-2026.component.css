@@ -1,3 +1,35 @@
 :host {
   display: block;
 }
+
+.iwppo-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #0f7f5f;
+}
+
+.iwppo-section-label::before {
+  content: "";
+  width: 2.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #f2c230;
+}
+
+.iwppo-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.iwppo-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
