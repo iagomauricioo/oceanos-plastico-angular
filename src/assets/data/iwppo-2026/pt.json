@@ -19,13 +19,11 @@
   },
   "institutional": {
     "fundingProgram": "PAEP - Programa de Apoio a Eventos no País",
-    "call": "PAEP-2026",
     "proponent": {
       "name": "Jesse Marques da Silva Junior Pavão",
       "nationality": "Brasil",
       "institutionalRole": "Coordenador",
-      "email": "jesse.marques@cesmac.edu.br",
-      "phone": "+55 (82) 996942018"
+      "email": "jesse.marques@cesmac.edu.br"
     },
     "institution": {
       "name": "Centro Universitário Cesmac",
