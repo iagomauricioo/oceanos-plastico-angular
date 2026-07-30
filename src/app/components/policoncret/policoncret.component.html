@@ -1,0 +1,133 @@
+<main class="policoncret-page">
+  <header class="pc-header">
+    <div class="pc-shell pc-header-inner">
+      <a href="#inicio" class="pc-brand" aria-label="Policoncret">
+        <img src="assets/images/policoncret/logo.png" alt="Policoncret">
+      </a>
+      <button class="pc-menu-button" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+      <nav class="pc-nav" [class.open]="menuOpen" aria-label="Navegação Policoncret">
+        <a href="#sec-nossas-solucoes" (click)="closeMenu()">Soluções</a>
+        <a href="#sec-sobre-tecnologia" (click)="closeMenu()">Tecnologia</a>
+        <a href="#sec-processo-de-producao" (click)="closeMenu()">Produção</a>
+        <a href="#sec-quem-somos" (click)="closeMenu()">Quem Somos</a>
+        <a href="#sec-parceiros" (click)="closeMenu()">Parceiros</a>
+        <a href="#sec-contato" (click)="closeMenu()">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="pc-video-hero" aria-label="Apresentação Policoncret">
+    <iframe
+      src="https://www.youtube.com/embed/XXzdmZvtyJw?autoplay=1&mute=1&loop=1&playlist=XXzdmZvtyJw&controls=0&modestbranding=1"
+      title="Vídeo Policoncret"
+      allow="autoplay; encrypted-media; picture-in-picture">
+    </iframe>
+  </section>
+
+  <section id="sec-lixo-plastico" class="pc-section">
+    <div class="pc-shell">
+      <h1 class="pc-title centered">De lixo plástico <span>para artefatos de concretos</span></h1>
+      <div class="pc-two-columns pc-intro">
+        <img class="pc-rounded-image pc-products" src="assets/images/policoncret/produtos.jpg" alt="Produtos Policoncret">
+        <div class="pc-copy">
+          <p>Atuamos nas áreas da construção civil, arquitetura ou design, com produtos de concreto não estrutural que contêm polímeros plásticos reciclados retirados do oceano.</p>
+          <p>O concreto convencional é composto por areia, brita, cimento e água.</p>
+          <p>Nossa empresa confecciona artefatos de concreto com incorporação de polímeros sintéticos reciclados em substituição parcial dos agregados convencionais, mais especificamente, copos descartáveis, garrafas PET e EPS triturados.</p>
+          <p>Nossa tecnologia é própria, made in Brazil, com registros e patentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-nossas-solucoes" class="pc-section pc-pale">
+    <div class="pc-shell">
+      <h2 class="pc-title centered">Nossas <span>Soluções</span></h2>
+      <div class="pc-two-columns pc-copy-columns">
+        <p>Estabelecemos nossa diferenciação tecnológica através da criação de uma tecnologia inovadora baseada na produção de artefatos de concreto com percentuais de substituição de agregados naturais (areia e brita) por polímeros (plásticos) triturados e incorporados ao concreto.</p>
+        <p>Minimizamos, com isso, um dos principais problemas ambientais: o descarte desordenado e irregular de plásticos na natureza, dando-lhe uma destinação diversa e sustentável, com eficiência energética, através da redução da emissão de carbono para atmosfera.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-sobre-tecnologia" class="pc-section pc-dark">
+    <div class="pc-shell pc-tech">
+      <div class="pc-ocean-frame">
+        <img src="assets/images/policoncret/oceanos.png" alt="Plásticos nos oceanos">
+      </div>
+      <div>
+        <h2 class="pc-title light">Sobre a <span>Tecnologia</span></h2>
+        <p>Os artefatos de concreto da POLICONCRET fazem parte do setor tecnológico de novos materiais aplicados à engenharia civil, arquitetura, Design e Tecnologias Ambientais (Eco friendly). Desenvolvemos tecnologia e produtos que contribuem, substancialmente, com a reutilização de polímeros símbolos da poluição dos ambientes terrestres e aquáticos (PET’s e copos descartáveis), objetivando, com isso, a diminuição dos impactos ambientais causados pelo descarte inadequado desses resíduos, a partir de seu reaproveitamento, beneficiamento e paralelamente diminuir o consumo de materiais de origem natural extraídos da natureza (areia e brita).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-processo-de-producao" class="pc-section">
+    <div class="pc-shell">
+      <h2 class="pc-title centered">Processo de <span>Produção</span></h2>
+      <div class="pc-two-columns pc-copy-columns">
+        <p>Após o beneficiamento, os resíduos apresentam tamanho de partículas compatíveis com a dos agregados aos quais substituem: o isopor à brita; garrafas PET e copos à areia. Nosso concreto tem menor densidade que o concreto convencional, requer um menor volume de água na sua confecção, além dos benefícios ambientais.</p>
+        <p>A inovação tecnológica já possui patente depositada registro nº BR10201900897. A tecnologia já vem sendo estudada há alguns anos por membros da equipe, e já resultou em publicações científicas, dissertações de mestrado e no depósito da patente.</p>
+      </div>
+      <div class="pc-process-gallery">
+        <img src="assets/images/policoncret/processo-1.jpeg" alt="Concreto azul Policoncret">
+        <img src="assets/images/policoncret/processo-2.jpg" alt="Plástico processado">
+        <img src="assets/images/policoncret/processo-3.jpg" alt="Medição de material">
+        <img src="assets/images/policoncret/processo-4.jpeg" alt="Produção Policoncret">
+        <img src="assets/images/policoncret/processo-5.jpeg" alt="Desmoldagem">
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-quem-somos" class="pc-section pc-pale">
+    <div class="pc-shell">
+      <h2 class="pc-title centered">Quem <span>Somos</span></h2>
+      <p class="pc-about">Nascida nos laboratórios de pesquisa universitária alagoana e com o objetivo de trazer uma solução eficiente para redução da poluição pelo descarte inadequado do plástico, a POLICONCRET agrega polímeros plásticos reciclados para fabricação do concreto ecológico, chegando a um produto resistente e adaptável às diversas necessidades da indústria.</p>
+    </div>
+  </section>
+
+  <section id="sec-parceiros" class="pc-section pc-pale pc-partners-section">
+    <div class="pc-shell">
+      <h2 class="pc-title centered">Nossos <span>Parceiros</span></h2>
+      <div class="pc-partners">
+        <a href="https://al2.programacentelha.com.br/" target="_blank" rel="noopener"><img src="assets/images/policoncret/centelha.png" alt="Centelha"></a>
+        <a href="https://unisanta.br/" target="_blank" rel="noopener"><img src="assets/images/logos-leves/unisanta.jpeg" alt="UNISANTA"></a>
+        <a href="https://www.gov.br/cnpq/pt-br" target="_blank" rel="noopener"><img src="assets/images/policoncret/cnpq.png" alt="CNPq"></a>
+        <a href="https://www.fapeal.br/" target="_blank" rel="noopener"><img src="assets/images/policoncret/fapeal.png" alt="FAPEAL"></a>
+        <a href="https://www.sebrae.com.br/" target="_blank" rel="noopener"><img src="assets/images/policoncret/sebrae.png" alt="Sebrae"></a>
+        <a href="https://www.senai.br/" target="_blank" rel="noopener"><img src="assets/images/policoncret/senai.png" alt="Senai"></a>
+        <a href="https://tecnoseg.com.br/" target="_blank" rel="noopener"><img src="assets/images/policoncret/tecnoseg.png" alt="Tecnoseg"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-contato" class="pc-section pc-contact-section">
+    <div class="pc-shell pc-contact-grid">
+      <div>
+        <h2 class="pc-contact-title">Fale<br><span>conosco</span></h2>
+        <p>Se você se preocupa com a sustentabilidade e busca soluções inovadoras, a POLICONCRET pode ajudar. Se você deseja saber mais sobre nossos produtos e serviços, preencha o formulário e um de nossos especialistas entrará em contato com você. Faça parte dessa iniciativa em prol do meio ambiente!</p>
+      </div>
+      <form class="pc-form" action="mailto:contato@policoncret.com.br" method="post" enctype="text/plain">
+        <input type="text" name="nome" placeholder="NOME" aria-label="Nome" required>
+        <input type="email" name="email" placeholder="E-MAIL" aria-label="E-mail" required>
+        <textarea name="mensagem" placeholder="MENSAGEM" aria-label="Mensagem"></textarea>
+        <label class="pc-consent">
+          <input type="checkbox" required>
+          <span>Autorizo o uso dos dados informados neste formulário para manter contato com a <b>Policoncret</b>, de acordo com sua Política de Privacidade.</span>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="pc-footer">
+    <div class="pc-shell pc-footer-grid">
+      <img src="assets/images/policoncret/logo.png" alt="Policoncret" class="pc-footer-logo">
+      <div><strong>Endereço</strong><p>Rua Íris Alagoense, 103 Sala 001 Quadra 0187, Lote Farol Maceió AL 57051-370</p></div>
+      <div><strong>Contato</strong><p><a href="mailto:contato@policoncret.com.br">contato&#64;policoncret.com.br</a><br><a href="tel:+5582996942018">(82) 99694-2018</a></p></div>
+      <a class="pc-instagram" href="https://www.instagram.com/policoncret/" target="_blank" rel="noopener" aria-label="Instagram Policoncret">◎</a>
+    </div>
+  </footer>
+</main>

@@ -1,3 +1,7 @@
-<app-navbar />
+@if (!isPoliconcretRoute) {
+  <app-navbar />
+}
 <router-outlet />
-<app-footer />
+@if (!isPoliconcretRoute) {
+  <app-footer />
+}

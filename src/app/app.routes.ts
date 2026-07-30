@@ -14,6 +14,8 @@ import { RealizacoesAcademicasComponent } from './components/realizacoes-academi
 import { LinhaDoTempoComponent } from './components/linha-do-tempo/linha-do-tempo.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { Iwppo2026Component } from './components/iwppo-2026/iwppo-2026.component';
+import { PoliconcretComponent } from './components/policoncret/policoncret.component';
+
 
 export const routes: Routes = [
   {
@@ -82,5 +84,10 @@ export const routes: Routes = [
   path: 'iwppo/2026',
   component: Iwppo2026Component,
   },
+
+  {
+  path: 'policoncret',
+  component: PoliconcretComponent
+},
   
 ];
