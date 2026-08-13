@@ -62,6 +62,13 @@ interface TargetAudience {
   fee: string;
 }
 
+interface CountdownValue {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 interface IwppoPageData {
   event: {
     edition: string;
@@ -515,6 +522,16 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
       en: { title: 'Countdown', dates: 'Highlighted dates', units: ['Days', 'Hours', 'Minutes', 'Seconds'], started: 'III IWPPO has started!' },
       es: { title: 'Cuenta regresiva', dates: 'Fechas destacadas', units: ['Días', 'Horas', 'Minutos', 'Segundos'], started: '¡El III IWPPO ha comenzado!' }
     }[this.currentLanguage];
+  }
+
+  get countdownItems(): Array<{ value: number; label: string }> {
+    const values: CountdownValue = this.countdown;
+    return [
+      { value: values.days, label: this.countdownText.units[0] },
+      { value: values.hours, label: this.countdownText.units[1] },
+      { value: values.minutes, label: this.countdownText.units[2] },
+      { value: values.seconds, label: this.countdownText.units[3] }
+    ];
   }
 
   private updateCountdown(): void {

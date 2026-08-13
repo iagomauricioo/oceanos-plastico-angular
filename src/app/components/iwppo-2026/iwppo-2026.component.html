@@ -145,9 +145,9 @@
           <h2 id="countdown-title" class="text-2xl font-black mb-6">{{ countdownText.title }}</h2>
           <p *ngIf="eventHasStarted" class="text-xl font-bold text-[#F2C230]">{{ countdownText.started }}</p>
           <div *ngIf="!eventHasStarted" class="grid grid-cols-4 gap-2 md:gap-4" aria-live="polite">
-            <div *ngFor="let value of [countdown.days, countdown.hours, countdown.minutes, countdown.seconds]; let i = index" class="rounded-2xl bg-[#06182E]/70 p-3 md:p-5 text-center border border-white/10">
-              <strong class="block text-2xl md:text-4xl text-[#F2C230] tabular-nums">{{ value }}</strong>
-              <span class="block mt-1 text-[10px] md:text-xs uppercase tracking-wider">{{ countdownText.units[i] }}</span>
+            <div *ngFor="let item of countdownItems" class="rounded-2xl bg-[#06182E]/70 p-3 md:p-5 text-center border border-white/10">
+              <strong class="block text-2xl md:text-4xl text-[#F2C230] tabular-nums">{{ item.value }}</strong>
+              <span class="block mt-1 text-[10px] md:text-xs uppercase tracking-wider">{{ item.label }}</span>
             </div>
           </div>
         </section>
