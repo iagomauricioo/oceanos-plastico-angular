@@ -140,6 +140,29 @@
 
       </div>
 
+      <div class="relative mt-16 grid lg:grid-cols-[1fr_1.15fr] gap-6 iwppo-reveal">
+        <section class="rounded-[2rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 md:p-8 text-white" aria-labelledby="countdown-title">
+          <h2 id="countdown-title" class="text-2xl font-black mb-6">{{ countdownText.title }}</h2>
+          <p *ngIf="eventHasStarted" class="text-xl font-bold text-[#F2C230]">{{ countdownText.started }}</p>
+          <div *ngIf="!eventHasStarted" class="grid grid-cols-4 gap-2 md:gap-4" aria-live="polite">
+            <div *ngFor="let value of [countdown.days, countdown.hours, countdown.minutes, countdown.seconds]; let i = index" class="rounded-2xl bg-[#06182E]/70 p-3 md:p-5 text-center border border-white/10">
+              <strong class="block text-2xl md:text-4xl text-[#F2C230] tabular-nums">{{ value }}</strong>
+              <span class="block mt-1 text-[10px] md:text-xs uppercase tracking-wider">{{ countdownText.units[i] }}</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-[2rem] bg-white p-6 md:p-8" aria-labelledby="important-dates-title">
+          <h2 id="important-dates-title" class="text-2xl font-black text-[#063A4A] mb-5">{{ countdownText.dates }}</h2>
+          <div class="grid sm:grid-cols-3 gap-3">
+            <a *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay" href="#programacao" class="rounded-2xl bg-[#F7F3EA] border border-[#E6DDC8] p-4 hover:border-[#F2C230] transition">
+              <span class="block text-xs font-black uppercase tracking-wider text-[#0F7F5F]">{{ day.dayLabel }}</span>
+              <strong class="block mt-2 text-[#063A4A]">{{ day.activities[0].title }}</strong>
+            </a>
+          </div>
+        </section>
+      </div>
+
       <!-- CARDS DE IMPACTO -->
       <div class="relative mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 iwppo-reveal">
         <article class="rounded-[1.8rem] bg-white/10 border border-white/15 backdrop-blur-xl p-6 text-white">
@@ -377,16 +400,10 @@
       </div>
 
       <div class="iwppo-reveal overflow-x-auto rounded-[2rem] border border-[#E6DDC8] bg-white shadow-[0_24px_70px_rgba(6,24,46,0.08)]">
-        <table class="w-full min-w-[900px] text-left">
+        <table class="w-full text-left">
           <thead class="bg-[#06182E] text-white">
             <tr>
               <th class="p-5">{{ pageData.ui.table.category }}</th>
-              <th class="p-5">{{ pageData.ui.table.north }}</th>
-              <th class="p-5">{{ pageData.ui.table.northeast }}</th>
-              <th class="p-5">{{ pageData.ui.table.southeast }}</th>
-              <th class="p-5">{{ pageData.ui.table.south }}</th>
-              <th class="p-5">{{ pageData.ui.table.midwest }}</th>
-              <th class="p-5">{{ pageData.ui.table.foreigners }}</th>
               <th class="p-5">{{ pageData.ui.table.registration }}</th>
             </tr>
           </thead>
@@ -399,12 +416,6 @@
               <td class="p-5 font-black text-[#063A4A]">
                 {{ audience.type }}
               </td>
-              <td class="p-5">{{ audience.north }}</td>
-              <td class="p-5">{{ audience.northeast }}</td>
-              <td class="p-5">{{ audience.southeast }}</td>
-              <td class="p-5">{{ audience.south }}</td>
-              <td class="p-5">{{ audience.midwest }}</td>
-              <td class="p-5">{{ audience.foreigners }}</td>
               <td class="p-5 font-black text-[#9A7600]">
                 {{ audience.fee }}
               </td>

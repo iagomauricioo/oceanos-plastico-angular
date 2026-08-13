@@ -27,17 +27,17 @@
     },
     "institution": {
       "name": "Universidade Santa Cecília (UNISANTA)",
-      "program": "Análise de Sistemas Ambientais"
+      "program": " Programa de Pós-Graduação em Engenharia Mecânica e Programa de Pós- Graduação em Auditoria Ambiental, Portos e Governança"
     }
   },
   "promotingInstitution": {
-    "name": "Universidade Santa Cecília (UNISANTA)",
+    "name": "Universidade Santa Cecília",
     "website": "https://unisanta.br/",
     "country": "Brasil",
     "type": "Instituição de Ensino Superior",
-    "address": "Rua Cônego Machado, Farol, 918, Maceió/AL, Brasil, 57051160",
+    "address": "Rua Osvaldo Cruz, 277 - Boquirão - Santos - SP - CEP: 11045-907",
     "director": {
-      "name": "Douglas Apratto Tenorio",
+      "name": "",
       "role": "Pró-Reitor",
       "country": "Brasil"
     }
@@ -217,13 +217,6 @@
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
       "lattes": "http://lattes.cnpq.br/3536396604369119"
-    },
-    {
-      "name": "Selenobaldo Alexinaldo Cabral de Sant Anna",
-      "nationality": "Brasileiro",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/selenobaldo-santanna.jpg",
-      "lattes": "http://lattes.cnpq.br/4011554123832368"
     },
     {
       "name": "Marília Gabriela Gondim Rezende",

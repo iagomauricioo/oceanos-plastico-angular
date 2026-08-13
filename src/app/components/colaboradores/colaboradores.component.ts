@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, isPlatformBrowser } from '@angular/common';
 import { PessoaDto } from '../../shared/dto/pessoa-dto';
 import { ColaboradoresService } from '../../service/colaboradores/colaboradores.service';
-import { Router } from '@angular/router';
 import { SkeletonCardComponent } from '../../shared/skeleton-card/skeleton-card.component';
 import { ActivatedRoute } from '@angular/router';
 
@@ -18,24 +17,40 @@ export class ColaboradoresComponent implements OnInit {
   pessoas: any[] = [];
   colaboradores: PessoaDto[] = [];
   loading = true;
+  errorMessage = '';
   instituicao!: string;
 
   constructor(
     private colaboradoresService: ColaboradoresService,
-    private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private readonly platformId: object
   ) { }
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.loading = false;
+      return;
+    }
     this.route.params.subscribe((params) => {
       this.instituicao = params['instituicao'];
+      this.loadColaboradores();
+    });
+  }
+
+  retry(): void {
+    this.loadColaboradores();
+  }
+
+  private loadColaboradores(): void {
+    this.loading = true;
+    this.errorMessage = '';
       if (!this.instituicao) {
-        this.router.navigate(['/equipe']);
         this.colaboradoresService.getColaboradores().subscribe({
           next: (data) => {
             this.colaboradores = data;
             this.loading = false;
-          }
+          },
+          error: () => this.handleLoadError()
         });
         return;
       }
@@ -46,8 +61,14 @@ export class ColaboradoresComponent implements OnInit {
             this.colaboradores = data;
             this.loading = false;
           },
+          error: () => this.handleLoadError(),
         });
-    });
+  }
+
+  private handleLoadError(): void {
+    this.colaboradores = [];
+    this.loading = false;
+    this.errorMessage = 'Não foi possível carregar a equipe agora. Tente novamente em alguns instantes.';
   }
 
   desconhecido = [

@@ -1,5 +1,6 @@
-import { Component, OnInit, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 
 
@@ -208,6 +209,44 @@ const data: Record<Language, IwppoPageData> = {
   es: esData as IwppoPageData
 };
 
+const updatedSchedule: ScheduleDay[] = [
+  {
+    date: '2026-12-02', dayLabel: '02 de dezembro de 2026', activities: [
+      { time: '09:00', title: 'Cine Ambiental — Escola A', type: 'Atividade educativa', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão'], description: 'Atividade de conscientização para estudantes da educação básica de Manaus sobre preservação ambiental e impactos da poluição plástica.' },
+      { time: '14:00', title: 'Cine Ambiental — Escola B', type: 'Atividade educativa', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão'], description: 'Atividade de conscientização para estudantes da educação básica de Manaus sobre preservação ambiental e impactos da poluição plástica.' },
+      { time: '17:00', title: 'Credenciamento', type: 'Credenciamento', room: 'Entrada do Auditório Eulálio', speakers: ['Comissão organizadora'], description: 'Recepção e credenciamento dos participantes.' },
+      { time: '18:00', title: 'Abertura oficial do III IWPPO e atividade cultural', type: 'Abertura', room: 'Auditório Eulálio', speakers: ['Jesse Marques Pavão', 'Marília', 'Comissão de Cerimonial'], description: 'Abertura oficial com apresentação de grupo de dança e coral da UFAM.' },
+      { time: '19:00', title: 'Palestra Magna', type: 'Palestra', room: 'Auditório Eulálio', speakers: ['Henrique Pereira (UFAM/INPA)'], description: 'O desafio global da poluição plástica e os compromissos na Pan-Amazônia.' },
+      { time: '20:30', title: 'Encerramento e momento cultural', type: 'Atividade cultural', room: 'Hall do auditório', speakers: ['Comissão de Cerimonial'], description: 'Encerramento das atividades do primeiro dia.' }
+    ]
+  },
+  {
+    date: '2026-12-03', dayLabel: '03 de dezembro de 2026', activities: [
+      { time: '09:00', title: 'Painel 1 — Evidências científicas sobre os impactos da poluição plástica na Pan-Amazônia', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['José Eduardo Martinelli Filho', 'Fabian Sá', 'Jemilli Castiglioni Viaggi'], description: 'Pesquisas recentes sobre rios, solos, ecossistemas locais, biodiversidade e comunidades ribeirinhas.' },
+      { time: '10:30', title: 'Painel 2 — Monitoramento remoto, bioindicadores e rastreabilidade de resíduos', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Jesse Marques Pavão', 'Robson Guimarães dos Santos', 'Scott Wilson'], description: 'Métodos e tecnologias para monitorar, identificar e rastrear resíduos plásticos.' },
+      { time: '11:30', title: 'Sessão técnica de jovens pesquisadores — pôsteres', type: 'Sessão técnica', room: 'Sala do CCA', speakers: [], description: 'Apresentação de trabalhos de jovens pesquisadores.' },
+      { time: '12:45–13:45', title: 'Almoço', type: 'Intervalo', room: '', speakers: [], description: 'Intervalo para almoço.' },
+      { time: '14:00', title: 'Mesa-redonda 1 / Keynote internacional — Tecnologias emergentes de captura e reciclagem', type: 'Mesa-redonda', room: 'Auditório CCA — com tradução', speakers: ['Alireza Moghayedi', 'Brendan P. Kelaher'], description: 'Inovações para coleta de plásticos e transformação desses materiais em novas matérias-primas.' },
+      { time: '15:30', title: 'Painel 3 — Biorremediação, enzimas e startups de bioplásticos', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Marcell Mariano Correa Maceno', 'Marcos Paulo Alves de Sousa', 'Alexandre Urban Borbely'], description: 'Soluções biotecnológicas para degradação e substituição de plásticos convencionais.' },
+      { time: '16:30', title: 'Painel 4 — Economia circular aplicada a bacias hidrográficas e oceânicas', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Ian Vázquez Rowe'], description: 'Estratégias de economia circular aplicadas à gestão dos resíduos.' },
+      { time: '18:00', title: 'Sessão técnica de pôsteres e atividade cultural', type: 'Sessão técnica', room: 'Sala do CCA', speakers: [], description: 'Apresentação de jovens pesquisadores seguida de atividade cultural.' }
+    ]
+  },
+  {
+    date: '2026-12-04', dayLabel: '04 de dezembro de 2026', activities: [
+      { time: '09:00', title: 'Mesa-redonda 2 — Instrumentos econômicos: logística reversa, taxação e créditos ambientais', type: 'Mesa-redonda', room: 'Auditório CCA — com tradução', speakers: ['Feni Dalano Roosevelt Agostinho'], description: 'Instrumentos econômicos voltados à prevenção e redução da poluição plástica.' },
+      { time: '10:30', title: 'Mesa-redonda 3 — Acordo Global do Plástico da ONU e desdobramentos na Pan-Amazônia', type: 'Mesa-redonda', room: 'Auditório CCA — com tradução', speakers: ['Fernando Miguel Granja Martins', 'Jemilli Castiglioni Viaggi', 'Ana Filipa da Silva Bessa'], description: 'Implicações regionais das negociações e dos compromissos internacionais.' },
+      { time: '11:30', title: 'Sessão técnica de jovens pesquisadores — pôsteres', type: 'Sessão técnica', room: 'Sala do CCA', speakers: [], description: 'Apresentação de trabalhos de jovens pesquisadores.' },
+      { time: '12:45–13:45', title: 'Almoço', type: 'Intervalo', room: '', speakers: [], description: 'Intervalo para almoço.' },
+      { time: '14:00', title: 'Painel 5 — Saberes indígenas e justiça ambiental', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Richard James Ladle', 'Bankole Ositadimma Awuzie'], description: 'Diálogo entre conhecimentos tradicionais, ciência e justiça ambiental.' },
+      { time: '15:30', title: 'Painel 6 — Indústria 4.0, rastreabilidade e logística reversa', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Alireza Moghayedi'], description: 'Aplicações de IoT, big data e inteligência artificial na rastreabilidade de resíduos.' },
+      { time: '16:30', title: 'Grupo de trabalho — redação de policy brief', type: 'Grupo de trabalho', room: 'Sala do CCA', speakers: ['Scott Wilson'], description: 'Elaboração colaborativa de recomendações para governos, organizações e comunidades.' },
+      { time: '17:30', title: 'Sessão de premiação', type: 'Premiação', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão', 'Marília'], description: 'Reconhecimento dos melhores artigos, pôsteres e protótipos.' },
+      { time: '18:00', title: 'Encerramento — Carta Científica do III IWPPO', type: 'Encerramento', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão', 'Alexinaldo Santana'], description: 'Leitura da carta científica e encerramento oficial do evento.' }
+    ]
+  }
+];
+
 
 const fallbackUi: Record<Language, IwppoPageData['ui']> = {
   pt: {
@@ -412,20 +451,31 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
   templateUrl: './iwppo-2026.component.html',
   styleUrl: './iwppo-2026.component.css'
 })
-export class Iwppo2026Component implements OnInit, AfterViewInit{
+export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
   currentLanguage: Language = 'pt';
   pageData!: IwppoPageData;
 
   languages: Language[] = ['pt', 'en', 'es'];
+  countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  eventHasStarted = false;
+  private countdownTimer?: ReturnType<typeof setInterval>;
+  private revealObserver?: IntersectionObserver;
+
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: object) {}
 
   ngOnInit(): void {
     this.setLanguage(this.currentLanguage);
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateCountdown();
+      this.countdownTimer = setInterval(() => this.updateCountdown(), 1000);
+    }
   }
 
   ngAfterViewInit(): void {
+  if (!isPlatformBrowser(this.platformId)) return;
   const elements = document.querySelectorAll('.iwppo-reveal');
 
-  const observer = new IntersectionObserver(
+  this.revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -438,8 +488,13 @@ export class Iwppo2026Component implements OnInit, AfterViewInit{
     }
   );
 
-  elements.forEach((element) => observer.observe(element));
+  elements.forEach((element) => this.revealObserver?.observe(element));
 }
+
+  ngOnDestroy(): void {
+    if (this.countdownTimer) clearInterval(this.countdownTimer);
+    this.revealObserver?.disconnect();
+  }
 
   setLanguage(language: Language): void {
     this.currentLanguage = language;
@@ -448,7 +503,32 @@ export class Iwppo2026Component implements OnInit, AfterViewInit{
 
     this.pageData = {
       ...selectedData,
+      event: { ...selectedData.event, startDate: '2026-12-02', endDate: '2026-12-04' },
+      schedule: updatedSchedule,
       ui: selectedData.ui ?? fallbackUi[language]
+    };
+  }
+
+  get countdownText() {
+    return {
+      pt: { title: 'Contagem regressiva', dates: 'Datas em destaque', units: ['Dias', 'Horas', 'Minutos', 'Segundos'], started: 'O III IWPPO começou!' },
+      en: { title: 'Countdown', dates: 'Highlighted dates', units: ['Days', 'Hours', 'Minutes', 'Seconds'], started: 'III IWPPO has started!' },
+      es: { title: 'Cuenta regresiva', dates: 'Fechas destacadas', units: ['Días', 'Horas', 'Minutos', 'Segundos'], started: '¡El III IWPPO ha comenzado!' }
+    }[this.currentLanguage];
+  }
+
+  private updateCountdown(): void {
+    const distance = new Date('2026-12-02T09:00:00-04:00').getTime() - Date.now();
+    if (distance <= 0) {
+      this.eventHasStarted = true;
+      this.countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      return;
+    }
+    this.countdown = {
+      days: Math.floor(distance / 86_400_000),
+      hours: Math.floor((distance % 86_400_000) / 3_600_000),
+      minutes: Math.floor((distance % 3_600_000) / 60_000),
+      seconds: Math.floor((distance % 60_000) / 1000)
     };
   }
 
