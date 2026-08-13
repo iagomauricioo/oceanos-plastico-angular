@@ -20,4 +20,13 @@ describe('Iwppo2026Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should link the program button to the current route fragment', () => {
+    const programLink = fixture.nativeElement.querySelector(
+      'a[href$="#programacao"]',
+    ) as HTMLAnchorElement | null;
+
+    expect(programLink).not.toBeNull();
+    expect(programLink?.hash).toBe('#programacao');
+  });
 });

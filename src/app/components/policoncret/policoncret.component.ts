@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-policoncret',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './policoncret.component.html',
   styleUrl: './policoncret.component.css'
 })

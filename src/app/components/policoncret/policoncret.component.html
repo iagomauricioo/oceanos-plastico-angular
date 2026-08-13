@@ -1,7 +1,7 @@
 <main class="policoncret-page">
   <header class="pc-header">
     <div class="pc-shell pc-header-inner">
-      <a href="#inicio" class="pc-brand" aria-label="Policoncret">
+      <a [routerLink]="[]" fragment="inicio" class="pc-brand" aria-label="Policoncret">
         <img src="assets/images/policoncret/logo.png" alt="Policoncret">
       </a>
       <button class="pc-menu-button" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen">
@@ -9,12 +9,12 @@
         <span class="sr-only">Abrir menu</span>
       </button>
       <nav class="pc-nav" [class.open]="menuOpen" aria-label="Navegação Policoncret">
-        <a href="#sec-nossas-solucoes" (click)="closeMenu()">Soluções</a>
-        <a href="#sec-sobre-tecnologia" (click)="closeMenu()">Tecnologia</a>
-        <a href="#sec-processo-de-producao" (click)="closeMenu()">Produção</a>
-        <a href="#sec-quem-somos" (click)="closeMenu()">Quem Somos</a>
-        <a href="#sec-parceiros" (click)="closeMenu()">Parceiros</a>
-        <a href="#sec-contato" (click)="closeMenu()">Contato</a>
+        <a [routerLink]="[]" fragment="sec-nossas-solucoes" (click)="closeMenu()">Soluções</a>
+        <a [routerLink]="[]" fragment="sec-sobre-tecnologia" (click)="closeMenu()">Tecnologia</a>
+        <a [routerLink]="[]" fragment="sec-processo-de-producao" (click)="closeMenu()">Produção</a>
+        <a [routerLink]="[]" fragment="sec-quem-somos" (click)="closeMenu()">Quem Somos</a>
+        <a [routerLink]="[]" fragment="sec-parceiros" (click)="closeMenu()">Parceiros</a>
+        <a [routerLink]="[]" fragment="sec-contato" (click)="closeMenu()">Contato</a>
       </nav>
     </div>
   </header>

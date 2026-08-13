@@ -62,7 +62,8 @@
 
           <div class="flex flex-wrap gap-4">
             <a
-              href="#submissoes"
+              [routerLink]="[]"
+              fragment="submissoes"
               class="group inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#F2C230] hover:bg-[#d8aa1d] text-[#06182E] font-black transition shadow-[0_18px_45px_rgba(242,194,48,0.32)]"
             >
               {{ pageData.hero.primaryButton }}
@@ -70,7 +71,8 @@
             </a>
 
             <a
-              href="#programacao"
+              [routerLink]="[]"
+              fragment="programacao"
               class="inline-flex items-center justify-center px-8 py-4 rounded-2xl border border-white/30 text-white hover:bg-white/10 transition font-bold backdrop-blur-md"
             >
               {{ pageData.hero.secondaryButton }}
@@ -155,7 +157,7 @@
         <section class="rounded-[2rem] bg-white p-6 md:p-8" aria-labelledby="important-dates-title">
           <h2 id="important-dates-title" class="text-2xl font-black text-[#063A4A] mb-5">{{ countdownText.dates }}</h2>
           <div class="grid sm:grid-cols-3 gap-3">
-            <a *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay" href="#programacao" class="rounded-2xl bg-[#F7F3EA] border border-[#E6DDC8] p-4 hover:border-[#F2C230] transition">
+            <a *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay" [routerLink]="[]" fragment="programacao" class="rounded-2xl bg-[#F7F3EA] border border-[#E6DDC8] p-4 hover:border-[#F2C230] transition">
               <span class="block text-xs font-black uppercase tracking-wider text-[#0F7F5F]">{{ day.dayLabel }}</span>
               <strong class="block mt-2 text-[#063A4A]">{{ day.activities[0].title }}</strong>
             </a>
@@ -387,7 +389,8 @@
   </section>
 
   <!-- PÚBLICO-ALVO -->
-  <section id="publico-alvo" class="py-24 bg-[#F7F3EA]">
+  <section id="publico-alvo" class="relative py-24 bg-[#F7F3EA]">
+    <span id="submissoes" class="absolute -top-24" aria-hidden="true"></span>
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-12 iwppo-reveal">
         <span class="iwppo-section-label">
@@ -441,7 +444,8 @@
         </div>
 
         <a
-          href="#programacao"
+          [routerLink]="[]"
+          fragment="programacao"
           class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#06182E] text-white font-bold hover:bg-[#0B2A4C] transition"
         >
           Ver programação

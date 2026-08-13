@@ -2,7 +2,7 @@
   <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
     <div class="md:flex md:justify-between">
       <div class="mb-6">
-        <a href="/" class="items-center hidden md:flex">
+        <a routerLink="/" class="items-center hidden md:flex">
           <img
             src="assets/images/logo-oceanos-unisanta.png"
             class="h-40 me-3"
@@ -27,12 +27,13 @@
                 href="https://unisanta.br/"
                 class="hover:text-white"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Blog</a
               >
             </li>
             <li class="mb-4">
               <a
-                routerLink="linha-do-tempo"
+                routerLink="/linha-do-tempo"
                 routerLinkActive="router-link-active"
                 class="hover:text-white"
                 >Linha do tempo</a
@@ -40,7 +41,7 @@
             </li>
             <li class="mb-4">
               <a
-                routerLink="realizacoes-academicas"
+                routerLink="/realizacoes-academicas"
                 routerLinkActive="router-link-active"
                 class="hover:text-white"
                 >Realizações acadêmicas</a
@@ -57,9 +58,10 @@
           <ul class="text-gray-500 dark:text-gray-400 font-medium">
             <li>
               <a
-                href="https://discord.gg/4eeurUVvTy"
+                href="https://instagram.com/projetooceanosdeplastico"
                 class="hover:underline"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Instagram
               </a>
@@ -78,6 +80,7 @@
                 href="https://github.com/iagomauricioo/oceanos-plastico-angular"
                 class="hover:underline"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Github</a
               >
             </li>
@@ -116,6 +119,7 @@
           href="https://instagram.com/projetooceanosdeplastico"
           class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i class="pi pi-instagram"></i>
           <span class="sr-only">Instagram page</span>
@@ -124,12 +128,13 @@
           href="https://github.com/iagomauricioo/oceanos-plastico-angular"
           class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i class="pi pi-github"></i>
           <span class="sr-only">GitHub account</span>
         </a>
         <a
-          routerLink="login"
+          routerLink="/login"
           class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
         >
           <i class="pi pi-cog"></i>

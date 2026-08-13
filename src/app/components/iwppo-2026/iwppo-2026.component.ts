@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -454,7 +455,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
 @Component({
   selector: 'app-iwppo-2026',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './iwppo-2026.component.html',
   styleUrl: './iwppo-2026.component.css'
 })
