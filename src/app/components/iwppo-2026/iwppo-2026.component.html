@@ -86,7 +86,7 @@
             <div class="absolute -inset-6 rounded-[3rem] bg-[#F2C230]/20 blur-3xl"></div>
 
             <div class="relative rounded-[2.5rem] bg-white/95 p-8 shadow-2xl border border-white/40">
-             <div class="w-64 h-64 mx-auto rounded-full bg-white border border-[#E6DDC8] overflow-hidden flex items-center justify-center p-4 shadow-md">
+             <div class="w-80 h-80 mx-auto rounded-full bg-white border border-[#E6DDC8] overflow-hidden flex items-center justify-center p-2 shadow-md">
             <img
               src="assets/images/iwppo/iwppo26/fundo-branco.jpeg"
               [alt]="pageData.ui.alt.iwppoLogo"
@@ -800,12 +800,12 @@
           *ngFor="let partner of partners; trackBy: trackByName"
           class="iwppo-reveal min-h-48 rounded-[1.5rem] bg-white border border-[#E6DDC8] p-5 shadow-sm flex flex-col items-center justify-between gap-4 text-center"
         >
-          <img [src]="partner.logo" [alt]="partner.name" loading="lazy" class="w-full h-24 object-contain" />
+          <img [src]="partner.logo" [alt]="partnerName(partner)" loading="lazy" class="w-full h-24 object-contain" />
           <div>
             <p class="text-xs font-black uppercase tracking-wider text-[#9A7600]">
               {{ pageData.ui.labels[partner.category] }}
             </p>
-            <h3 class="text-sm font-black text-[#063A4A] mt-2">{{ partner.name }}</h3>
+            <h3 class="text-sm font-black text-[#063A4A] mt-2">{{ partnerName(partner) }}</h3>
           </div>
         </article>
       </div>

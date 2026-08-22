@@ -1,3 +1,20 @@
 .router-link-active {
     border-bottom: 0.1px solid #6b6969;
 }
+
+.footer-logo-link {
+    display: grid;
+    width: 8rem;
+    height: 6rem;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: #fff;
+    padding: 0.5rem;
+}
+
+.footer-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

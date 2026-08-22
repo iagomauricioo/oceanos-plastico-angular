@@ -65,6 +65,8 @@ interface TargetAudience {
 
 interface Partner {
   name: string;
+  nameEn?: string;
+  nameEs?: string;
   logo: string;
   category: 'organizer' | 'supporter' | 'partner';
 }
@@ -498,7 +500,20 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
 
   readonly partners: Partner[] = [
     { name: 'Universidade Santa Cecília (UNISANTA)', logo: 'assets/images/iwppo-2026/partners/unisanta.jpeg', category: 'organizer' },
-    { name: 'PPGASA', logo: 'assets/images/iwppo-2026/partners/ppgasa.png', category: 'organizer' },
+    {
+      name: 'Programa de Pós-Graduação em Engenharia Mecânica',
+      nameEn: 'Graduate Program in Mechanical Engineering',
+      nameEs: 'Programa de Posgrado en Ingeniería Mecánica',
+      logo: 'assets/images/iwppo-2026/partners/unisanta-programas.png',
+      category: 'organizer'
+    },
+    {
+      name: 'Programa de Pós-Graduação em Auditoria Ambiental, Portos e Governança',
+      nameEn: 'Graduate Program in Environmental Auditing, Ports, and Governance',
+      nameEs: 'Programa de Posgrado en Auditoría Ambiental, Puertos y Gobernanza',
+      logo: 'assets/images/iwppo-2026/partners/unisanta-programas.png',
+      category: 'organizer'
+    },
     { name: 'CAPES', logo: 'assets/images/iwppo-2026/partners/capes.png', category: 'supporter' },
     { name: 'CNPq', logo: 'assets/images/iwppo-2026/partners/cnpq.png', category: 'supporter' },
     { name: 'FAPEAL', logo: 'assets/images/iwppo-2026/partners/fapeal.png', category: 'partner' },
@@ -635,6 +650,12 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     const image = event.target as HTMLImageElement;
     image.onerror = null;
     image.src = 'assets/images/profile.png';
+  }
+
+  partnerName(partner: Partner): string {
+    if (this.currentLanguage === 'en') return partner.nameEn ?? partner.name;
+    if (this.currentLanguage === 'es') return partner.nameEs ?? partner.name;
+    return partner.name;
   }
 
   trackByName(index: number, item: { name: string }): string {
