@@ -63,6 +63,25 @@ interface TargetAudience {
   fee: string;
 }
 
+interface Partner {
+  name: string;
+  logo: string;
+  category: 'organizer' | 'supporter' | 'partner';
+}
+
+interface EventInstitution {
+  name: string;
+  website: string;
+  country: string;
+  type: string;
+  address: string;
+  director: {
+    name: string;
+    role: string;
+    country: string;
+  };
+}
+
 interface CountdownValue {
   days: number;
   hours: number;
@@ -106,18 +125,8 @@ interface IwppoPageData {
     };
   };
 
-  promotingInstitution: {
-    name: string;
-    website: string;
-    country: string;
-    type: string;
-    address: string;
-    director: {
-      name: string;
-      role: string;
-      country: string;
-    };
-  };
+  promotingInstitution: EventInstitution;
+  hostInstitution: EventInstitution;
 
   hero: {
     badge: string;
@@ -161,6 +170,8 @@ interface IwppoPageData {
       scheduleTitle: string;
       institutional: string;
       institutionalTitle: string;
+      partners: string;
+      partnersTitle: string;
     };
     table: {
       category: string;
@@ -185,6 +196,10 @@ interface IwppoPageData {
       institution: string;
       program: string;
       promotingInstitution: string;
+      hostInstitution: string;
+      organizer: string;
+      supporter: string;
+      partner: string;
       name: string;
       type: string;
       country: string;
@@ -287,7 +302,9 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       schedule: 'Programação',
       scheduleTitle: 'Programação do evento',
       institutional: 'Institucional',
-      institutionalTitle: 'Realização e informações institucionais'
+      institutionalTitle: 'Realização e informações institucionais',
+      partners: 'Parcerias',
+      partnersTitle: 'Realização, apoio e parceiros'
     },
     table: {
       category: 'Categoria',
@@ -312,6 +329,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       institution: 'Instituição',
       program: 'Programa',
       promotingInstitution: 'Instituição promotora',
+      hostInstitution: 'Instituição anfitriã',
+      organizer: 'Realização',
+      supporter: 'Apoio',
+      partner: 'Parceiro',
       name: 'Nome',
       type: 'Tipo',
       country: 'País',
@@ -351,7 +372,9 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       schedule: 'Program',
       scheduleTitle: 'Event program',
       institutional: 'Institutional',
-      institutionalTitle: 'Organization and institutional information'
+      institutionalTitle: 'Organization and institutional information',
+      partners: 'Partnerships',
+      partnersTitle: 'Organizers, supporters, and partners'
     },
     table: {
       category: 'Category',
@@ -376,6 +399,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       institution: 'Institution',
       program: 'Program',
       promotingInstitution: 'Promoting institution',
+      hostInstitution: 'Host institution',
+      organizer: 'Organizer',
+      supporter: 'Supporter',
+      partner: 'Partner',
       name: 'Name',
       type: 'Type',
       country: 'Country',
@@ -415,7 +442,9 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       schedule: 'Programa',
       scheduleTitle: 'Programa del evento',
       institutional: 'Institucional',
-      institutionalTitle: 'Organización e información institucional'
+      institutionalTitle: 'Organización e información institucional',
+      partners: 'Alianzas',
+      partnersTitle: 'Organización, apoyo y socios'
     },
     table: {
       category: 'Categoría',
@@ -440,6 +469,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       institution: 'Institución',
       program: 'Programa',
       promotingInstitution: 'Institución promotora',
+      hostInstitution: 'Institución anfitriona',
+      organizer: 'Organización',
+      supporter: 'Apoyo',
+      partner: 'Socio',
       name: 'Nombre',
       type: 'Tipo',
       country: 'País',
@@ -462,6 +495,27 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
 export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
   currentLanguage: Language = 'pt';
   pageData!: IwppoPageData;
+
+  readonly partners: Partner[] = [
+    { name: 'Universidade Santa Cecília (UNISANTA)', logo: 'assets/images/iwppo-2026/partners/unisanta.jpeg', category: 'organizer' },
+    { name: 'PPGASA', logo: 'assets/images/iwppo-2026/partners/ppgasa.png', category: 'organizer' },
+    { name: 'CAPES', logo: 'assets/images/iwppo-2026/partners/capes.png', category: 'supporter' },
+    { name: 'CNPq', logo: 'assets/images/iwppo-2026/partners/cnpq.png', category: 'supporter' },
+    { name: 'FAPEAL', logo: 'assets/images/iwppo-2026/partners/fapeal.png', category: 'partner' },
+    { name: 'Ocean Decade', logo: 'assets/images/iwppo-2026/partners/oceandecade.png', category: 'partner' },
+    { name: 'Plataforma Athena', logo: 'assets/images/iwppo-2026/partners/athena.png', category: 'partner' },
+    { name: 'NUMAS', logo: 'assets/images/iwppo-2026/partners/numas.png', category: 'partner' },
+    { name: 'Oceanos de Plástico', logo: 'assets/images/iwppo-2026/partners/oceanosdeplastico.png', category: 'partner' },
+    { name: 'UNESCO', logo: 'assets/images/iwppo-2026/partners/unesco.png', category: 'partner' },
+    { name: 'Vittia', logo: 'assets/images/iwppo-2026/partners/vittia.png', category: 'partner' },
+    { name: 'ACPN', logo: 'assets/images/iwppo-2026/partners/acpn.png', category: 'partner' },
+    { name: 'EcoaLab', logo: 'assets/images/iwppo-2026/partners/ecoalab.png', category: 'partner' },
+    { name: 'Alta Mídia', logo: 'assets/images/iwppo-2026/partners/altamidia.png', category: 'partner' },
+    { name: 'Club Lyon', logo: 'assets/images/iwppo-2026/partners/club-laranja.png', category: 'partner' },
+    { name: 'Marinha do Brasil', logo: 'assets/images/iwppo-2026/partners/marinha2.jpeg', category: 'partner' },
+    { name: 'Capitania dos Portos de Alagoas', logo: 'assets/images/iwppo-2026/partners/brasao_cpal.png', category: 'partner' },
+    { name: 'SINPLAST', logo: 'assets/images/iwppo-2026/partners/sinplast.png', category: 'partner' }
+  ];
 
   languages: Language[] = ['pt', 'en', 'es'];
   countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -513,7 +567,18 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
       ...selectedData,
       event: { ...selectedData.event, startDate: '2026-12-02', endDate: '2026-12-04' },
       schedule: updatedSchedule,
-      ui: selectedData.ui ?? fallbackUi[language]
+      ui: {
+        ...fallbackUi[language],
+        ...selectedData.ui,
+        sections: {
+          ...fallbackUi[language].sections,
+          ...selectedData.ui?.sections
+        },
+        labels: {
+          ...fallbackUi[language].labels,
+          ...selectedData.ui?.labels
+        }
+      }
     };
   }
 
@@ -566,8 +631,14 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     return Array.isArray(activity.speakers) && activity.speakers.length > 0;
   }
 
-  trackByName(index: number, person: Person): string {
-    return person.name;
+  useFallbackPhoto(event: Event): void {
+    const image = event.target as HTMLImageElement;
+    image.onerror = null;
+    image.src = 'assets/images/profile.png';
+  }
+
+  trackByName(index: number, item: { name: string }): string {
+    return item.name;
   }
 
   trackByAxis(index: number, axis: ThematicAxis): string {

@@ -461,6 +461,7 @@
             <img
               [src]="speaker.photo"
               [alt]="speaker.name"
+              (error)="useFallbackPhoto($event)"
               class="w-full h-72 object-cover bg-[#DCE7E1] group-hover:scale-105 transition duration-500"
             />
 
@@ -671,7 +672,7 @@
         </h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-6">
+      <div class="grid lg:grid-cols-3 gap-6">
         <article class="iwppo-reveal rounded-[2rem] bg-white/10 border border-white/15 p-7 md:p-8 backdrop-blur-md">
           <h3 class="text-2xl font-black text-[#F2C230] mb-6">
             {{ pageData.ui.labels.proponentData }}
@@ -754,6 +755,57 @@
             >
               {{ pageData.ui.labels.accessInstitutionalWebsite }}
             </a>
+          </div>
+        </article>
+
+        <article class="iwppo-reveal rounded-[2rem] bg-white/10 border border-white/15 p-7 md:p-8 backdrop-blur-md">
+          <h3 class="text-2xl font-black text-[#F2C230] mb-6">
+            {{ pageData.ui.labels.hostInstitution }}
+          </h3>
+
+          <div class="space-y-4 text-white/86">
+            <p><strong class="text-white">{{ pageData.ui.labels.name }}:</strong> {{ pageData.hostInstitution.name }}</p>
+            <p><strong class="text-white">{{ pageData.ui.labels.type }}:</strong> {{ pageData.hostInstitution.type }}</p>
+            <p><strong class="text-white">{{ pageData.ui.labels.country }}:</strong> {{ pageData.hostInstitution.country }}</p>
+            <p><strong class="text-white">{{ pageData.ui.labels.address }}:</strong> {{ pageData.hostInstitution.address }}</p>
+            <p><strong class="text-white">{{ pageData.ui.labels.director }}:</strong> {{ pageData.hostInstitution.director.name }}</p>
+            <p><strong class="text-white">{{ pageData.ui.labels.position }}:</strong> {{ pageData.hostInstitution.director.role }}</p>
+
+            <a
+              [href]="pageData.hostInstitution.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex mt-4 px-5 py-3 rounded-2xl bg-[#F2C230] text-[#06182E] font-black hover:bg-[#d8aa1d] transition"
+            >
+              {{ pageData.ui.labels.accessInstitutionalWebsite }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section id="parceiros" class="py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="mb-12 iwppo-reveal">
+        <span class="iwppo-section-label">{{ pageData.ui.sections.partners }}</span>
+        <h2 class="text-3xl md:text-5xl font-black text-[#063A4A] mt-5 tracking-[-0.04em]">
+          {{ pageData.ui.sections.partnersTitle }}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <article
+          *ngFor="let partner of partners; trackBy: trackByName"
+          class="iwppo-reveal min-h-48 rounded-[1.5rem] bg-white border border-[#E6DDC8] p-5 shadow-sm flex flex-col items-center justify-between gap-4 text-center"
+        >
+          <img [src]="partner.logo" [alt]="partner.name" loading="lazy" class="w-full h-24 object-contain" />
+          <div>
+            <p class="text-xs font-black uppercase tracking-wider text-[#9A7600]">
+              {{ pageData.ui.labels[partner.category] }}
+            </p>
+            <h3 class="text-sm font-black text-[#063A4A] mt-2">{{ partner.name }}</h3>
           </div>
         </article>
       </div>

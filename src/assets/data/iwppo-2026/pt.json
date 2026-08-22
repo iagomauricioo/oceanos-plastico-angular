@@ -37,8 +37,20 @@
     "type": "Instituição de Ensino Superior",
     "address": "Rua Osvaldo Cruz, 277 - Boquirão - Santos - SP - CEP: 11045-907",
     "director": {
-      "name": "",
-      "role": "Pró-Reitor",
+      "name": "Profª. Drª. Lúcia Maria Teixeira",
+      "role": "Reitora",
+      "country": "Brasil"
+    }
+  },
+  "hostInstitution": {
+    "name": "Universidade Federal do Amazonas (UFAM)",
+    "website": "https://ufam.edu.br/",
+    "country": "Brasil",
+    "type": "Instituição de Ensino Superior",
+    "address": "Av. Gen. Rodrigo Octávio, 6200, Coroado I, Prédio da Reitoria, 1º andar, Setor Norte, Campus Universitário, 69080-900 - Manaus - AM",
+    "director": {
+      "name": "Profª. Drª. Tanara Lauschner",
+      "role": "Reitora",
       "country": "Brasil"
     }
   },

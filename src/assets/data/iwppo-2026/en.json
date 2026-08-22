@@ -39,8 +39,20 @@
     "type": "Higher Education Institution",
     "address": "Rua Osvaldo Cruz, 277 - Boquirão - Santos - SP - 11045-907",
     "director": {
-      "name": "",
-      "role": "Dean",
+      "name": "Prof. Dr. Lúcia Maria Teixeira",
+      "role": "Rector",
+      "country": "Brazil"
+    }
+  },
+  "hostInstitution": {
+    "name": "Federal University of Amazonas (UFAM)",
+    "website": "https://ufam.edu.br/",
+    "country": "Brazil",
+    "type": "Higher Education Institution",
+    "address": "Av. Gen. Rodrigo Octávio, 6200, Coroado I, Rectorate Building, 1st floor, North Sector, University Campus, 69080-900 - Manaus - AM",
+    "director": {
+      "name": "Prof. Dr. Tanara Lauschner",
+      "role": "Rector",
       "country": "Brazil"
     }
   },

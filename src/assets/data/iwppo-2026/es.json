@@ -39,8 +39,20 @@
     "type": "Institución de Educación Superior",
     "address": "Rua Osvaldo Cruz, 277 - Boquirão - Santos - SP - 11045-907",
     "director": {
-      "name": "",
-      "role": "Prorrector",
+      "name": "Prof. Dra. Lúcia Maria Teixeira",
+      "role": "Rectora",
+      "country": "Brasil"
+    }
+  },
+  "hostInstitution": {
+    "name": "Universidad Federal de Amazonas (UFAM)",
+    "website": "https://ufam.edu.br/",
+    "country": "Brasil",
+    "type": "Institución de Educación Superior",
+    "address": "Av. Gen. Rodrigo Octávio, 6200, Coroado I, Edificio de la Rectoría, 1.er piso, Sector Norte, Campus Universitario, 69080-900 - Manaus - AM",
+    "director": {
+      "name": "Prof. Dra. Tanara Lauschner",
+      "role": "Rectora",
       "country": "Brasil"
     }
   },
