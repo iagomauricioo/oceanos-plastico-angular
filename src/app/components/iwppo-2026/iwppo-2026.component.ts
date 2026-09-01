@@ -639,6 +639,22 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     return this.currentLanguage === language;
   }
 
+  formatEventDate(value: string): string {
+    const [year, month, day] = value.split('-').map(Number);
+    const locale: Record<Language, string> = {
+      pt: 'pt-BR',
+      en: 'en-US',
+      es: 'es-ES'
+    };
+
+    return new Intl.DateTimeFormat(locale[this.currentLanguage], {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      timeZone: 'UTC'
+    }).format(new Date(Date.UTC(year, month - 1, day)));
+  }
+
   hasLattes(person: Person): boolean {
     return Boolean(person.lattes && person.lattes.trim() !== '');
   }

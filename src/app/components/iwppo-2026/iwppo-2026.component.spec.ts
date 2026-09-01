@@ -29,4 +29,15 @@ describe('Iwppo2026Component', () => {
     expect(programLink).not.toBeNull();
     expect(programLink?.hash).toBe('#programacao');
   });
+
+  it('should format event dates according to the selected language', () => {
+    component.setLanguage('pt');
+    expect(component.formatEventDate('2026-11-17')).toBe('17/11/2026');
+
+    component.setLanguage('en');
+    expect(component.formatEventDate('2026-11-17')).toBe('11/17/2026');
+
+    component.setLanguage('es');
+    expect(component.formatEventDate('2026-11-17')).toBe('17/11/2026');
+  });
 });
