@@ -62,12 +62,23 @@
 
           <div class="flex flex-wrap gap-4">
             <a
-              [routerLink]="[]"
-              fragment="submissoes"
+              [href]="submissionUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="group inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#F2C230] hover:bg-[#d8aa1d] text-[#06182E] font-black transition shadow-[0_18px_45px_rgba(242,194,48,0.32)]"
             >
               {{ pageData.hero.primaryButton }}
               <span class="ml-2 group-hover:translate-x-1 transition">→</span>
+            </a>
+
+            <a
+              [href]="registrationUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-[#0F7F5F] hover:bg-[#0b684e] text-white transition font-bold"
+            >
+              {{ pageData.ui.table.registration }}
+              <span class="ml-2">→</span>
             </a>
 
             <a

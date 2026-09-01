@@ -234,9 +234,12 @@ const data: Record<Language, IwppoPageData> = {
   es: esData as IwppoPageData
 };
 
+const registrationUrl = 'https://doity.com.br/3rd-international-workshop-on-plastic-pollution-in-the-oceans-iwppo--environmental-policies-and-tech';
+const submissionUrl = `${registrationUrl}/trabalhos`;
+
 const updatedSchedule: ScheduleDay[] = [
   {
-    date: '2026-12-02', dayLabel: '02 de dezembro de 2026', activities: [
+    date: '2026-11-17', dayLabel: '17 de novembro de 2026', activities: [
       { time: '09:00', title: 'Cine Ambiental — Escola A', type: 'Atividade educativa', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão'], description: 'Atividade de conscientização para estudantes da educação básica de Manaus sobre preservação ambiental e impactos da poluição plástica.' },
       { time: '14:00', title: 'Cine Ambiental — Escola B', type: 'Atividade educativa', room: 'Auditório CCA', speakers: ['Jesse Marques Pavão'], description: 'Atividade de conscientização para estudantes da educação básica de Manaus sobre preservação ambiental e impactos da poluição plástica.' },
       { time: '17:00', title: 'Credenciamento', type: 'Credenciamento', room: 'Entrada do Auditório Eulálio', speakers: ['Comissão organizadora'], description: 'Recepção e credenciamento dos participantes.' },
@@ -246,7 +249,7 @@ const updatedSchedule: ScheduleDay[] = [
     ]
   },
   {
-    date: '2026-12-03', dayLabel: '03 de dezembro de 2026', activities: [
+    date: '2026-11-18', dayLabel: '18 de novembro de 2026', activities: [
       { time: '09:00', title: 'Painel 1 — Evidências científicas sobre os impactos da poluição plástica na Pan-Amazônia', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['José Eduardo Martinelli Filho', 'Fabian Sá', 'Jemilli Castiglioni Viaggi'], description: 'Pesquisas recentes sobre rios, solos, ecossistemas locais, biodiversidade e comunidades ribeirinhas.' },
       { time: '10:30', title: 'Painel 2 — Monitoramento remoto, bioindicadores e rastreabilidade de resíduos', type: 'Painel', room: 'Auditório CCA — com tradução', speakers: ['Jesse Marques Pavão', 'Robson Guimarães dos Santos', 'Scott Wilson'], description: 'Métodos e tecnologias para monitorar, identificar e rastrear resíduos plásticos.' },
       { time: '11:30', title: 'Sessão técnica de jovens pesquisadores — pôsteres', type: 'Sessão técnica', room: 'Sala do CCA', speakers: [], description: 'Apresentação de trabalhos de jovens pesquisadores.' },
@@ -258,7 +261,7 @@ const updatedSchedule: ScheduleDay[] = [
     ]
   },
   {
-    date: '2026-12-04', dayLabel: '04 de dezembro de 2026', activities: [
+    date: '2026-11-19', dayLabel: '19 de novembro de 2026', activities: [
       { time: '09:00', title: 'Mesa-redonda 2 — Instrumentos econômicos: logística reversa, taxação e créditos ambientais', type: 'Mesa-redonda', room: 'Auditório CCA — com tradução', speakers: ['Feni Dalano Roosevelt Agostinho'], description: 'Instrumentos econômicos voltados à prevenção e redução da poluição plástica.' },
       { time: '10:30', title: 'Mesa-redonda 3 — Acordo Global do Plástico da ONU e desdobramentos na Pan-Amazônia', type: 'Mesa-redonda', room: 'Auditório CCA — com tradução', speakers: ['Fernando Miguel Granja Martins', 'Jemilli Castiglioni Viaggi', 'Ana Filipa da Silva Bessa'], description: 'Implicações regionais das negociações e dos compromissos internacionais.' },
       { time: '11:30', title: 'Sessão técnica de jovens pesquisadores — pôsteres', type: 'Sessão técnica', room: 'Sala do CCA', speakers: [], description: 'Apresentação de trabalhos de jovens pesquisadores.' },
@@ -497,6 +500,8 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
 export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
   currentLanguage: Language = 'pt';
   pageData!: IwppoPageData;
+  readonly registrationUrl = registrationUrl;
+  readonly submissionUrl = submissionUrl;
 
   readonly partners: Partner[] = [
     { name: 'Universidade Santa Cecília (UNISANTA)', logo: 'assets/images/iwppo-2026/partners/unisanta.jpeg', category: 'organizer' },
@@ -580,7 +585,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
 
     this.pageData = {
       ...selectedData,
-      event: { ...selectedData.event, startDate: '2026-12-02', endDate: '2026-12-04' },
+      event: { ...selectedData.event, startDate: '2026-11-17', endDate: '2026-11-19' },
       schedule: updatedSchedule,
       ui: {
         ...fallbackUi[language],
@@ -616,7 +621,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private updateCountdown(): void {
-    const distance = new Date('2026-12-02T09:00:00-04:00').getTime() - Date.now();
+    const distance = new Date('2026-11-17T09:00:00-04:00').getTime() - Date.now();
     if (distance <= 0) {
       this.eventHasStarted = true;
       this.countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };

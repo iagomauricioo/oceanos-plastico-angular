@@ -5,8 +5,8 @@
     "fullName": "3rd International Workshop on Plastic Pollution in the Oceans (IWPPO) - Environmental Policies and Technological Innovations: Strategies for Reducing Plastic Pollution in the Pan-Amazon Region",
     "theme": "Environmental Policies and Technological Innovations: Strategies for Reducing Plastic Pollution in the Pan-Amazon Region",
     "shortTheme": "Plastic pollution, Pan-Amazon Region, environmental policies and technological innovation",
-    "startDate": "2026-08-26",
-    "endDate": "2026-08-28",
+    "startDate": "2026-11-17",
+    "endDate": "2026-11-19",
     "city": "Manaus",
     "state": "AM",
     "country": "Brazil",
@@ -174,7 +174,7 @@
       "south": 30,
       "midwest": 0,
       "foreigners": 20,
-      "fee": "R$ 50.00"
+      "fee": "R$ 20.00"
     },
     {
       "type": "Graduate Students",
@@ -184,37 +184,27 @@
       "south": 20,
       "midwest": 0,
       "foreigners": 20,
-      "fee": "R$ 70.00"
+      "fee": "R$ 40.00"
     },
     {
-      "type": "Basic Education Teachers",
+      "type": "Faculty",
       "north": 30,
       "northeast": 10,
       "southeast": 10,
       "south": 10,
       "midwest": 0,
       "foreigners": 0,
-      "fee": "R$ 0.00"
+      "fee": "R$ 100.00"
     },
     {
-      "type": "Professors / Researchers",
+      "type": "Other Researchers",
       "north": 20,
       "northeast": 10,
       "southeast": 10,
       "south": 5,
       "midwest": 0,
       "foreigners": 0,
-      "fee": "R$ 100.00"
-    },
-    {
-      "type": "Speakers",
-      "north": 1,
-      "northeast": 2,
-      "southeast": 1,
-      "south": 1,
-      "midwest": 0,
-      "foreigners": 5,
-      "fee": "R$ 0.00"
+      "fee": "R$ 120.00"
     }
   ],
   "organizingCommittee": [
@@ -499,8 +489,8 @@
   ],
   "schedule": [
     {
-      "date": "2026-08-26",
-      "dayLabel": "August 26, 2026",
+      "date": "2026-11-17",
+      "dayLabel": "November 17, 2026",
       "activities": [
         {
           "time": "09:00",
@@ -560,8 +550,8 @@
       ]
     },
     {
-      "date": "2026-08-27",
-      "dayLabel": "August 27, 2026",
+      "date": "2026-11-18",
+      "dayLabel": "November 18, 2026",
       "activities": [
         {
           "time": "09:30",
@@ -663,8 +653,8 @@
       ]
     },
     {
-      "date": "2026-08-28",
-      "dayLabel": "August 28, 2026",
+      "date": "2026-11-19",
+      "dayLabel": "November 19, 2026",
       "activities": [
         {
           "time": "09:30",
