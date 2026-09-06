@@ -9,23 +9,24 @@
     </a>
     <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse justify-between">
       <button type="button" data-dropdown-toggle="language-dropdown-menu"
-        class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-secondary hover:text-white">
-        <app-flag-brazil />
-        Brasil (PT-BR)
+        class="inline-flex items-center gap-2 font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-secondary hover:text-white"
+        aria-label="Selecionar idioma">
+        <span aria-hidden="true">🌐</span>
+        {{ languageLabel(languageService.currentLanguage) }}
+        <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+        </svg>
       </button>
       <div
         class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-secondary"
         id="language-dropdown-menu">
-        <ul class="py-2 font-medium" role="none">
-          <li>
-            <span
-              class="block px-4 py-2 text-sm text-gray-500 dark:text-gray-300"
-              role="menuitem" aria-disabled="true" title="Tradução em breve">
-              <div class="inline-flex items-center">
-                <app-flag-us />
-                English (US)
-              </div>
-            </span>
+        <ul class="py-2 font-medium" role="menu" aria-label="Idiomas">
+          <li *ngFor="let language of languages">
+            <button type="button" role="menuitem" (click)="setLanguage(language)"
+              class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
+              [attr.aria-current]="languageService.currentLanguage === language ? 'true' : null">
+              {{ languageLabel(language) }}
+            </button>
           </li>
         </ul>
       </div>

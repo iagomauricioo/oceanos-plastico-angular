@@ -17,7 +17,7 @@ describe('OceanosDePlasticoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {https://mail.google.com/mail/u/0/?hl=pt-BR#inbox
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

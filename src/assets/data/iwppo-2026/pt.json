@@ -75,15 +75,25 @@
       "O III IWPPO propõe um espaço de diálogo internacional voltado à construção de soluções para a poluição plástica em ambientes aquáticos amazônicos e marinho-costeiros.",
       "O evento busca fortalecer a cooperação entre ciência, governo, organizações, setor produtivo e sociedade, promovendo debates sobre monitoramento, rastreamento, reciclagem, economia circular e políticas ambientais.",
       "A edição de 2026 será realizada em Manaus, trazendo para o centro da discussão os desafios ambientais da Pan-Amazônia, região estratégica para a conservação da biodiversidade, dos rios, das florestas e dos ecossistemas conectados aos oceanos."
+    ],
+    "territories": [
+      "Brasil (cerca de 60% da Pan-Amazônia)",
+      "Peru",
+      "Colômbia",
+      "Bolívia",
+      "Venezuela",
+      "Equador",
+      "Guiana",
+      "Suriname",
+      "Guiana Francesa (departamento ultramarino da França)"
     ]
   },
   "history": {
-    "title": "Histórico do IWPPO",
+    "title": "Sobre o IWPPO",
     "paragraphs": [
       "O IWPPO surgiu da necessidade de encontrar soluções para a poluição plástica em corpos hídricos, especialmente mares e oceanos.",
       "O 1st IWPPO ocorreu em novembro de 2024, em Curitiba-PR, na PUC-Curitiba, com o tema “Desafios e Soluções sobre o Monitoramento e Reciclagem da Produção de Plástico para Proteger os Oceanos”.",
       "O 2nd IWPPO ocorreu em setembro de 2025, em Maceió-AL, com o tema “Oceanos em crise, ciência com propósito: transformando conhecimento em esperança”.",
-      "A proposta do IWPPO nasceu de discussões realizadas no VI Congresso de Estudos sobre o Meio Ambiente, promovido em 2023 pelo Programa de Pós-Graduação em Análise de Sistemas Ambientais da Universidade Santa Cecília (UNISANTA).",
       "Desde suas primeiras edições, o evento busca integrar ensino, pesquisa, extensão, inovação e diálogo entre academia, sociedade, setor produtivo e poder público."
     ]
   },
@@ -211,7 +221,16 @@
       "nationality": "Brasileiro",
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg",
-      "lattes": "http://lattes.cnpq.br/2811263859126204"
+      "lattes": "http://lattes.cnpq.br/2811263859126204",
+      "role": "General Chair"
+    },
+    {
+      "name": "Marília Gabriela Gondim Rezende",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
+      "lattes": "http://lattes.cnpq.br/4449108765997603",
+      "role": "Co-Chair"
     },
     {
       "name": "Cristiane Gomes Barreto",
@@ -219,13 +238,6 @@
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
       "lattes": "http://lattes.cnpq.br/3536396604369119"
-    },
-    {
-      "name": "Marília Gabriela Gondim Rezende",
-      "nationality": "Brasileira",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
-      "lattes": "http://lattes.cnpq.br/4449108765997603"
     },
     {
       "name": "José Eduardo Martinelli Filho",
@@ -762,5 +774,80 @@
         }
       ]
     }
-  ]
+  ],
+  "ui": {
+    "alt": {
+      "waterTexture": "Textura de água",
+      "iwppoLogo": "Logo IWPPO 2026"
+    },
+    "eventCard": {
+      "start": "Início",
+      "end": "Término",
+      "location": "Local",
+      "modality": "Modalidade"
+    },
+    "sections": {
+      "about": "Sobre o evento",
+      "history": "Sobre o IWPPO",
+      "justification": "Justificativa",
+      "professionalContribution": "Formação e cooperação",
+      "thematicAxes": "Eixos temáticos",
+      "participatingPrograms": "Programas participantes",
+      "participatingGraduatePrograms": "Programas de Pós-Graduação participantes",
+      "targetAudience": "Público-alvo",
+      "targetAudienceFees": "Público-alvo e valores de inscrição",
+      "speakers": "Palestrantes",
+      "invitedSpeakers": "Palestrantes convidados",
+      "committees": "Comissões",
+      "committeesTitle": "Comissão organizadora e comitê científico",
+      "organizingCommittee": "Comissão Organizadora",
+      "scientificCommittee": "Comitê Científico",
+      "schedule": "Programação",
+      "scheduleTitle": "Programação do evento",
+      "institutional": "Institucional",
+      "institutionalTitle": "Realização e informações institucionais",
+      "partners": "Parcerias",
+      "partnersTitle": "Realização, apoio e parceiros"
+    },
+    "table": {
+      "category": "Categoria",
+      "north": "Norte",
+      "northeast": "Nordeste",
+      "southeast": "Sudeste",
+      "south": "Sul",
+      "midwest": "Centro-Oeste",
+      "foreigners": "Estrangeiros",
+      "registration": "Inscrição"
+    },
+    "labels": {
+      "grade": "Conceito",
+      "edition": "Edição",
+      "programmingDays": "Dias de programação",
+      "speakers": "Palestrantes",
+      "thematicAxes": "Eixos temáticos",
+      "panAmazonTerritories": "Países e territórios da Pan-Amazônia",
+      "lattes": "Lattes",
+      "proponentData": "Dados do proponente",
+      "fundingProgram": "Programa de apoio",
+      "call": "Edital",
+      "proponent": "Proponente",
+      "role": "Função",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "institution": "Instituição",
+      "program": "Programa",
+      "promotingInstitution": "Instituição promotora",
+      "hostInstitution": "Instituição anfitriã",
+      "organizer": "Realização",
+      "supporter": "Apoio",
+      "partner": "Parceiro",
+      "name": "Nome",
+      "type": "Tipo",
+      "country": "País",
+      "address": "Endereço",
+      "director": "Dirigente",
+      "position": "Cargo",
+      "accessInstitutionalWebsite": "Acessar site institucional"
+    }
+  }
 }

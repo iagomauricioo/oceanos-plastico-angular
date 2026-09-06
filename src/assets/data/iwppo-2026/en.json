@@ -77,15 +77,25 @@
       "The 3rd IWPPO proposes an international dialogue space focused on building solutions for plastic pollution in Amazonian aquatic and marine-coastal environments.",
       "The event seeks to strengthen cooperation between science, government, organizations, the productive sector, and society by promoting debates on monitoring, tracking, recycling, circular economy, and environmental policies.",
       "The 2026 edition will be held in Manaus, placing the environmental challenges of the Pan-Amazon Region at the center of the discussion. This region is strategic for the conservation of biodiversity, rivers, forests, and ecosystems connected to the oceans."
+    ],
+    "territories": [
+      "Brazil (around 60% of the Pan-Amazon Region)",
+      "Peru",
+      "Colombia",
+      "Bolivia",
+      "Venezuela",
+      "Ecuador",
+      "Guyana",
+      "Suriname",
+      "French Guiana (an overseas department of France)"
     ]
   },
   "history": {
-    "title": "History of IWPPO",
+    "title": "About IWPPO",
     "paragraphs": [
       "IWPPO emerged from the need to find solutions to plastic pollution in water bodies, especially seas and oceans.",
       "The 1st IWPPO took place in November 2024 in Curitiba, Paraná, at PUC-Curitiba, under the theme ‘Challenges and Solutions for Monitoring and Recycling Plastic Production to Protect the Oceans.’",
       "The 2nd IWPPO took place in September 2025 in Maceió, Alagoas, under the theme ‘Oceans in crisis, science with purpose: transforming knowledge into hope.’",
-      "The IWPPO proposal was born from discussions held at the 6th Congress of Environmental Studies, promoted in 2023 by the Graduate Program in Environmental Systems Analysis at Santa Cecília University (UNISANTA).",
       "Since its first editions, the event has sought to integrate teaching, research, outreach, innovation, and dialogue between academia, society, the productive sector, and public authorities."
     ]
   },
@@ -213,7 +223,16 @@
       "nationality": "Brazilian",
       "country": "Brazil",
       "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg",
-      "lattes": "http://lattes.cnpq.br/2811263859126204"
+      "lattes": "http://lattes.cnpq.br/2811263859126204",
+      "role": "General Chair"
+    },
+    {
+      "name": "Marília Gabriela Gondim Rezende",
+      "nationality": "Brazilian",
+      "country": "Brazil",
+      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
+      "lattes": "http://lattes.cnpq.br/4449108765997603",
+      "role": "Co-Chair"
     },
     {
       "name": "Cristiane Gomes Barreto",
@@ -221,13 +240,6 @@
       "country": "Brazil",
       "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
       "lattes": "http://lattes.cnpq.br/3536396604369119"
-    },
-    {
-      "name": "Marília Gabriela Gondim Rezende",
-      "nationality": "Brazilian",
-      "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
-      "lattes": "http://lattes.cnpq.br/4449108765997603"
     },
     {
       "name": "José Eduardo Martinelli Filho",
@@ -778,7 +790,7 @@
     },
     "sections": {
       "about": "About the event",
-      "history": "History",
+      "history": "About IWPPO",
       "justification": "Justification",
       "professionalContribution": "Training and cooperation",
       "thematicAxes": "Thematic axes",
@@ -793,7 +805,7 @@
       "organizingCommittee": "Organizing Committee",
       "scientificCommittee": "Scientific Committee",
       "schedule": "Program",
-      "scheduleTitle": "Event program",
+      "scheduleTitle": "Event Scheduler",
       "institutional": "Institutional",
       "institutionalTitle": "Organization and institutional information"
     },
@@ -809,6 +821,11 @@
     },
     "labels": {
       "grade": "Grade",
+      "edition": "Edition",
+      "programmingDays": "Program days",
+      "speakers": "Speakers",
+      "thematicAxes": "Thematic axes",
+      "panAmazonTerritories": "Pan-Amazon countries and territories",
       "lattes": "Lattes",
       "proponentData": "Proponent data",
       "fundingProgram": "Funding program",

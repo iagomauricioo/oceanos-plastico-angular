@@ -33,3 +33,30 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.iwppo-language-selector {
+  max-width: 100%;
+}
+
+.iwppo-language-selector button {
+  min-height: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .iwppo-language-selector {
+    width: 100%;
+  }
+
+  .iwppo-language-selector > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iwppo-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

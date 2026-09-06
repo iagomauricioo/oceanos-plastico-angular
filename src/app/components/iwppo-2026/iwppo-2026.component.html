@@ -4,7 +4,7 @@
   <section class="relative min-h-screen flex items-center overflow-hidden bg-[#06182E]">
     <div class="absolute inset-0">
       <img
-        src="assets/images/iwppo-2026/ocean-bg.jpg"
+        src="assets/images/iwppo/iwppo26/fundo-azul.jpeg"
         [alt]="pageData.ui.alt.waterTexture"
         class="w-full h-full object-cover scale-105"
       />
@@ -21,18 +21,26 @@
 
         <div class="iwppo-reveal">
           <!-- IDIOMAS -->
-          <div class="flex flex-wrap gap-2 mb-7">
-            <button
-              *ngFor="let language of languages; trackBy: trackByLanguage"
-              type="button"
-              (click)="setLanguage(language)"
-              [class.bg-[#F2C230]]="isCurrentLanguage(language)"
-              [class.text-[#06182E]]="isCurrentLanguage(language)"
-              [class.border-[#F2C230]]="isCurrentLanguage(language)"
-              class="px-4 py-2 rounded-full bg-white/10 text-white border border-white/20 backdrop-blur-md text-xs font-black uppercase tracking-widest hover:bg-white/20 transition"
-            >
-              {{ language }}
-            </button>
+          <div class="iwppo-language-selector mb-7" aria-label="Language selector">
+            <div class="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-md">
+              <span aria-hidden="true" class="text-lg">◎</span>
+              <span class="text-xs font-black uppercase tracking-widest text-white/80">{{ currentLanguage }}</span>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  *ngFor="let language of languages; trackBy: trackByLanguage"
+                  type="button"
+                  (click)="setLanguage(language)"
+                  [attr.aria-pressed]="isCurrentLanguage(language)"
+                  [attr.aria-label]="language"
+                  [class.bg-[#F2C230]]="isCurrentLanguage(language)"
+                  [class.text-[#06182E]]="isCurrentLanguage(language)"
+                  [class.border-[#F2C230]]="isCurrentLanguage(language)"
+                  class="min-w-10 px-3 py-2 rounded-full bg-white/10 text-white border border-white/20 text-xs font-black uppercase tracking-widest hover:bg-white/20 transition"
+                >
+                  {{ language }}
+                </button>
+              </div>
+            </div>
           </div>
 
           <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md text-white text-sm font-bold mb-6 border border-white/20">
@@ -97,7 +105,7 @@
             <div class="absolute -inset-6 rounded-[3rem] bg-[#F2C230]/20 blur-3xl"></div>
 
             <div class="relative rounded-[2.5rem] bg-white/95 p-8 shadow-2xl border border-white/40">
-             <div class="w-80 h-80 mx-auto rounded-full bg-white border border-[#E6DDC8] overflow-hidden flex items-center justify-center p-2 shadow-md">
+            <div class="w-96 h-96 max-w-full mx-auto rounded-[2rem] bg-white border border-[#E6DDC8] overflow-hidden flex items-center justify-center p-4 shadow-md">
             <img
               src="assets/images/iwppo/iwppo26/fundo-branco.jpeg"
               [alt]="pageData.ui.alt.iwppoLogo"
@@ -183,7 +191,7 @@
             {{ pageData.event.edition }}
           </p>
           <p class="text-sm uppercase tracking-widest font-bold mt-2">
-            Edição
+            {{ pageData.ui.labels.edition }}
           </p>
         </article>
 
@@ -192,7 +200,7 @@
             {{ pageData.schedule.length }}
           </p>
           <p class="text-sm uppercase tracking-widest font-bold mt-2">
-            Dias de programação
+            {{ pageData.ui.labels.programmingDays }}
           </p>
         </article>
 
@@ -201,7 +209,7 @@
             {{ pageData.speakers.length }}
           </p>
           <p class="text-sm uppercase tracking-widest font-bold mt-2">
-            Palestrantes
+            {{ pageData.ui.labels.speakers }}
           </p>
         </article>
 
@@ -210,7 +218,7 @@
             {{ pageData.thematicAxes.length }}
           </p>
           <p class="text-sm uppercase tracking-widest font-bold mt-2">
-            Eixos temáticos
+            {{ pageData.ui.labels.thematicAxes }}
           </p>
         </article>
       </div>
@@ -238,6 +246,21 @@
           >
             {{ paragraph }}
           </p>
+
+          <div *ngIf="pageData.about.territories?.length" class="mt-6 pt-6 border-t border-[#E6DDC8]">
+            <p class="text-sm font-black uppercase tracking-widest text-[#0F7F5F] mb-3">
+              {{ pageData.ui.labels.panAmazonTerritories }}
+            </p>
+            <ul class="grid sm:grid-cols-2 gap-2 text-gray-700" aria-label="Pan-Amazon territories">
+              <li
+                *ngFor="let territory of pageData.about.territories; trackBy: trackByText"
+                class="flex items-start gap-2"
+              >
+                <span class="mt-2 w-2 h-2 shrink-0 rounded-full bg-[#0F7F5F]"></span>
+                <span>{{ territory }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -459,7 +482,7 @@
           fragment="programacao"
           class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[#06182E] text-white font-bold hover:bg-[#0B2A4C] transition"
         >
-          Ver programação
+          {{ pageData.ui.sections.scheduleTitle }}
         </a>
       </div>
 
@@ -525,21 +548,33 @@
 
       <div class="grid lg:grid-cols-2 gap-8">
         <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
-          <h3 class="text-2xl font-black text-[#9A7600] mb-6">
-            {{ pageData.ui.sections.organizingCommittee }}
-          </h3>
-
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.organizingCommittee; trackBy: trackByName"
               class="rounded-2xl p-5 bg-[#F7F3EA] border border-[#E6DDC8]"
             >
-              <h4 class="font-black text-[#063A4A]">
-                {{ person.name }}
-              </h4>
+              <div class="flex items-start gap-4">
+                <img
+                  [src]="person.photo"
+                  [alt]="person.name"
+                  (error)="useFallbackPhoto($event)"
+                  loading="lazy"
+                  class="w-16 h-16 shrink-0 rounded-2xl object-cover bg-[#DCE7E1]"
+                />
 
-              <p class="text-sm text-[#9A7600] font-semibold mt-1">
-                {{ person.nationality }}
+                <div class="min-w-0">
+                  <h4 class="font-black text-[#063A4A]">
+                    {{ person.name }}
+                  </h4>
+
+                  <p class="text-sm text-[#9A7600] font-semibold mt-1">
+                    {{ person.nationality }}
+                  </p>
+                </div>
+              </div>
+
+              <p *ngIf="person.role" class="text-sm text-gray-600 mt-2">
+                {{ pageData.ui.labels.role }}: {{ person.role }}
               </p>
 
               <a
@@ -549,28 +584,40 @@
                 rel="noopener noreferrer"
                 class="inline-block mt-3 text-sm text-[#0F7F5F] font-bold"
               >
-                Lattes
+                {{ pageData.ui.labels.lattes }}
               </a>
             </article>
           </div>
         </div>
 
         <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
-          <h3 class="text-2xl font-black text-[#9A7600] mb-6">
-            {{ pageData.ui.sections.scientificCommittee }}
-          </h3>
-
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.scientificCommittee; trackBy: trackByName"
               class="rounded-2xl p-5 bg-[#F7F3EA] border border-[#E6DDC8]"
             >
-              <h4 class="font-black text-[#063A4A]">
-                {{ person.name }}
-              </h4>
+              <div class="flex items-start gap-4">
+                <img
+                  [src]="person.photo"
+                  [alt]="person.name"
+                  (error)="useFallbackPhoto($event)"
+                  loading="lazy"
+                  class="w-16 h-16 shrink-0 rounded-2xl object-cover bg-[#DCE7E1]"
+                />
 
-              <p class="text-sm text-[#9A7600] font-semibold mt-1">
-                {{ person.nationality }}
+                <div class="min-w-0">
+                  <h4 class="font-black text-[#063A4A]">
+                    {{ person.name }}
+                  </h4>
+
+                  <p class="text-sm text-[#9A7600] font-semibold mt-1">
+                    {{ person.nationality }}
+                  </p>
+                </div>
+              </div>
+
+              <p *ngIf="person.role" class="text-sm text-gray-600 mt-2">
+                {{ pageData.ui.labels.role }}: {{ person.role }}
               </p>
 
               <a
@@ -580,7 +627,7 @@
                 rel="noopener noreferrer"
                 class="inline-block mt-3 text-sm text-[#0F7F5F] font-bold"
               >
-                Lattes
+                {{ pageData.ui.labels.lattes }}
               </a>
             </article>
           </div>
