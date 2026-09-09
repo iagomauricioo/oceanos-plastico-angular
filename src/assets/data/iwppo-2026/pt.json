@@ -93,7 +93,6 @@
     "paragraphs": [
       "O IWPPO surgiu da necessidade de encontrar soluções para a poluição plástica em corpos hídricos, especialmente mares e oceanos.",
       "O 1st IWPPO ocorreu em novembro de 2024, em Curitiba-PR, na PUC-Curitiba, com o tema “Desafios e Soluções sobre o Monitoramento e Reciclagem da Produção de Plástico para Proteger os Oceanos”.",
-      "O 2nd IWPPO ocorreu em setembro de 2025, em Maceió-AL, com o tema “Oceanos em crise, ciência com propósito: transformando conhecimento em esperança”.",
       "Desde suas primeiras edições, o evento busca integrar ensino, pesquisa, extensão, inovação e diálogo entre academia, sociedade, setor produtivo e poder público."
     ]
   },
@@ -222,21 +221,42 @@
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg",
       "lattes": "http://lattes.cnpq.br/2811263859126204",
-      "role": "General Chair"
+      "role": "Presidente Geral"
     },
     {
       "name": "Marília Gabriela Gondim Rezende",
       "nationality": "Brasileira",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/4449108765997603",
-      "role": "Co-Chair"
+      "role": "Co-coordenadora"
+    },
+    {
+      "name": "Victoria Camille",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/equipe/victoria.png",
+      "lattes": ""
+    },
+    {
+      "name": "Alessandro Sarmento",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/equipe/alessandro.png",
+      "lattes": ""
+    },
+    {
+      "name": "João Mota",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/profile.png",
+      "lattes": ""
     },
     {
       "name": "Cristiane Gomes Barreto",
       "nationality": "Brasileira",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/3536396604369119"
     },
     {
@@ -250,21 +270,21 @@
       "name": "João Paulo Seabra de Lima",
       "nationality": "Brasileiro",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/joao-paulo-seabra.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/6072111926866157"
     },
     {
       "name": "Clarissa Nascimento Soares Rener",
       "nationality": "Brasileira",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/clarissa-rener.jpg",
+      "photo": "assets/images/equipe/clarissa.png",
       "lattes": "http://lattes.cnpq.br/5106375055470886"
     },
     {
       "name": "Márcio Roberto Santos Berto",
       "nationality": "Brasileiro",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/marcio-berto.jpg",
+      "photo": "assets/images/equipe/marcio.png",
       "lattes": "http://lattes.cnpq.br/5527925471049709"
     },
     {
@@ -308,7 +328,7 @@
       "name": "Ubirata Tortato",
       "nationality": "Brasileiro",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/ubirata-tortato.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/9713975312522659"
     },
     {
@@ -336,14 +356,14 @@
       "name": "Taciana Kramer de Oliveira Pinto",
       "nationality": "Brasileira",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/taciana-kramer.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/4590437453711867"
     },
     {
       "name": "Claudio Luis Santos Sampaio",
       "nationality": "Brasileiro",
       "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/claudio-sampaio.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/2526336992077506"
     },
     {

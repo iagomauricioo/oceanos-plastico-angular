@@ -23,21 +23,21 @@
           <!-- IDIOMAS -->
           <div class="iwppo-language-selector mb-7" aria-label="Language selector">
             <div class="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-md">
-              <span aria-hidden="true" class="text-lg">◎</span>
-              <span class="text-xs font-black uppercase tracking-widest text-white/80">{{ currentLanguage }}</span>
-              <div class="flex flex-wrap gap-2">
+              <span aria-hidden="true" class="text-lg">🌐</span>
+              <span class="text-xs font-black uppercase tracking-widest text-white/80">{{ languageLabels[currentLanguage] }}</span>
+              <div class="flex flex-wrap gap-2" role="group" [attr.aria-label]="languageLabels[currentLanguage]">
                 <button
                   *ngFor="let language of languages; trackBy: trackByLanguage"
                   type="button"
                   (click)="setLanguage(language)"
                   [attr.aria-pressed]="isCurrentLanguage(language)"
-                  [attr.aria-label]="language"
+                  [attr.aria-label]="languageLabels[language]"
                   [class.bg-[#F2C230]]="isCurrentLanguage(language)"
                   [class.text-[#06182E]]="isCurrentLanguage(language)"
                   [class.border-[#F2C230]]="isCurrentLanguage(language)"
-                  class="min-w-10 px-3 py-2 rounded-full bg-white/10 text-white border border-white/20 text-xs font-black uppercase tracking-widest hover:bg-white/20 transition"
+                  class="min-w-10 px-3 py-2 rounded-full bg-white/10 text-white border border-white/20 text-xs font-black uppercase tracking-widest hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#F2C230] transition"
                 >
-                  {{ language }}
+                  {{ language.toUpperCase() }}
                 </button>
               </div>
             </div>

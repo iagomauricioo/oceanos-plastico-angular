@@ -95,7 +95,6 @@
     "paragraphs": [
       "IWPPO emerged from the need to find solutions to plastic pollution in water bodies, especially seas and oceans.",
       "The 1st IWPPO took place in November 2024 in Curitiba, Paraná, at PUC-Curitiba, under the theme ‘Challenges and Solutions for Monitoring and Recycling Plastic Production to Protect the Oceans.’",
-      "The 2nd IWPPO took place in September 2025 in Maceió, Alagoas, under the theme ‘Oceans in crisis, science with purpose: transforming knowledge into hope.’",
       "Since its first editions, the event has sought to integrate teaching, research, outreach, innovation, and dialogue between academia, society, the productive sector, and public authorities."
     ]
   },
@@ -230,15 +229,36 @@
       "name": "Marília Gabriela Gondim Rezende",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/4449108765997603",
       "role": "Co-Chair"
+    },
+    {
+      "name": "Victoria Camille",
+      "nationality": "Brazilian",
+      "country": "Brazil",
+      "photo": "assets/images/equipe/victoria.png",
+      "lattes": ""
+    },
+    {
+      "name": "Alessandro Sarmento",
+      "nationality": "Brazilian",
+      "country": "Brazil",
+      "photo": "assets/images/equipe/alessandro.png",
+      "lattes": ""
+    },
+    {
+      "name": "João Mota",
+      "nationality": "Brazilian",
+      "country": "Brazil",
+      "photo": "assets/images/profile.png",
+      "lattes": ""
     },
     {
       "name": "Cristiane Gomes Barreto",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/cristiane-gomes-barreto.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/3536396604369119"
     },
     {
@@ -252,21 +272,21 @@
       "name": "João Paulo Seabra de Lima",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/joao-paulo-seabra.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/6072111926866157"
     },
     {
       "name": "Clarissa Nascimento Soares Rener",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/clarissa-rener.jpg",
+      "photo": "assets/images/equipe/clarissa.png",
       "lattes": "http://lattes.cnpq.br/5106375055470886"
     },
     {
       "name": "Márcio Roberto Santos Berto",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/marcio-berto.jpg",
+      "photo": "assets/images/equipe/marcio.png",
       "lattes": "http://lattes.cnpq.br/5527925471049709"
     },
     {
@@ -310,7 +330,7 @@
       "name": "Ubirata Tortato",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/ubirata-tortato.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/9713975312522659"
     },
     {
@@ -338,14 +358,14 @@
       "name": "Taciana Kramer de Oliveira Pinto",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/taciana-kramer.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/4590437453711867"
     },
     {
       "name": "Claudio Luis Santos Sampaio",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/iwppo-2026/people/claudio-sampaio.jpg",
+      "photo": "assets/images/profile.png",
       "lattes": "http://lattes.cnpq.br/2526336992077506"
     },
     {

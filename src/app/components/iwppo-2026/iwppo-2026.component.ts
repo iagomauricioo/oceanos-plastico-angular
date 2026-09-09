@@ -520,6 +520,11 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
   ];
 
   languages: Language[] = ['pt', 'en', 'es'];
+  readonly languageLabels: Record<Language, string> = {
+    pt: 'Português',
+    en: 'English',
+    es: 'Español'
+  };
   countdown = { days: 0, hours: 0, minutes: 0, seconds: 0 };
   eventHasStarted = false;
   private countdownTimer?: ReturnType<typeof setInterval>;
