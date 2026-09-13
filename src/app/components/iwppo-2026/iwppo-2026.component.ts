@@ -19,6 +19,8 @@ interface Person {
   lattes: string;
   role?: string;
   affiliation?: string;
+  talkTitle?: string;
+  talkTitleEn?: string;
 }
 
 interface Activity {

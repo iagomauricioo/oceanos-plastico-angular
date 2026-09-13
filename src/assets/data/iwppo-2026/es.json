@@ -229,7 +229,7 @@
       "name": "Marília Gabriela Gondim Rezende",
       "nationality": "Brasileña",
       "country": "Brasil",
-      "photo": "assets/images/profile.png",
+      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpeg",
       "lattes": "http://lattes.cnpq.br/4449108765997603",
       "role": "Copresidente"
     },
@@ -248,10 +248,25 @@
       "lattes": ""
     },
     {
-      "name": "João Mota",
+      "name": "Vitor Fabiano dos Santos Silva",
       "nationality": "Brasileño",
       "country": "Brasil",
       "photo": "assets/images/profile.png",
+      "lattes": "http://lattes.cnpq.br/60112379249"
+    },
+    {
+      "name": "Dr. Marcos Tadeu",
+      "nationality": "Brasileño",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marcos-tadeu.jpeg",
+      "lattes": "",
+      "role": "Comité Organizador"
+    },
+    {
+      "name": "João Mota",
+      "nationality": "Brasileño",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/joao-mota.jpeg",
       "lattes": ""
     },
     {
@@ -517,6 +532,24 @@
       "country": "",
       "photo": "assets/images/iwppo-2026/people/ana-filipa-bessa.jpg",
       "lattes": ""
+    },
+    {
+      "name": "Clemilson Marques Batista",
+      "nationality": "Brasileño",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/clemilson-marques.jpeg",
+      "lattes": "",
+      "affiliation": "Plataforma Athena",
+      "talkTitle": "Plataforma Athena: Innovación en la gestión de la investigación y la producción científica brasileña"
+    },
+    {
+      "name": "Letícia Anderson",
+      "nationality": "Brasileña",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/leticia-anderson.jpeg",
+      "lattes": "",
+      "affiliation": "Laboratorio de Expresión Génica y Estudios Moleculares LEGEM/IQB/UFAL",
+      "talkTitle": "Microorganismos en Plásticos Marinos: de la Plastisfera a la Detección Molecular"
     }
   ],
   "schedule": [

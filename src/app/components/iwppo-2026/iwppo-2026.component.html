@@ -518,6 +518,13 @@
               {{ speaker.affiliation }}
             </p>
 
+            <p
+              *ngIf="speaker.talkTitle"
+              class="text-sm text-[#063A4A] font-semibold mt-3 leading-relaxed"
+            >
+              {{ speaker.talkTitle }}
+            </p>
+
             <a
               *ngIf="hasLattes(speaker)"
               [href]="speaker.lattes"

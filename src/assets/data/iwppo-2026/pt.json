@@ -227,7 +227,7 @@
       "name": "Marília Gabriela Gondim Rezende",
       "nationality": "Brasileira",
       "country": "Brasil",
-      "photo": "assets/images/profile.png",
+      "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpeg",
       "lattes": "http://lattes.cnpq.br/4449108765997603",
       "role": "Co-coordenadora"
     },
@@ -246,10 +246,25 @@
       "lattes": ""
     },
     {
-      "name": "João Mota",
+      "name": "Vitor Fabiano dos Santos Silva",
       "nationality": "Brasileiro",
       "country": "Brasil",
       "photo": "assets/images/profile.png",
+      "lattes": "http://lattes.cnpq.br/60112379249"
+    },
+    {
+      "name": "Dr. Marcos Tadeu",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/marcos-tadeu.jpeg",
+      "lattes": "",
+      "role": "Comissão Organizadora"
+    },
+    {
+      "name": "João Mota",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/joao-mota.jpeg",
       "lattes": ""
     },
     {
@@ -515,6 +530,25 @@
       "country": "",
       "photo": "assets/images/iwppo-2026/people/ana-filipa-bessa.jpg",
       "lattes": ""
+    },
+    {
+      "name": "Clemilson Marques Batista",
+      "nationality": "Brasileiro",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/clemilson-marques.jpeg",
+      "lattes": "",
+      "affiliation": "Plataforma Athena",
+      "talkTitle": "Plataforma Athena: Inovação na gestão da pesquisa e da produção científica brasileira"
+    },
+    {
+      "name": "Letícia Anderson",
+      "nationality": "Brasileira",
+      "country": "Brasil",
+      "photo": "assets/images/iwppo-2026/people/leticia-anderson.jpeg",
+      "lattes": "",
+      "affiliation": "Laboratório de Expressão Gênica e Estudos Moleculares LEGEM/IQB/UFAL",
+      "talkTitle": "Microrganismos em Plásticos Marinhos: da Plastisfera à Detecção Molecular",
+      "talkTitleEn": "Microorganisms on Marine Plastics: From the Plastisphere to Molecular Detection"
     }
   ],
   "schedule": [
