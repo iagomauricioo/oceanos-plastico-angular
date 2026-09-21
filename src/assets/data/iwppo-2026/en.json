@@ -6,7 +6,7 @@
     "theme": "Environmental Policies and Technological Innovations: Strategies for Reducing Plastic Pollution in the Pan-Amazon Region",
     "shortTheme": "Plastic pollution, Pan-Amazon Region, environmental policies and technological innovation",
     "startDate": "2026-11-17",
-    "endDate": "2026-11-19",
+    "endDate": "2026-11-20",
     "city": "Manaus",
     "state": "AM",
     "country": "Brazil",
@@ -251,7 +251,7 @@
       "name": "Vitor Fabiano dos Santos Silva",
       "nationality": "Brazilian",
       "country": "Brazil",
-      "photo": "assets/images/profile.png",
+      "photo": "assets/images/iwppo-2026/people/vitor-fabiano.jpeg",
       "lattes": "http://lattes.cnpq.br/60112379249"
     },
     {
@@ -718,114 +718,16 @@
       ]
     },
     {
-      "date": "2026-11-19",
-      "dayLabel": "November 19, 2026",
+      "date": "2026-11-20",
+      "dayLabel": "November 20, 2026",
       "activities": [
         {
-          "time": "09:30",
-          "title": "Round Table 2: Economic instruments: reverse logistics, taxation, and environmental credits",
-          "type": "Round table",
-          "room": "",
-          "speakers": [
-            "Feni Dalano Roosevelt Agostinho"
-          ],
-          "description": "Discussion on economic instruments to combat plastic pollution, including reverse logistics, taxation, and environmental credits."
-        },
-        {
-          "time": "09:30",
-          "title": "Round Table 1: The UN Global Plastic Agreement and developments in the Pan-Amazon Region",
-          "type": "Round table",
-          "room": "",
-          "speakers": [
-            "Fernando Miguel Granja Martins",
-            "Jemilli Castiglioni Viaggi",
-            "Ana Filipa da Silva Bessa"
-          ],
-          "description": "Discussion on the UN Global Plastic Agreement and its implications for the Pan-Amazon Region."
-        },
-        {
-          "time": "10:40",
-          "title": "Coffee Break",
+          "time": "All day",
+          "title": "Free day for immersive experiences in the region",
           "type": "Other",
           "room": "",
           "speakers": [],
-          "description": "A moment for interaction and networking among participants."
-        },
-        {
-          "time": "11:00",
-          "title": "Room 2 Community Panel: Amazonian Toolkit for Action Against Plastic",
-          "type": "Panel",
-          "room": "Room 2",
-          "speakers": [
-            "José Eduardo Martinelli Filho"
-          ],
-          "description": "Discussion on awareness strategies, waste reduction practices, and environmental education initiatives."
-        },
-        {
-          "time": "11:00",
-          "title": "Room 1 Community Panel: Indigenous knowledge and environmental justice",
-          "type": "Panel",
-          "room": "Room 1",
-          "speakers": [
-            "Richard James Ladle",
-            "Bankole Ositadimma Awuzie"
-          ],
-          "description": "Debate on Indigenous knowledge, environmental justice, and sustainable practices for protecting aquatic ecosystems."
-        },
-        {
-          "time": "12:00",
-          "title": "Lunch break",
-          "type": "Other",
-          "room": "",
-          "speakers": [],
-          "description": "Lunch break."
-        },
-        {
-          "time": "13:00",
-          "title": "Panel 2: Industry 4.0, traceability, and reverse logistics",
-          "type": "Panel",
-          "room": "",
-          "speakers": [
-            "Alireza Moghayedi"
-          ],
-          "description": "Discussion on IoT, big data, and artificial intelligence applied to waste management, traceability, and reverse logistics."
-        },
-        {
-          "time": "14:30",
-          "title": "Coffee Break",
-          "type": "Other",
-          "room": "",
-          "speakers": [],
-          "description": "A moment for interaction and networking among participants."
-        },
-        {
-          "time": "15:00",
-          "title": "Working group: drafting a policy brief",
-          "type": "Workshop",
-          "room": "",
-          "speakers": [
-            "Scott Wilson"
-          ],
-          "description": "Activity focused on preparing a policy brief with practical recommendations for governments, organizations, and communities."
-        },
-        {
-          "time": "17:30",
-          "title": "Awards session",
-          "type": "Other",
-          "room": "",
-          "speakers": [],
-          "description": "Recognition of the best contributions in papers, posters, and innovative prototypes."
-        },
-        {
-          "time": "18:00",
-          "title": "Closing: Scientific Letter of the 3rd IWPPO",
-          "type": "Other",
-          "room": "",
-          "speakers": [
-            "Jesse Marques Pavão",
-            "Selenobaldo Alexinaldo Santana"
-          ],
-          "description": "Presentation of the Scientific Letter of the 3rd IWPPO, bringing together the event’s conclusions and recommendations."
+          "description": "A free day to experience immersive activities and explore the Amazon region."
         }
       ]
     }

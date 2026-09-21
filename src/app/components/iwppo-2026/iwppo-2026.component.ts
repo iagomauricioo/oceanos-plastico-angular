@@ -574,7 +574,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
 
     this.pageData = {
       ...selectedData,
-      event: { ...selectedData.event, startDate: '2026-11-17', endDate: '2026-11-19' },
+      event: { ...selectedData.event, startDate: '2026-11-17', endDate: '2026-11-20' },
       schedule: selectedData.schedule,
       ui: {
         ...fallbackUi[language],
