@@ -743,6 +743,10 @@
       "location": "Lugar",
       "modality": "Formato"
     },
+    "deadlines": {
+      "submission": "Fecha límite de envío de trabajos: hasta el 03.11 (resultados el 06.11)",
+      "registration": "Inscripción al evento: hasta el 06.11 (o mientras haya cupos)"
+    },
     "sections": {
       "about": "Sobre el evento",
       "history": "Sobre el IWPPO",

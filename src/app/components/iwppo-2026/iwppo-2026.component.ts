@@ -156,6 +156,10 @@ interface IwppoPageData {
       location: string;
       modality: string;
     };
+    deadlines: {
+      submission: string;
+      registration: string;
+    };
     sections: {
       about: string;
       history: string;
@@ -258,6 +262,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       location: 'Local',
       modality: 'Modalidade'
     },
+    deadlines: {
+      submission: 'Deadline de envio de trabalhos: até dia 03.11 (divulgação dos resultados no dia 06.11)',
+      registration: 'Inscrição no evento: até o dia 06.11 (ou enquanto durarem as inscrições)'
+    },
     sections: {
       about: 'Sobre o evento',
       history: 'Sobre o IWPPO',
@@ -333,6 +341,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       location: 'Location',
       modality: 'Format'
     },
+    deadlines: {
+      submission: 'Submission deadline: November 3 (results announced on November 6)',
+      registration: 'Event registration: until November 6 (or while spaces last)'
+    },
     sections: {
       about: 'About the event',
       history: 'About IWPPO',
@@ -407,6 +419,10 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       end: 'Fin',
       location: 'Lugar',
       modality: 'Modalidad'
+    },
+    deadlines: {
+      submission: 'Fecha límite de envío de trabajos: hasta el 03.11 (resultados el 06.11)',
+      registration: 'Inscripción al evento: hasta el 06.11 (o mientras haya cupos)'
     },
     sections: {
       about: 'Sobre el evento',

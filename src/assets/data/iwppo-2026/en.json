@@ -743,6 +743,10 @@
       "location": "Location",
       "modality": "Format"
     },
+    "deadlines": {
+      "submission": "Submission deadline: November 3 (results announced on November 6)",
+      "registration": "Event registration: until November 6 (or while spaces last)"
+    },
     "sections": {
       "about": "About the event",
       "history": "About IWPPO",

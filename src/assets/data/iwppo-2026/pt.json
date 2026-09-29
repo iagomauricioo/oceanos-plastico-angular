@@ -742,6 +742,10 @@
       "location": "Local",
       "modality": "Modalidade"
     },
+    "deadlines": {
+      "submission": "Deadline de envio de trabalhos: até dia 03.11 (divulgação dos resultados no dia 06.11)",
+      "registration": "Inscrição no evento: até o dia 06.11 (ou enquanto durarem as inscrições)"
+    },
     "sections": {
       "about": "Sobre o evento",
       "history": "Sobre o IWPPO",
