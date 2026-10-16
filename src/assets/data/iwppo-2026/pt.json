@@ -596,20 +596,20 @@
           "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia."
         },
         {
-          "time": "17:00",
-          "title": "Coffee Break de Abertura",
-          "type": "Abertura",
-          "room": "",
-          "speakers": [],
-          "description": "Momento de interação e networking entre os participantes."
-        },
-        {
           "time": "16:30",
           "title": "Apresentação Cultural",
           "type": "Abertura",
           "room": "",
           "speakers": [],
           "description": "Apresentação cultural conectando cultura amazônica e preservação ambiental."
+        },
+        {
+          "time": "17:00",
+          "title": "Coffee Break de Abertura",
+          "type": "Abertura",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interação e networking entre os participantes."
         }
       ]
     },

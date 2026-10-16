@@ -597,20 +597,20 @@
           "description": "La conferencia abordará el grave problema de la contaminación plástica, destacando sus impactos globales y regionales, especialmente en la Región Panamazónica."
         },
         {
-          "time": "17:00",
-          "title": "Coffee Break de Apertura",
-          "type": "Apertura",
-          "room": "",
-          "speakers": [],
-          "description": "Momento de interacción y networking entre los participantes."
-        },
-        {
           "time": "16:30",
           "title": "Presentación Cultural",
           "type": "Apertura",
           "room": "",
           "speakers": [],
           "description": "Presentación cultural que conecta la cultura amazónica con la preservación ambiental."
+        },
+        {
+          "time": "17:00",
+          "title": "Coffee Break de Apertura",
+          "type": "Apertura",
+          "room": "",
+          "speakers": [],
+          "description": "Momento de interacción y networking entre los participantes."
         }
       ]
     },

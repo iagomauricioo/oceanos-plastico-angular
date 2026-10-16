@@ -597,20 +597,20 @@
           "description": "The lecture will address the serious problem of plastic pollution, highlighting its global and regional impacts, especially in the Pan-Amazon Region."
         },
         {
-          "time": "17:00",
-          "title": "Opening Coffee Break",
-          "type": "Opening",
-          "room": "",
-          "speakers": [],
-          "description": "A moment for interaction and networking among participants."
-        },
-        {
           "time": "16:30",
           "title": "Cultural Presentation",
           "type": "Opening",
           "room": "",
           "speakers": [],
           "description": "Cultural presentation connecting Amazonian culture and environmental preservation."
+        },
+        {
+          "time": "17:00",
+          "title": "Opening Coffee Break",
+          "type": "Opening",
+          "room": "",
+          "speakers": [],
+          "description": "A moment for interaction and networking among participants."
         }
       ]
     },
