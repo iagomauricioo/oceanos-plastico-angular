@@ -636,8 +636,12 @@
                     {{ person.name }}
                   </h4>
 
-                  <p class="text-sm text-[#9A7600] font-semibold mt-1">
+                  <p *ngIf="person.nationality" class="text-sm text-[#9A7600] font-semibold mt-1">
                     {{ person.nationality }}
+                  </p>
+
+                  <p *ngIf="person.affiliation" class="text-sm text-gray-600 mt-1">
+                    {{ person.affiliation }}
                   </p>
                 </div>
               </div>

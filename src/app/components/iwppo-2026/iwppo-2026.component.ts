@@ -13,7 +13,7 @@ type Language = 'pt' | 'en' | 'es';
 
 interface Person {
   name: string;
-  nationality: string;
+  nationality?: string;
   country: string;
   photo: string;
   lattes: string;
