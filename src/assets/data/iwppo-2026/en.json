@@ -606,6 +606,13 @@
       "lattes": "",
       "affiliation": "Laboratory of Gene Expression and Molecular Studies LEGEM/IQB/UFAL",
       "talkTitle": "Microorganisms on Marine Plastics: From the Plastisphere to Molecular Detection"
+    },
+    {
+      "name": "Lays Marques",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/lays-marques.jpeg",
+      "lattes": "",
+      "talkTitle": "Challenges and prospects in researching the effects of microplastics during pregnancy"
     }
   ],
   "schedule": [
@@ -770,6 +777,22 @@
           "room": "",
           "speakers": [],
           "description": "Theatrical presentation on plastic pollution, local culture, and environmental preservation in the Pan-Amazon Region."
+        }
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "dayLabel": "November 19, 2026",
+      "activities": [
+        {
+          "time": "Time to be announced",
+          "title": "Challenges and prospects in researching the effects of microplastics during pregnancy",
+          "type": "Lecture",
+          "room": "",
+          "speakers": [
+            "Lays Marques"
+          ],
+          "description": "A talk on the challenges and prospects of researching the effects of microplastics during pregnancy."
         }
       ]
     },

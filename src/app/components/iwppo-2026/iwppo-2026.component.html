@@ -536,7 +536,7 @@
               {{ speaker.name }}
             </h3>
 
-            <p class="text-sm text-[#9A7600] font-bold mt-2">
+            <p *ngIf="speaker.nationality" class="text-sm text-[#9A7600] font-bold mt-2">
               {{ speaker.nationality }}
             </p>
 
