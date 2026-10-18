@@ -172,6 +172,20 @@
       "program": "Sustainable Development",
       "grade": 7,
       "description": "The program contributes an interdisciplinary approach to policy, environmental management, sustainability, territory, society, consumption, and the formulation of strategies to reduce plastic pollution."
+    },
+    {
+      "institution": "Universidade Santa Cecília (UNISANTA)",
+      "program": "Mechanical Engineering — Master's and Doctorate",
+      "grade": 4,
+      "description": "PPGEMec offers master's and doctorate degrees in Thermofluid Mechanics and Electroenergy Management and Process Control.",
+      "url": "https://unisanta.br/mestrado/curso-engenharia-mecanica/"
+    },
+    {
+      "institution": "Universidade Santa Cecília (UNISANTA)",
+      "program": "Environmental Auditing, Ports, and Governance — Professional Master's",
+      "grade": 4,
+      "description": "PPG-AUPG is an interdisciplinary professional master's program that connects biodiversity conservation, environmental management, port activities, and public policy.",
+      "url": "https://unisanta.br/mestrado/curso-auditoria-ambiental-portos-governanca/"
     }
   ],
   "targetAudience": [

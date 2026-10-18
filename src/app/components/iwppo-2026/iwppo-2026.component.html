@@ -427,6 +427,16 @@
           <p class="text-gray-700 leading-relaxed">
             {{ program.description }}
           </p>
+
+          <a
+            *ngIf="program.url"
+            [href]="program.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-4 text-sm text-[#0F7F5F] font-bold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0F7F5F]"
+          >
+            {{ pageData.ui.labels.accessInstitutionalWebsite }}
+          </a>
         </article>
       </div>
     </div>

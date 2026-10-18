@@ -54,6 +54,7 @@ interface ParticipatingProgram {
   program: string;
   grade: number | null;
   description: string;
+  url?: string;
 }
 
 interface TargetAudience {

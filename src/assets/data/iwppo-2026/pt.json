@@ -170,6 +170,20 @@
       "program": "Desenvolvimento Sustentável",
       "grade": 7,
       "description": "O programa contribui com abordagem interdisciplinar em política, gestão ambiental, sustentabilidade, território, sociedade, consumo e formulação de estratégias para redução da poluição plástica."
+    },
+    {
+      "institution": "Universidade Santa Cecília (UNISANTA)",
+      "program": "Engenharia Mecânica — Mestrado e Doutorado",
+      "grade": 4,
+      "description": "O PPGEMec oferece mestrado e doutorado nas áreas de Termofluidomecânica e Gerenciamento Eletroenergético e Controle de Processos.",
+      "url": "https://unisanta.br/mestrado/curso-engenharia-mecanica/"
+    },
+    {
+      "institution": "Universidade Santa Cecília (UNISANTA)",
+      "program": "Auditoria Ambiental, Portos e Governança — Mestrado Profissional",
+      "grade": 4,
+      "description": "O PPG-AUPG é um mestrado profissional interdisciplinar que integra conservação da biodiversidade, gestão ambiental, atividades portuárias e políticas públicas.",
+      "url": "https://unisanta.br/mestrado/curso-auditoria-ambiental-portos-governanca/"
     }
   ],
   "targetAudience": [
