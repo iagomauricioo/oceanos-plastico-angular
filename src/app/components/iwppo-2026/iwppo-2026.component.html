@@ -583,7 +583,13 @@
       </div>
 
       <div class="grid lg:grid-cols-2 gap-8">
-        <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
+        <div
+          class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm"
+          aria-labelledby="organizing-committee-title"
+        >
+          <h3 id="organizing-committee-title" class="text-xl md:text-2xl font-black text-[#063A4A] mb-5">
+            {{ pageData.ui.sections.organizingCommittee }}
+          </h3>
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.organizingCommittee; trackBy: trackByName"
@@ -626,7 +632,13 @@
           </div>
         </div>
 
-        <div class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm">
+        <div
+          class="iwppo-reveal rounded-[2rem] bg-white border border-[#E6DDC8] p-7 shadow-sm"
+          aria-labelledby="scientific-committee-title"
+        >
+          <h3 id="scientific-committee-title" class="text-xl md:text-2xl font-black text-[#063A4A] mb-5">
+            {{ pageData.ui.sections.scientificCommittee }}
+          </h3>
           <div class="space-y-4">
             <article
               *ngFor="let person of pageData.scientificCommittee; trackBy: trackByName"
