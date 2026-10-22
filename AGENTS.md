@@ -29,3 +29,17 @@ npm run serve:ssr:oceanos-plastico-angular
 - Executar testes e build antes de concluir.
 
 Seguir `SECURITY.md`. Achados criticos ou altos bloqueiam entrega sem aceitacao.
+
+## Verificacao e entrega
+
+- Objetivo: manter as paginas publicas, acessiveis, traduzidas e compativeis com SSR.
+- Fontes e testes: `src/app/`; dados e imagens: `src/assets/`.
+- Teste sem interface: `npm run test -- --watch=false --browsers=ChromeHeadless`.
+- Teste IWPPO: acrescentar `--include=src/app/components/iwppo-2026/iwppo-2026.component.spec.ts`.
+- Build de producao: `npm run build`. Seguranca: `npm audit --offline` (depende do cache local).
+- Nao ha comando de lint configurado; nao adicionar ferramentas sem autorizacao.
+- Seguir componentes standalone e testes Jasmine existentes; usar interpolacao para textos traduzidos.
+- Preservar alteracoes existentes e revisar `git diff --check` antes da entrega.
+- Sempre executar teste focado, suite e build; informar falhas e limites de verificacao.
+- Pedir autorizacao antes de publicar, mudar dependencias ou infraestrutura; nunca inserir segredos ou editar gerados.
+- Branches e commits devem descrever a alteracao, sem o termo proibido pelas regras globais.

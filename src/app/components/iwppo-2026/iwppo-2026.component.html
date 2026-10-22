@@ -185,12 +185,21 @@
 
         <section class="rounded-[2rem] bg-white p-6 md:p-8" aria-labelledby="important-dates-title">
           <h2 id="important-dates-title" class="text-2xl font-black text-[#063A4A] mb-5">{{ countdownText.dates }}</h2>
-          <div class="grid sm:grid-cols-3 gap-3">
-            <a *ngFor="let day of pageData.schedule; trackBy: trackByScheduleDay" [routerLink]="[]" fragment="programacao" class="rounded-2xl bg-[#F7F3EA] border border-[#E6DDC8] p-4 hover:border-[#F2C230] transition">
-              <span class="block text-xs font-black uppercase tracking-wider text-[#0F7F5F]">{{ day.dayLabel }}</span>
-              <strong class="block mt-2 text-[#063A4A]">{{ day.activities[0].title }}</strong>
-            </a>
-          </div>
+          <ul class="space-y-3">
+            <li *ngFor="let milestone of importantDates" class="flex items-center gap-3 rounded-2xl bg-[#F7F3EA] border border-[#E6DDC8] p-4">
+              <span class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-[#0F7F5F]/10 text-[#0F7F5F]" aria-hidden="true">
+                <i class="pi" [ngClass]="milestone.icon"></i>
+              </span>
+              <div>
+                <span class="block text-sm font-semibold text-[#0F7F5F]">{{ milestone.label }}</span>
+                <strong class="block mt-1 text-[#063A4A]">
+                  <time *ngIf="milestone.start" [attr.datetime]="milestone.start">{{ formatEventDate(milestone.start) }}</time>
+                  <ng-container *ngIf="milestone.end"> – <time [attr.datetime]="milestone.end">{{ formatEventDate(milestone.end) }}</time></ng-container>
+                  {{ milestone.pending }}
+                </strong>
+              </div>
+            </li>
+          </ul>
         </section>
       </div>
 

@@ -610,10 +610,24 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
 
   get countdownText() {
     return {
-      pt: { title: 'Contagem regressiva', dates: 'Datas em destaque', units: ['Dias', 'Horas', 'Minutos', 'Segundos'], started: 'O III IWPPO começou!' },
-      en: { title: 'Countdown', dates: 'Highlighted dates', units: ['Days', 'Hours', 'Minutes', 'Seconds'], started: 'III IWPPO has started!' },
-      es: { title: 'Cuenta regresiva', dates: 'Fechas destacadas', units: ['Días', 'Horas', 'Minutos', 'Segundos'], started: '¡El III IWPPO ha comenzado!' }
+      pt: { title: 'Contagem regressiva', dates: 'Datas importantes', units: ['Dias', 'Horas', 'Minutos', 'Segundos'], started: 'O III IWPPO começou!' },
+      en: { title: 'Countdown', dates: 'Important dates', units: ['Days', 'Hours', 'Minutes', 'Seconds'], started: 'III IWPPO has started!' },
+      es: { title: 'Cuenta regresiva', dates: 'Fechas importantes', units: ['Días', 'Horas', 'Minutos', 'Segundos'], started: '¡El III IWPPO ha comenzado!' }
     }[this.currentLanguage];
+  }
+
+  get importantDates() {
+    const labels = {
+      pt: ['Submissão de artigos', 'Comunicação de aceite', 'Inscrição no evento', 'Realização do evento', 'ou enquanto durarem as inscrições'],
+      en: ['Paper submission', 'Acceptance notification', 'Event registration', 'Event dates', 'or while spaces last'],
+      es: ['Envío de artículos', 'Comunicación de aceptación', 'Inscripción al evento', 'Realización del evento', 'o mientras haya cupos']
+    }[this.currentLanguage];
+    return [
+      { label: labels[0], start: '2026-11-03', end: '', pending: '', icon: 'pi-send' },
+      { label: labels[1], start: '2026-11-06', end: '', pending: '', icon: 'pi-check-circle' },
+      { label: labels[2], start: '2026-11-06', end: '', pending: labels[4], icon: 'pi-clock' },
+      { label: labels[3], start: this.pageData.event.startDate, end: this.pageData.event.endDate, pending: '', icon: 'pi-calendar' }
+    ];
   }
 
   get countdownItems(): Array<{ value: number; label: string }> {
