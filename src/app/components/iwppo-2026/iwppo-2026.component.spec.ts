@@ -23,6 +23,33 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show the three Aura cards only on November 20 in every language', () => {
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const gallery = fixture.nativeElement.querySelector('[data-aura-experiences]') as HTMLElement;
+      expect(gallery).not.toBeNull();
+      expect(gallery?.closest('[data-schedule-date]')?.getAttribute('data-schedule-date')).toBe('2026-11-20');
+      const cards = gallery?.querySelectorAll('a[data-aura-image]');
+      expect(cards?.length).toBe(3);
+      cards?.forEach(card => {
+        const image = card.querySelector('img');
+        expect(image?.getAttribute('src')).toBe(card.getAttribute('href'));
+        expect(image?.getAttribute('alt')).toBeTruthy();
+        expect(image?.getAttribute('loading')).toBe('lazy');
+      });
+      const contacts = gallery?.querySelectorAll('a[data-aura-contact]');
+      expect(contacts?.length).toBe(3);
+      contacts?.forEach(contact => {
+        const url = new URL(contact.getAttribute('href')!);
+        expect(url.origin).toBe('https://api.whatsapp.com');
+        expect(url.searchParams.get('phone')).toBe('555191911504');
+        expect(contact.textContent?.trim()).toBeTruthy();
+        expect(contact.getAttribute('rel')).toBe('noopener noreferrer');
+      });
+    }
+  });
+
   it('should show four important milestones instead of schedule activities in every language', () => {
     for (const [language, title, pending] of [
       ['pt', 'Datas importantes', 'ou enquanto durarem as inscrições'],

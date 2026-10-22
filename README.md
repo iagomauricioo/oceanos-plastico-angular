@@ -32,6 +32,14 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+Os cards da Aura Amazônia aparecem na atividade de experiências imersivas de
+20/11/2026. Textos e descrições acessíveis ficam em
+`src/assets/data/iwppo-2026/{pt,en,es}.json`, e as artes originais em
+`src/assets/images/iwppo-2026/aura/`. Para validar os dados e arquivos sem navegador:
+`node --test src/app/components/iwppo-2026/aura-assets.test.cjs`.
+Cada card permite ampliar a arte e possui um botão de contato; o link de
+WhatsApp e o rótulo traduzido ficam em `experiences.contactUrl` e `experiences.contactLabel`.
+
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests

@@ -806,7 +806,27 @@
           "type": "Otro",
           "room": "",
           "speakers": [],
-          "description": "Día libre para vivir experiencias inmersivas y conocer la región amazónica."
+          "description": "Día libre para vivir experiencias inmersivas y conocer la región amazónica.",
+          "experiences": {
+            "title": "Vive la Amazonía con Aura Amazônia",
+            "description": "El 20 de noviembre, descubre Cheiros da Floresta, Circuito Científico y Sabores da Floresta. Consulta los precios en las imágenes y haz clic en cada tarjeta para ampliarla. Las tarjetas originales están en portugués.",
+            "contactLabel": "Contactar",
+            "contactUrl": "https://api.whatsapp.com/send/?phone=555191911504&text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+Tour+Arom%C3%A1tico.&type=phone_number&app_absent=0",
+            "cards": [
+              {
+                "src": "assets/images/iwppo-2026/aura/1.png",
+                "alt": "Cheiros da Floresta — RDS Rio Negro. Desde R$ 1.442,50 por persona en grupo de 4; R$ 1.696,92 individual."
+              },
+              {
+                "src": "assets/images/iwppo-2026/aura/2.png",
+                "alt": "Circuito Científico. Desde R$ 1.023,85 por persona en grupo de 4; R$ 1.620,00 individual."
+              },
+              {
+                "src": "assets/images/iwppo-2026/aura/3.png",
+                "alt": "Sabores da Floresta. Desde R$ 1.370,00 por persona en grupo de 4; R$ 2.112,31 individual."
+              }
+            ]
+          }
         }
       ]
     }

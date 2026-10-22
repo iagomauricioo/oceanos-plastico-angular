@@ -30,6 +30,13 @@ interface Activity {
   room: string;
   speakers: string[];
   description: string;
+  experiences?: {
+    title: string;
+    description: string;
+    contactLabel: string;
+    contactUrl: string;
+    cards: Array<{ src: string; alt: string }>;
+  };
 }
 
 interface ScheduleDay {
