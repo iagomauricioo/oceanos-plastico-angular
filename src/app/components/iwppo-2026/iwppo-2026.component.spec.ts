@@ -23,6 +23,18 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show and link the communication email in every language', () => {
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const contact = fixture.nativeElement.querySelector(
+        'a[href="mailto:iwppo@unisanta.br"]',
+      ) as HTMLAnchorElement | null;
+      expect(contact).not.toBeNull();
+      expect(contact?.textContent?.trim()).toBe('iwppo@unisanta.br');
+    }
+  });
+
   it('should show the three Aura cards only on November 20 in every language', () => {
     for (const language of ['pt', 'en', 'es'] as const) {
       component.setLanguage(language);
