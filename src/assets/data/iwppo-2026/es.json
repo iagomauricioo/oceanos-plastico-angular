@@ -478,32 +478,11 @@
       "lattes": "http://lattes.cnpq.br/5020237977975416"
     },
     {
-      "name": "Feni Dalano Roosevelt Agostinho",
-      "nationality": "Brasileño",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/feni-agostinho.jpg",
-      "lattes": "http://lattes.cnpq.br/2739577358518765"
-    },
-    {
       "name": "Jemilli Castiglioni Viaggi",
       "nationality": "Brasileña",
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/jemilli-viaggi.jpg",
       "lattes": "http://lattes.cnpq.br/1461526810377278"
-    },
-    {
-      "name": "Alexandre Urban Borbely",
-      "nationality": "Brasileño",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/alexandre-borbely.jpg",
-      "lattes": "http://lattes.cnpq.br/3999711350740879"
-    },
-    {
-      "name": "Carlos Alberto Cioce Sampaio",
-      "nationality": "Brasileño",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/carlos-sampaio.jpg",
-      "lattes": "http://lattes.cnpq.br/9034603212802471"
     },
     {
       "name": "Jesse Marques da Silva Junior Pavão",
@@ -518,20 +497,6 @@
       "country": "Brasil",
       "photo": "assets/images/iwppo-2026/people/jose-eduardo-martinelli.jpg",
       "lattes": "http://lattes.cnpq.br/2080628833884538"
-    },
-    {
-      "name": "Marcos Paulo Alves de Sousa",
-      "nationality": "Brasileño",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/marcos-paulo-sousa.jpg",
-      "lattes": "http://lattes.cnpq.br/6713232502495902"
-    },
-    {
-      "name": "Robson Guimarães dos Santos",
-      "nationality": "Brasileño",
-      "country": "Brasil",
-      "photo": "assets/images/iwppo-2026/people/robson-guimaraes.jpg",
-      "lattes": "http://lattes.cnpq.br/3415855125714979"
     },
     {
       "name": "Richard James Ladle",
@@ -700,7 +665,6 @@
           "room": "Sala 2",
           "speakers": [
             "Jesse Marques Pavão",
-            "Robson Guimarães dos Santos",
             "Scott Wilson"
           ],
           "description": "Discusión sobre tecnologías y metodologías para monitorear la contaminación plástica, incluyendo satélites y drones."
@@ -746,9 +710,7 @@
           "type": "Panel",
           "room": "",
           "speakers": [
-            "Marcell Mariano Correa Maceno",
-            "Marcos Paulo Alves de Sousa",
-            "Alexandre Urban Borbely"
+            "Marcell Mariano Correa Maceno"
           ],
           "description": "Discusión sobre biorremediación, uso de enzimas en la degradación de plásticos e innovaciones de startups enfocadas en bioplásticos."
         },

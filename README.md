@@ -32,6 +32,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+Para validar a retirada de palestrantes da programação nos três idiomas:
+`node --test src/app/components/iwppo-2026/program-speakers.test.cjs`.
+
 Os cards da Aura Amazônia aparecem na atividade de experiências imersivas de
 20/11/2026. Textos e descrições acessíveis ficam em
 `src/assets/data/iwppo-2026/{pt,en,es}.json`, e as artes originais em
