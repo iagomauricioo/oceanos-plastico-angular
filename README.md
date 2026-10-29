@@ -32,6 +32,14 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+As moderações do IWPPO 2026 ficam em `schedule[].activities[].moderator`
+nos três arquivos de idioma, com nome, afiliação e rótulo traduzido.
+O teste do componente verifica a associação das sete moderações às atividades.
+Genilson Pereira Santana e Deivison Carvalho Molinari são palestrantes dos painéis
+1 e 2; suas fotos ficam em `src/assets/images/iwppo-2026/people/`.
+Esses painéis têm Maria Teresa Gomes Lopes e Francimara Souza da Costa como
+moderadoras, respectivamente.
+
 A seção de localização do IWPPO 2026 apresenta o endereço da UFAM no Setor Sul,
 mapa e link para o Google Maps. O endereço fica em `hostInstitution.address`
 nos três arquivos de idioma; ao alterá-lo, atualize também os URLs do mapa no template.

@@ -23,6 +23,52 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show the seven moderators on their corresponding activities in every language', () => {
+    const assignments = [
+      ['2026-11-17', 3, 'Kátia Viana Cavalcante'],
+      ['2026-11-18', 0, 'Guilherme Silva Modoro'],
+      ['2026-11-18', 1, 'Mônica Alves de Vasconcelos'],
+      ['2026-11-18', 5, 'Santiago Linório Ferreyra Ramos'],
+      ['2026-11-18', 6, 'Maria Teresa Gomes Lopes'],
+      ['2026-11-18', 8, 'Francimara Souza da Costa'],
+      ['2026-11-19', 0, 'Jessé Marques'],
+    ] as const;
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.querySelectorAll('[data-activity-moderator]').length).toBe(7);
+      for (const [date, index, name] of assignments) {
+        const day = component.pageData.schedule.find(day => day.date === date)!;
+        const activity = day.activities[index];
+        const section = fixture.nativeElement.querySelector(`[data-schedule-date="${date}"]`) as HTMLElement;
+        const card = Array.from(section.querySelectorAll('article'))
+          .find(card => card.textContent?.includes(activity.title));
+        const moderator = card?.querySelector('[data-activity-moderator]');
+        expect(moderator?.textContent).toContain(name);
+        expect(moderator?.textContent).toContain(language === 'pt' ? 'Modera' : language === 'en' ? 'Moderator' : 'Modera');
+      }
+    }
+  });
+
+  it('should register the forwarded panel speakers with their photos separately from moderators', () => {
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      for (const [index, name, photo] of [
+        [6, 'Genilson Pereira Santana', 'genilson.jpeg'],
+        [8, 'Deivison Carvalho Molinari', 'deivison.jpeg'],
+      ] as const) {
+        const panel = component.pageData.schedule.find(day => day.date === '2026-11-18')!.activities[index];
+        expect(panel.speakers).toContain(name);
+        const speaker = component.pageData.speakers.find(speaker => speaker.name === name);
+        expect(speaker?.photo).toBe(`assets/images/iwppo-2026/people/${photo}`);
+        expect(speaker?.talkTitle).toBe(panel.title);
+        const image = fixture.nativeElement.querySelector(`#palestrantes img[alt="${name}"]`);
+        expect(image?.getAttribute('src')).toBe(speaker?.photo);
+      }
+    }
+  });
+
   it('should show the UFAM South Sector venue with an accessible map in every language', () => {
     const address = 'Universidade Federal do Amazonas, Av. Jauary Marinho - Setor Sul, Manaus, 69000-000, AM, BR';
     for (const language of ['pt', 'en', 'es'] as const) {

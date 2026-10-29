@@ -30,6 +30,11 @@ interface Activity {
   room: string;
   speakers: string[];
   description: string;
+  moderator?: {
+    name: string;
+    affiliation: string;
+    label: string;
+  };
   experiences?: {
     title: string;
     description: string;

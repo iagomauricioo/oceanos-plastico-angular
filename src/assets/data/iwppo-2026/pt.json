@@ -577,6 +577,20 @@
       "photo": "assets/images/iwppo-2026/people/lays-marques.jpeg",
       "lattes": "",
       "talkTitle": "Os desafios e perspectivas de pesquisar os efeitos de microplásticos na gestação"
+    },
+    {
+      "name": "Genilson Pereira Santana",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/genilson.jpeg",
+      "lattes": "",
+      "talkTitle": "Painel 1: Biorremediação, enzimas e startups de bioplásticos"
+    },
+    {
+      "name": "Deivison Carvalho Molinari",
+      "country": "",
+      "photo": "assets/images/iwppo-2026/people/deivison.jpeg",
+      "lattes": "",
+      "talkTitle": "Painel 2: Economia circular aplicada a bacias hidrográficas e oceânicas"
     }
   ],
   "schedule": [
@@ -621,7 +635,12 @@
           "speakers": [
             "Henrique dos Santos Pereira"
           ],
-          "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia."
+          "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia.",
+          "moderator": {
+            "name": "Kátia Viana Cavalcante",
+            "affiliation": "PPGCASA/PROFCIAMB/UFAM",
+            "label": "Moderadora"
+          }
         },
         {
           "time": "16:30",
@@ -655,7 +674,12 @@
             "Fabian Sá",
             "Jemilli Castiglioni Viaggi"
           ],
-          "description": "Apresentação de pesquisas recentes sobre impactos da poluição plástica na Pan-Amazônia, incluindo contaminação de rios, solos, ecossistemas locais e efeitos sobre biodiversidade e comunidades ribeirinhas."
+          "description": "Apresentação de pesquisas recentes sobre impactos da poluição plástica na Pan-Amazônia, incluindo contaminação de rios, solos, ecossistemas locais e efeitos sobre biodiversidade e comunidades ribeirinhas.",
+          "moderator": {
+            "name": "Guilherme Silva Modoro",
+            "affiliation": "PPGCIFA/UFAM",
+            "label": "Moderador"
+          }
         },
         {
           "time": "09:30",
@@ -666,7 +690,12 @@
             "Jesse Marques Pavão",
             "Scott Wilson"
           ],
-          "description": "Discussão sobre tecnologias e metodologias para monitorar a poluição plástica, incluindo satélites e drones."
+          "description": "Discussão sobre tecnologias e metodologias para monitorar a poluição plástica, incluindo satélites e drones.",
+          "moderator": {
+            "name": "Mônica Alves de Vasconcelos",
+            "affiliation": "CENSIPAM",
+            "label": "Moderadora"
+          }
         },
         {
           "time": "10:40",
@@ -701,7 +730,12 @@
             "Alireza Moghayedi",
             "Brendan P. Kelaher"
           ],
-          "description": "Apresentação de inovações para coleta de plásticos dos oceanos e transformação desses materiais em novas matérias-primas."
+          "description": "Apresentação de inovações para coleta de plásticos dos oceanos e transformação desses materiais em novas matérias-primas.",
+          "moderator": {
+            "name": "Santiago Linório Ferreyra Ramos",
+            "affiliation": "ICET/PPGCASA/UFAM",
+            "label": "Moderador"
+          }
         },
         {
           "time": "14:00",
@@ -709,9 +743,15 @@
           "type": "Painel",
           "room": "",
           "speakers": [
-            "Marcell Mariano Correa Maceno"
+            "Marcell Mariano Correa Maceno",
+            "Genilson Pereira Santana"
           ],
-          "description": "Discussão sobre biorremediação, uso de enzimas na degradação de plásticos e inovações de startups focadas em bioplásticos."
+          "description": "Discussão sobre biorremediação, uso de enzimas na degradação de plásticos e inovações de startups focadas em bioplásticos.",
+          "moderator": {
+            "name": "Maria Teresa Gomes Lopes",
+            "affiliation": "PPGCASA/PPGATR/PPGCIFA/UFAM",
+            "label": "Moderadora"
+          }
         },
         {
           "time": "15:00",
@@ -727,9 +767,15 @@
           "type": "Painel",
           "room": "",
           "speakers": [
-            "Ian Vázquez Rowe"
+            "Ian Vázquez Rowe",
+            "Deivison Carvalho Molinari"
           ],
-          "description": "Debate sobre economia circular como estratégia para gestão sustentável de bacias hidrográficas e oceânicas."
+          "description": "Debate sobre economia circular como estratégia para gestão sustentável de bacias hidrográficas e oceânicas.",
+          "moderator": {
+            "name": "Francimara Souza da Costa",
+            "affiliation": "PPGCASA/UFAM",
+            "label": "Moderadora"
+          }
         },
         {
           "time": "16:30",
@@ -753,7 +799,12 @@
           "speakers": [
             "Lays Marques"
           ],
-          "description": "Palestra sobre os desafios e as perspectivas de pesquisar os efeitos dos microplásticos na gestação."
+          "description": "Palestra sobre os desafios e as perspectivas de pesquisar os efeitos dos microplásticos na gestação.",
+          "moderator": {
+            "name": "Jessé Marques",
+            "affiliation": "UNISANTA",
+            "label": "Moderador"
+          }
         }
       ]
     },

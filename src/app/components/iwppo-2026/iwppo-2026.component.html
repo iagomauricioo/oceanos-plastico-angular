@@ -762,6 +762,11 @@
                     {{ activity.description }}
                   </p>
 
+                  <p *ngIf="activity.moderator as moderator" data-activity-moderator class="text-[#063A4A] mb-4 leading-relaxed">
+                    <strong>{{ moderator.label }}:</strong> {{ moderator.name }}
+                    <span *ngIf="moderator.affiliation">({{ moderator.affiliation }})</span>
+                  </p>
+
                   <section *ngIf="activity.experiences as experiences" data-aura-experiences class="mt-6">
                     <h5 class="text-xl font-black text-[#063A4A]">{{ experiences.title }}</h5>
                     <p class="mt-2 text-gray-700 leading-relaxed">{{ experiences.description }}</p>
