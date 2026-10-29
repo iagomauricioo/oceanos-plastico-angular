@@ -32,6 +32,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+A seção de localização do IWPPO 2026 apresenta o endereço da UFAM no Setor Sul,
+mapa e link para o Google Maps. O endereço fica em `hostInstitution.address`
+nos três arquivos de idioma; ao alterá-lo, atualize também os URLs do mapa no template.
+
 Para validar a retirada de palestrantes da programação nos três idiomas:
 `node --test src/app/components/iwppo-2026/program-speakers.test.cjs`.
 

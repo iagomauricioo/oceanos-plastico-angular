@@ -23,6 +23,28 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show the UFAM South Sector venue with an accessible map in every language', () => {
+    const address = 'Universidade Federal do Amazonas, Av. Jauary Marinho - Setor Sul, Manaus, 69000-000, AM, BR';
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const section = fixture.nativeElement.querySelector('#localizacao') as HTMLElement;
+      expect(section).not.toBeNull();
+      expect(section?.textContent).toContain(address);
+      expect(component.pageData.hostInstitution.address).toBe(address);
+      const map = section?.querySelector('iframe');
+      expect(map?.title).toBe(`${component.pageData.ui.eventCard.location} — ${component.pageData.hostInstitution.name}`);
+      expect(map?.getAttribute('loading')).toBe('lazy');
+      const mapUrl = new URL(map!.src);
+      expect(mapUrl.origin).toBe('https://www.google.com');
+      expect(mapUrl.searchParams.get('q')).toBe(address);
+      expect(mapUrl.searchParams.get('output')).toBe('embed');
+      const link = section?.querySelector('a');
+      expect(new URL(link!.href).searchParams.get('query')).toBe(address);
+      expect(link?.rel).toBe('noopener noreferrer');
+    }
+  });
+
   it('should show and link the communication email in every language', () => {
     for (const language of ['pt', 'en', 'es'] as const) {
       component.setLanguage(language);
