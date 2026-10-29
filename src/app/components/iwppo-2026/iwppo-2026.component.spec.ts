@@ -23,6 +23,21 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show INPA as an event partner with its supplied logo in every language', () => {
+    const name = 'Instituto Nacional de Pesquisas da Amazônia (INPA)';
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const partner = component.partners.find(partner => partner.name === name);
+      expect(partner?.category).toBe('partner');
+      expect(partner?.logo).toBe('assets/images/iwppo-2026/partners/inpa.png');
+      const image = fixture.nativeElement.querySelector('#parceiros img[alt="' + name + '"]') as HTMLImageElement;
+      expect(image).not.toBeNull();
+      expect(image?.getAttribute('src')).toBe('assets/images/iwppo-2026/partners/inpa.png');
+      expect(image?.classList.contains('object-contain')).toBeTrue();
+    }
+  });
+
   it('should show the seven moderators on their corresponding activities in every language', () => {
     const assignments = [
       ['2026-11-17', 3, 'Kátia Viana Cavalcante'],

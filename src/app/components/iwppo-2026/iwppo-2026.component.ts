@@ -536,6 +536,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     { name: 'CAPES', logo: 'assets/images/iwppo-2026/partners/capes.png', category: 'supporter' },
     { name: 'CNPq', logo: 'assets/images/iwppo-2026/partners/cnpq.png', category: 'supporter' },
     { name: 'FAPEAL', logo: 'assets/images/iwppo-2026/partners/fapeal.png', category: 'partner' },
+    { name: 'Instituto Nacional de Pesquisas da Amazônia (INPA)', logo: 'assets/images/iwppo-2026/partners/inpa.png', category: 'partner' },
     { name: 'Ocean Decade', logo: 'assets/images/iwppo-2026/partners/oceandecade.png', category: 'partner' },
     { name: 'Plataforma Athena', logo: 'assets/images/iwppo-2026/partners/athena.png', category: 'partner' },
     { name: 'Oceanos de Plástico', logo: 'assets/images/iwppo-2026/partners/oceanosdeplastico.png', category: 'partner' },

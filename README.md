@@ -32,6 +32,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.
+A marca do INPA está em `src/assets/images/iwppo-2026/partners/inpa.png`,
+com referência institucional em https://www.gov.br/inpa/pt-br/marcas-do-inpa.
+
 As moderações do IWPPO 2026 ficam em `schedule[].activities[].moderator`
 nos três arquivos de idioma, com nome, afiliação e rótulo traduzido.
 O teste do componente verifica a associação das sete moderações às atividades.
